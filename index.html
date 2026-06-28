@@ -1,85 +1,69 @@
-<!DOCTYPE html>
-<html lang="pa">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ Online Shopping</title>
-
-<link rel="stylesheet" href="style.css">
-
-</head>
-
-<body>
-
-<header class="header">
-
-<div class="logo">
-<img src="logo.png" alt="Logo">
-<div>
-<h1>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ</h1>
-<p>Online Shopping Mall</p>
-</div>
+<div class="card">
+<h3>👟 Shoes</h3>
+<p>ਹਰ ਉਮਰ ਲਈ</p>
+<button onclick="whatsappOrder('Shoes')">WhatsApp Order</button>
 </div>
 
-<nav>
-<a href="#">Home</a>
-<a href="#categories">Categories</a>
-<a href="#contact">Contact</a>
-</nav>
+<div class="card">
+<h3>🧸 Toys</h3>
+<p>ਬੱਚਿਆਂ ਦੇ ਖਿਡੌਣੇ</p>
+<button onclick="whatsappOrder('Toys')">WhatsApp Order</button>
+</div>
 
-</header>
+<div class="card">
+<h3>🛒 Grocery</h3>
+<p>ਰੋਜ਼ਾਨਾ ਦੀਆਂ ਜ਼ਰੂਰਤਾਂ</p>
+<button onclick="whatsappOrder('Grocery')">WhatsApp Order</button>
+</div>
 
-<section class="hero">
+<div class="card">
+<h3>💄 Cosmetics</h3>
+<p>Beauty Products</p>
+<button onclick="whatsappOrder('Cosmetics')">WhatsApp Order</button>
+</div>
 
-<h2>ਤੁਹਾਡਾ ਆਪਣਾ Online Shopping Mall</h2>
+<div class="card">
+<h3>📚 Stationery</h3>
+<p>School & Office Items</p>
+<button onclick="whatsappOrder('Stationery')">WhatsApp Order</button>
+</div>
 
-<p>
-ਇੱਕ ਹੀ ਥਾਂ ਤੇ ਹਰ ਤਰ੍ਹਾਂ ਦਾ ਸਮਾਨ
-</p>
+<div class="card">
+<h3>💍 Artificial Jewellery</h3>
+<p>ਲੇਡੀਜ਼ ਜੁਲਰੀ</p>
+<button onclick="whatsappOrder('Artificial Jewellery')">WhatsApp Order</button>
+</div>
 
-<input
-type="text"
-id="search"
-placeholder="ਪ੍ਰੋਡਕਟ ਖੋਜੋ..."
-onkeyup="searchProducts()">
+<div class="card">
+<h3>🏠 Home & Kitchen</h3>
+<p>ਘਰੇਲੂ ਸਮਾਨ</p>
+<button onclick="whatsappOrder('Home & Kitchen')">WhatsApp Order</button>
+</div>
 
+<div class="card">
+<h3>📱 Electronics</h3>
+<p>ਮੋਬਾਈਲ ਅਤੇ Accessories</p>
+<button onclick="whatsappOrder('Electronics')">WhatsApp Order</button>
+</div>
+
+</div>
 </section>
 
-<section id="categories" class="categories">
+<footer id="contact">
+<h2>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</h2>
+<p>📍 ਪਿੰਡ ਕਾਲਾ ਬਾਲਾ, ਜ਼ਿਲ੍ਹਾ ਗੁਰਦਾਸਪੁਰ</p>
+<p>📞 Call: +91 872776620</p>
+<p>💬 WhatsApp: +91 8872776620</p>
+<p>💳 UPI: 8872776620@axl</p>
+</footer>
 
-<h2>ਸਾਡੀਆਂ Categories</h2>
+<a class="whatsapp"
+href="https://wa.me/918872776620"
+target="_blank">
+WhatsApp
+</a>
 
-<div class="grid">
+<script src="script.js"></script>
 
-<div class="card">
-<h3>👗 Ladies Unstitched Suits</h3>
-<p>ਨਵੇਂ ਡਿਜ਼ਾਈਨ</p>
-<button onclick="whatsappOrder('Ladies Unstitched Suit')">
-WhatsApp Order
-</button>
-</div>
-
-<div class="card">
-<h3>👚 Ladies Stitched Suits</h3>
-<p>Ready to Wear</p>
-<button onclick="whatsappOrder('Ladies Stitched Suit')">
-WhatsApp Order
-</button>
-</div>
-
-<div class="card">
-<h3>👔 Gents Readymade</h3>
-<p>ਹਰ ਸਾਈਜ਼ ਉਪਲਬਧ</p>
-<button onclick="whatsappOrder('Gents Readymade')">
-WhatsApp Order
-</button>
-</div>
-
-<div class="card">
-<h3>👕 Kids Wear</h3>
-<p>ਲੜਕੇ ਅਤੇ ਲੜਕੀਆਂ ਲਈ</p>
-<button onclick="whatsappOrder('Kids Wear')">
-WhatsApp Order
-</button>
-</div>
+</body>
+</html>
