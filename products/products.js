@@ -1459,3 +1459,71 @@ cartCount.innerText = cart.length;
 window.onload = function(){
 loadProducts();
 }
+// WhatsApp Order
+
+function whatsappOrder(productName){
+
+const phone = "919607718703";
+
+const message = `Sat Sri Akal Ji 🙏
+
+ਮੈਂ ਇਹ Product ਖਰੀਦਣਾ ਚਾਹੁੰਦਾ/ਚਾਹੁੰਦੀ ਹਾਂ:
+
+${productName}
+
+ਕਿਰਪਾ ਕਰਕੇ ਹੋਰ ਜਾਣਕਾਰੀ ਭੇਜੋ।`;
+
+window.open(
+`https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+
+}
+
+// View Cart
+
+function viewCart(){
+
+if(cart.length===0){
+
+alert("ਤੁਹਾਡਾ Cart ਖਾਲੀ ਹੈ।");
+
+return;
+
+}
+
+let items="🛒 Cart Items\n\n";
+
+let total=0;
+
+cart.forEach(item=>{
+
+items += `${item.name} - ₹${item.price}\n`;
+
+total += item.price;
+
+});
+
+items += `\nਕੁੱਲ ਰਕਮ: ₹${total}`;
+
+alert(items);
+
+}
+
+// Website Load
+
+window.onload=function(){
+
+loadProducts();
+
+updateCartCount();
+
+<div style="padding:15px;text-align:center;">
+
+<button onclick="viewCart()">
+🛒 Cart (<span id="cart-count">0</span>)
+</button>
+
+</div>
+
+<div id="products" class="grid"></div>
