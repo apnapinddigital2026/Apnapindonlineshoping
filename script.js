@@ -1,74 +1,59 @@
-const firebaseConfig = {
-    apiKey: "AIzaSyBaIFzyick8RvsI5ep0y7ZBHaNZZT0aE0k",
-    authDomain: "apnapinddigital2026-c352c.firebaseapp.com",
-    projectId: "apnapinddigital2026-c352c",
-    storageBucket: "apnapinddigital2026-c352c.firebasestorage.app",
-    messagingSenderId: "1656215258946",
-    appId: "1:1656215258946:web:792e0b996f5f146db1ecdb"
-};
+const productsContainer = document.getElementById("products");
 
-firebase.initializeApp(firebaseConfig);
-const db = firebase.firestore();
+function displayProducts(data) {
 
-let allFirebaseProducts = [];
-let filteredProducts = [];
+    productsContainer.innerHTML = "";
 
-window.onload = function () {
-    db.collection('live_products').orderBy('createdAt', 'desc').onSnapshot((snapshot) => {
-        allFirebaseProducts = [];
-        
-        snapshot.forEach((doc) => {
-            const data = doc.data();
-            allFirebaseProducts.push({
-                id: doc.id,
-                name: data.name || "Special Product",
-                price: data.price,
-                image: data.image
-            });
-        });
+    data.forEach(product => {
 
-        filteredProducts = allFirebaseProducts.length > 0 ? allFirebaseProducts : (typeof products !== 'undefined' ? products : []);
-        displayProducts(filteredProducts);
-    }, (error) => {
-        console.error("ਡਾਟਾ ਲੋਡ ਕਰਨ ਵਿੱਚ ਸਮੱਸਿਆ: ", error);
-    });
-};
+        productsContainer.innerHTML += `
+        <div class="product-card">
 
-function displayProducts(list) {
-    const container = document.getElementById("products");
-    container.innerHTML = "";
+            <img src="products/${product.image}" alt="${product.name}">
 
-    if (list.length === 0) {
-        container.innerHTML = "<p style='text-align:center; width:100%;'>ਕੋਈ ਪ੍ਰੋਡਕਟ ਨਹੀਂ ਮਿਲਿਆ।</p>";
-        return;
-    }
-
-    list.forEach((product) => {
-        container.innerHTML += `
-        <div class="card">
-            <img src="${product.image}" alt="${product.name}">
             <h3>${product.name}</h3>
-            <p><strong>₹${product.price}</strong></p>
-            <button onclick="viewProduct('${product.id}')">
-            👁 View Product
+
+            <p>₹${product.price}</p>
+
+            <p>${product.category}</p>
+
+            <button onclick="orderOnWhatsapp('${product.name}', '${product.price}')">
+                WhatsApp Order
             </button>
+
         </div>
         `;
+
     });
+
 }
 
-function searchProducts() {
-    const keyword = document.getElementById("search").value.toLowerCase();
-    const sourceProducts = allFirebaseProducts.length > 0 ? allFirebaseProducts : (typeof products !== 'undefined' ? products : []);
+displayProducts(products);
 
-    filteredProducts = sourceProducts.filter(product =>
-        product.name.toLowerCase().includes(keyword)
+function searchProducts(){
+
+    const search = document.getElementById("search").value.toLowerCase();
+
+    const filtered = products.filter(product =>
+        product.name.toLowerCase().includes(search) ||
+        product.category.toLowerCase().includes(search)
     );
 
-    displayProducts(filteredProducts);
+    displayProducts(filtered);
+
 }
 
-function viewProduct(id) {
-    localStorage.setItem("productId", id);
-    window.location.href = "product.html";
+function orderOnWhatsapp(name, price){
+
+    const number = "919607718703";
+
+    const message = `Hello,
+I want to order
+
+${name}
+
+Price : ₹${price}`;
+
+    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`);
+
 }
