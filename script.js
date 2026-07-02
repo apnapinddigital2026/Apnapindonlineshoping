@@ -1,27 +1,39 @@
-const productsContainer = document.getElementById("products");
+// Products Show
 
-function displayProducts(data) {
+function displayProducts(list){
 
-    productsContainer.innerHTML = "";
+    const container = document.getElementById("products");
 
-    data.forEach(product => {
+    container.innerHTML = "";
 
-        productsContainer.innerHTML += `
-        <div class="product-card">
+    list.forEach(product=>{
 
-            <img src="products/${product.image}" alt="${product.name}">
+        container.innerHTML += `
 
-            <h3>${product.name}</h3>
+        <div class="card">
 
-            <p>₹${product.price}</p>
+            <img src="${product.image}" alt="${product.name}">
 
-            <p>${product.category}</p>
+            <div class="card-body">
 
-            <button onclick="orderOnWhatsapp('${product.name}', '${product.price}')">
-                WhatsApp Order
-            </button>
+                <h3>${product.name}</h3>
+
+                <div class="price">₹${product.price}</div>
+
+                <div class="category">${product.category}</div>
+
+                <a class="btn"
+                   href="https://wa.me/919607718703?text=ਮੈਨੂੰ ${product.name} ਚਾਹੀਦਾ ਹੈ।"
+                   target="_blank">
+
+                   WhatsApp Order
+
+                </a>
+
+            </div>
 
         </div>
+
         `;
 
     });
@@ -30,30 +42,21 @@ function displayProducts(data) {
 
 displayProducts(products);
 
+
+// Search
+
 function searchProducts(){
 
-    const search = document.getElementById("search").value.toLowerCase();
+    const value = document.getElementById("search").value.toLowerCase();
 
-    const filtered = products.filter(product =>
-        product.name.toLowerCase().includes(search) ||
-        product.category.toLowerCase().includes(search)
+    const filter = products.filter(product=>
+
+        product.name.toLowerCase().includes(value) ||
+
+        product.category.toLowerCase().includes(value)
+
     );
 
-    displayProducts(filtered);
-
-}
-
-function orderOnWhatsapp(name, price){
-
-    const number = "919607718703";
-
-    const message = `Hello,
-I want to order
-
-${name}
-
-Price : ₹${price}`;
-
-    window.open(`https://wa.me/${number}?text=${encodeURIComponent(message)}`);
+    displayProducts(filter);
 
 }
