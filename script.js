@@ -1,36 +1,32 @@
-// 🔥 ਤੁਹਾਡਾ ਅਸਲੀ ਫਾਇਰਬੇਸ ਕੋਡ ਮੈਂ ਇੱਥੇ ਸੈੱਟ ਕਰ ਦਿੱਤਾ ਹੈ
 const firebaseConfig = {
     apiKey: "AIzaSyBaIFzyick8RvsI5ep0y7ZBHaNZZT0aE0k",
-    authDomain: "://firebaseapp.com",
+    authDomain: "apnapinddigital2026-c352c.firebaseapp.com",
     projectId: "apnapinddigital2026-c352c",
     storageBucket: "apnapinddigital2026-c352c.firebasestorage.app",
     messagingSenderId: "1656215258946",
     appId: "1:1656215258946:web:792e0b996f5f146db1ecdb"
 };
 
-// Firebase ਚਾਲੂ ਕਰੋ
 firebase.initializeApp(firebaseConfig);
 const db = firebase.firestore();
 
-let allFirebaseProducts = []; // ਫਾਇਰਬੇਸ ਤੋਂ ਆਉਣ ਵਾਲੇ ਸਾਰੇ ਪ੍ਰੋਡਕਟਸ
+let allFirebaseProducts = [];
 let filteredProducts = [];
 
-// 🔄 ਵੈੱਬਸਾਈਟ ਲੋਡ ਹੁੰਦੇ ਹੀ Firebase ਤੋਂ ਰੀਅਲ-ਟਾਈਮ ਡਾਟਾ ਲੈਣਾ
 window.onload = function () {
-    db.collection('live_products').onSnapshot((snapshot) => {
+    db.collection('live_products').orderBy('createdAt', 'desc').onSnapshot((snapshot) => {
         allFirebaseProducts = [];
         
         snapshot.forEach((doc) => {
             const data = doc.data();
             allFirebaseProducts.push({
                 id: doc.id,
-                name: data.name || "Special Product", // ਜੇਕਰ ਨਾਮ ਨਾ ਹੋਵੇ
+                name: data.name || "Special Product",
                 price: data.price,
                 image: data.image
             });
         });
 
-        // ਜੇਕਰ ਫਾਇਰਬੇਸ ਵਿੱਚ ਕੋਈ ਪ੍ਰੋਡਕਟ ਨਹੀਂ ਹੈ, ਤਾਂ ਤੁਹਾਡੀ ਪੁਰਾਣੀ products.js ਵਾਲੀ ਲਿਸਟ ਦਿਖੇਗੀ
         filteredProducts = allFirebaseProducts.length > 0 ? allFirebaseProducts : (typeof products !== 'undefined' ? products : []);
         displayProducts(filteredProducts);
     }, (error) => {
@@ -38,7 +34,6 @@ window.onload = function () {
     });
 };
 
-// 🛒 ਪ੍ਰੋਡਕਟਸ ਨੂੰ ਸਕ੍ਰੀਨ 'ਤੇ ਦਿਖਾਉਣ ਦਾ ਫੰਕਸ਼ਨ (ਤੁਹਾਡਾ ਅਸਲੀ ਡਿਜ਼ਾਈਨ)
 function displayProducts(list) {
     const container = document.getElementById("products");
     container.innerHTML = "";
@@ -62,7 +57,6 @@ function displayProducts(list) {
     });
 }
 
-// 🔍 ਪ੍ਰੋਡਕਟ ਖੋਜਣ (Search) ਦਾ ਫੰਕਸ਼ਨ
 function searchProducts() {
     const keyword = document.getElementById("search").value.toLowerCase();
     const sourceProducts = allFirebaseProducts.length > 0 ? allFirebaseProducts : (typeof products !== 'undefined' ? products : []);
@@ -74,9 +68,7 @@ function searchProducts() {
     displayProducts(filteredProducts);
 }
 
-// 👁 ਪ੍ਰੋਡਕਟ ਦੇ ਪੇਜ 'ਤੇ ਜਾਣ ਦਾ ਫੰਕਸ਼ਨ
 function viewProduct(id) {
     localStorage.setItem("productId", id);
     window.location.href = "product.html";
 }
-
