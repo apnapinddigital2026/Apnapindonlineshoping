@@ -6,21 +6,20 @@
     <title>Admin Panel - Update Website</title>
     <link rel="stylesheet" href="style.css">
     
-    <!-- Firebase Libraries (SDK) -->
-    <script src="https://gstatic.com"></script>
+    <!-- Firebase Libraries -->
     <script src="https://gstatic.com"></script>
     <script src="https://gstatic.com"></script>
 </head>
 <body>
 
     <div class="admin-box" style="max-width: 400px; margin: 30px auto; background: white; padding: 20px; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); text-align: center;">
-        <h2>Admin Panel</h2>
+        <h2>Admin Panel (No-Card Version)</h2>
         
         <label style="display:block; text-align:left; margin-top:15px; font-weight:bold;">ਪ੍ਰੋਡਕਟ ਦਾ ਨਾਮ (Name):</label>
         <input type="text" id="cellName" placeholder="ਜਿਵੇਂ: Special Punjabi Jutti" style="width: 100%; padding: 12px; margin-top: 5px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
 
-        <label style="display:block; text-align:left; margin-top:15px; font-weight:bold;">ਗੈਲਰੀ ਵਿੱਚੋਂ ਫੋਟੋ (Image) ਚੁਣੋ:</label>
-        <input type="file" id="cellImage" accept="image/*" style="width: 100%; padding: 12px; margin-top: 5px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
+        <label style="display:block; text-align:left; margin-top:15px; font-weight:bold;">ਫੋਟੋ ਦਾ ਲਿੰਕ (Image URL) ਪੇਸਟ ਕਰੋ:</label>
+        <input type="text" id="cellImageUrl" placeholder="https://example.com" style="width: 100%; padding: 12px; margin-top: 5px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
         
         <label style="display:block; text-align:left; margin-top:15px; font-weight:bold;">ਕੀਮਤ (Price) ਬਦਲੋ:</label>
         <input type="number" id="cellPrice" placeholder="ਜਿਵੇਂ: 499" style="width: 100%; padding: 12px; margin-top: 5px; box-sizing: border-box; border-radius: 5px; border: 1px solid #ccc;">
@@ -30,65 +29,49 @@
     </div>
 
     <script>
-    // ਤੁਹਾਡਾ ਅਸਲੀ ਫਾਇਰਬੇਸ ਕੋਡ ਸੈੱਟ ਹੈ
     const firebaseConfig = {
         apiKey: "AIzaSyBaIFzyick8RvsI5ep0y7ZBHaNZZT0aE0k",
-        authDomain: "://firebaseapp.com",
+        authDomain: "apnapinddigital2026-c352c.firebaseapp.com",
         projectId: "apnapinddigital2026-c352c",
         storageBucket: "apnapinddigital2026-c352c.firebasestorage.app",
         messagingSenderId: "1656215258946",
         appId: "1:1656215258946:web:792e0b996f5f146db1ecdb"
     };
 
-    // Firebase ਚਾਲੂ ਕਰੋ
     firebase.initializeApp(firebaseConfig);
     const db = firebase.firestore();
-    const storage = firebase.storage();
 
-    // ਪ੍ਰੋਡਕਟ ਅਪਲੋਡ ਕਰਨ ਦਾ ਲਾਈਵ ਫੰਕਸ਼ਨ
     async function uploadProduct() {
         const nameInput = document.getElementById('cellName').value;
-        const fileInput = document.getElementById('cellImage');
+        const imageUrlInput = document.getElementById('cellImageUrl').value;
         const priceInput = document.getElementById('cellPrice').value;
         const statusText = document.getElementById('status');
         const saveBtn = document.getElementById('saveBtn');
 
-        // ਚੈੱਕ ਕਰੋ ਕਿ ਸਾਰੀਆਂ ਚੀਜ਼ਾਂ ਭਰੀਆਂ ਹਨ
-        if(nameInput === "" || fileInput.files.length === 0 || priceInput === "") {
-            alert("ਕਿਰਪਾ ਕਰਕੇ ਪ੍ਰੋਡਕਟ ਦਾ ਨਾਮ, ਫੋਟੋ ਅਤੇ ਪ੍ਰਾਈਸ ਤਿੰਨੋਂ ਚੀਜ਼ਾਂ ਭਰੋ!");
+        if(nameInput === "" || imageUrlInput === "" || priceInput === "") {
+            alert("ਕਿਰਪਾ ਕਰਕੇ ਨਾਮ, ਫੋਟੋ ਲਿੰਕ ਅਤੇ ਪ੍ਰਾਈਸ ਤਿੰਨੋਂ ਚੀਜ਼ਾਂ ਭਰੋ!");
             return;
         }
 
-        const file = fileInput.files[0]; // ਪਹਿਲੀ ਫਾਈਲ ਚੁਣੋ
         saveBtn.disabled = true;
-        statusText.innerText = "ਅਪਲੋਡ ਹੋ ਰਿਹਾ ਹੈ... ਕਿਰਪਾ ਕਰਕੇ ਰੁਕੋ।⏳";
+        statusText.innerText = "Firebase ਵਿੱਚ ਸੇਵ ਹੋ ਰਿਹਾ ਹੈ...⏳";
         statusText.style.color = "orange";
 
         try {
-            // 1. Image ਨੂੰ Firebase Storage ਵਿੱਚ ਅਪਲੋਡ ਕਰੋ
-            const storageRef = storage.ref('products/' + Date.now() + "_" + file.name);
-            const snapshot = await storageRef.put(file);
-            
-            // ਅਪਲੋਡ ਹੋਈ ਫੋਟੋ ਦਾ ਲਿੰਕ (URL) ਲਵੋ
-            const photoURL = await snapshot.ref.getDownloadURL();
-
-            // 2. ਨਾਮ, ਲਿੰਕ ਅਤੇ ਪ੍ਰਾਈਸ ਨੂੰ Firestore Database ਵਿੱਚ ਸੇਵ ਕਰੋ
-            // ਇੱਥੇ Date.now().toString() ਨਾਲ ਹਰ ਵਾਰ ਨਵਾਂ ਪ੍ਰੋਡਕਟ ਐਡ ਹੋਵੇਗਾ
+            // ਸਿੱਧਾ ਡਾਟਾਬੇਸ (Firestore) ਵਿੱਚ ਲਿੰਕ ਅਤੇ ਰੇਟ ਸੇਵ ਕਰੋ
             await db.collection('live_products').doc(Date.now().toString()).set({
                 name: nameInput,
-                image: photoURL,
+                image: imageUrlInput,
                 price: priceInput,
                 createdAt: new Date()
             });
 
-            // ਸਫਲਤਾ ਦਾ ਮੈਸੇਜ
             statusText.innerText = "Website ਸਫਲਤਾਪੂਰਵਕ Update ਹੋ ਗਈ ਹੈ! ✅";
             statusText.style.color = "green";
             
-            // ਇਨਪੁਟ ਬਾਕਸ ਖਾਲੀ ਕਰੋ
             document.getElementById('cellName').value = "";
+            document.getElementById('cellImageUrl').value = "";
             document.getElementById('cellPrice').value = "";
-            fileInput.value = "";
         } catch (error) {
             console.error("Error: ", error);
             statusText.innerText = "ਕੋਈ ਗੜਬੜ ਹੋ ਗਈ ਹੈ, ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।❌";
@@ -100,4 +83,3 @@
     </script>
 </body>
 </html>
-
