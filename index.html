@@ -2,102 +2,124 @@
 <html lang="pa">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ | Online Shopping Mall</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="style.css">
+  <title>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ Online Shopping Mall</title>
+
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
+<header>
 
-        <div class="logo">
+<div class="logo">
 
-            <img src="images/logo.png" alt="Logo">
+<img src="images/logo.png" alt="Logo">
 
-            <div>
-                <h1>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ</h1>
-                <p>Online Shopping Mall</p>
-            </div>
+<div>
 
-        </div>
+<h1>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ</h1>
 
-        <nav>
+<p>Online Shopping Mall</p>
 
-            <a href="#">Home</a>
-            <a href="#products">Products</a>
-            <a href="#contact">Contact</a>
+</div>
 
-        </nav>
+</div>
 
-    </header>
+<nav>
 
-    <!-- Banner -->
+<a href="#">Home</a>
 
-    <section class="hero">
+<a href="#categories">Categories</a>
 
-        <img src="images/banner.png"
-             alt="Banner"
-             class="hero-banner">
+<a href="#products">Products</a>
 
-        <h2>ਤੁਹਾਡਾ ਆਪਣਾ Online Shopping Mall</h2>
+<a href="#contact">Contact</a>
 
-        <p>
-            ਇੱਕ ਹੀ ਥਾਂ ਤੇ Ladies Wear, Gents Wear, Kids Wear,
-            Grocery Store, Hand Bags ਅਤੇ ਹੋਰ ਬਹੁਤ ਕੁਝ।
-        </p>
+</nav>
 
-        <input
-            type="text"
-            id="search"
-            placeholder="🔍 ਪ੍ਰੋਡਕਟ ਖੋਜੋ..."
-            onkeyup="searchProducts()">
+</header>
 
-    </section>
+<section class="hero">
 
-    <!-- Products -->
+<img src="images/banner.png" class="hero-banner" alt="Banner">
 
-    <section class="products-section">
+<div class="hero-text">
 
-        <h2>ਸਾਡੇ Products</h2>
+<h2>ਤੁਹਾਡਾ ਆਪਣਾ Online Shopping Mall</h2>
 
-        <div id="products" class="grid"></div>
+<p>ਇੱਕ ਹੀ ਥਾਂ ਤੇ ਹਰ ਤਰ੍ਹਾਂ ਦਾ ਸਮਾਨ ਖਰੀਦੋ</p>
 
-    </section>
+<input
+type="text"
+id="search"
+placeholder="🔍 Product Search..."
+onkeyup="searchProducts()">
 
-    <!-- Footer -->
+</div>
 
-    <footer id="contact">
+</section>
 
-        <h2>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ</h2>
+<section id="categories">
 
-        <p>📍 VPO Kala Bala, District Gurdaspur, Punjab - 143528</p>
+<h2>Shop by Category</h2>
 
-        <p>📞 Mobile : 9607718703</p>
+<div class="category-grid">
 
-        <p>💬 WhatsApp : 9607718703</p>
+<button onclick="filterCategory('Ladies Suit')">👗 Ladies Wear</button>
 
-    </footer>
+<button onclick="filterCategory('Ladies Unstitched Suit')">🧵 Unstitched Suit</button>
 
-    <!-- WhatsApp -->
+<button onclick="filterCategory('Hand Bag')">👜 Hand Bags</button>
 
-    <a
-        href="https://wa.me/919607718703"
-        target="_blank"
-        class="whatsapp">
+<button onclick="filterCategory('Gents')">👕 Gents Wear</button>
 
-        💬 WhatsApp
+<button onclick="filterCategory('Kids')">👶 Kids Wear</button>
 
-    </a>
+<button onclick="filterCategory('Grocery')">🛒 Grocery Store</button>
 
-    <!-- JavaScript -->
+<button onclick="displayProducts(products)">All Products</button>
 
-    <script src="products/products.js"></script>
+</div>
 
-    <script src="script.js"></script>
+</section>
+
+<section id="products">
+
+<h2>Latest Products</h2>
+
+<div class="grid" id="product-list"></div>
+
+</section>
+
+<footer id="contact">
+
+<h2>ਆਪਣਾ ਪਿੰਡ ਡਿਜਿਟਲ</h2>
+
+<p>📍 VPO Kala Bala, District Gurdaspur</p>
+
+<p>Punjab -143528</p>
+
+<p>☎️ 9607718703</p>
+
+<p>💬 WhatsApp : 9607718703</p>
+
+</footer>
+
+<a
+class="whatsapp"
+href="https://wa.me/919607718703"
+target="_blank">
+
+WhatsApp
+
+</a>
+
+<script src="products/products.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 
