@@ -56,3 +56,31 @@ const products = [
     price:1799,
     category:"footwear",
     image:"images/footwear/sh
+{
+    id:7,
+    name:"Ladies Fashion Suit",
+    price:1499,
+    category:"ladies",
+    image:"images/ladies/IMG-20260628-WA0033.jpg",
+    description:"Beautiful Ladies Suit"
+},
+
+{
+    id:8,
+    name:"Ladies Handbag",
+    price:999,
+    category:"ladies-handbags",
+    image:"images/ladies-handbags/IMG-20260628-WA0121.jpg",
+    description:"Premium Ladies Handbag"
+},
+
+{
+    id:9,
+    name:"Gents Shirt",
+    price:899,
+    category:"gents",
+    image:"images/gents/IMG-20260628-WA0026.jpg",
+    description:"Stylish Gents Shirt"
+}
+
+];
