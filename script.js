@@ -2,61 +2,74 @@
 
 function displayProducts(list){
 
-    const container = document.getElementById("products");
+const container = document.getElementById("product-list");
 
-    container.innerHTML = "";
+container.innerHTML = "";
 
-    list.forEach(product=>{
+list.forEach(product=>{
 
-        container.innerHTML += `
+container.innerHTML += `
 
-        <div class="card">
+<div class="card">
 
-            <img src="${product.image}" alt="${product.name}">
+<img src="${product.image}" alt="${product.name}">
 
-            <div class="card-body">
+<div class="card-body">
 
-                <h3>${product.name}</h3>
+<h3>${product.name}</h3>
 
-                <div class="price">₹${product.price}</div>
+<div class="price">₹${product.price}</div>
 
-                <div class="category">${product.category}</div>
+<div class="category">${product.category}</div>
 
-                <a class="btn"
-                   href="https://wa.me/919607718703?text=ਮੈਨੂੰ ${product.name} ਚਾਹੀਦਾ ਹੈ।"
-                   target="_blank">
+<a class="btn"
 
-                   WhatsApp Order
+href="https://wa.me/919607718703?text=ਮੈਨੂੰ ${product.name} ਚਾਹੀਦਾ ਹੈ"
 
-                </a>
+target="_blank">
 
-            </div>
+WhatsApp Order
 
-        </div>
+</a>
 
-        `;
+</div>
 
-    });
+</div>
+
+`;
+
+});
 
 }
 
 displayProducts(products);
 
 
-// Search
+// Search Products
 
 function searchProducts(){
 
-    const value = document.getElementById("search").value.toLowerCase();
+const value=document.getElementById("search").value.toLowerCase();
 
-    const filter = products.filter(product=>
+const filter=products.filter(product=>
 
-        product.name.toLowerCase().includes(value) ||
+product.name.toLowerCase().includes(value) ||
 
-        product.category.toLowerCase().includes(value)
+product.category.toLowerCase().includes(value)
 
-    );
+);
 
-    displayProducts(filter);
+displayProducts(filter);
+
+}
+
+
+// Category Filter
+
+function filterCategory(category){
+
+const filter=products.filter(product=>product.category===category);
+
+displayProducts(filter);
 
 }
