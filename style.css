@@ -111,3 +111,99 @@ nav a:hover{
     margin:15px 0;
     font-size:18px;
 }
+/* =========================
+   SEARCH BOX
+========================= */
+
+.search-box{
+    max-width:700px;
+    margin:25px auto;
+    display:flex;
+    gap:10px;
+}
+
+#search{
+    flex:1;
+    padding:15px;
+    font-size:16px;
+    border:2px solid #6a1b9a;
+    border-radius:10px;
+    outline:none;
+}
+
+#searchBtn{
+    padding:15px 25px;
+    background:#6a1b9a;
+    color:#fff;
+    border:none;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:16px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+#searchBtn:hover{
+    background:#4a148c;
+}
+
+/* =========================
+   SHOP NOW BUTTON
+========================= */
+
+.shop-btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:15px 35px;
+    background:#ff9800;
+    color:#fff;
+    text-decoration:none;
+    border-radius:10px;
+    font-size:18px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.shop-btn:hover{
+    background:#f57c00;
+}
+
+/* =========================
+   CATEGORIES
+========================= */
+
+.categories{
+    padding:40px 20px;
+    background:#ffffff;
+    text-align:center;
+}
+
+.categories h2{
+    font-size:32px;
+    margin-bottom:30px;
+    color:#6a1b9a;
+}
+
+.category-grid{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:15px;
+}
+
+.category-grid button{
+    background:#6a1b9a;
+    color:#fff;
+    border:none;
+    padding:15px 20px;
+    border-radius:10px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.category-grid button:hover{
+    background:#ff9800;
+    transform:translateY(-4px);
+}
