@@ -39,24 +39,25 @@ body{
 .logo{
     display:flex;
     align-items:center;
-    gap:15px;
+    gap:18px;
 }
 
-/* ===== LOGO SIZE ===== */
-
 .logo img{
-    width:90px;
-    height:90px;
+    width:120px;
+    height:120px;
     object-fit:contain;
 }
 
 .logo-text h1{
-    font-size:30px;
+    font-size:34px;
+    margin:0;
 }
 
 .logo-text p{
-    font-size:16px;
+    font-size:18px;
+    margin:0;
 }
+
 
 /* =========================
    NAVIGATION
