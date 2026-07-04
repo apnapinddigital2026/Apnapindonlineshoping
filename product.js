@@ -40,3 +40,47 @@ const products = [
     image: "images/gents/shirt1.jpg",
     description: "Premium Cotton Shirt"
 },
+{
+    id: 5,
+    name: "Kids Wear",
+    price: 699,
+    category: "kids",
+    image: "images/kids/kids1.jpg",
+    description: "Comfortable Kids Wear"
+},
+
+{
+    id: 6,
+    name: "Sports Shoes",
+    price: 1799,
+    category: "footwear",
+    image: "images/footwear/shoe1.jpg",
+    description: "Sports Shoes"
+},
+
+{
+    id: 7,
+    name: "Cosmetics",
+    price: 499,
+    category: "cosmetics",
+    image: "images/cosmetics/item1.jpg",
+    description: "Beauty Product"
+},
+
+{
+    id: 8,
+    name: "Grocery Item",
+    price: 299,
+    category: "grocery",
+    image: "images/grocery/item1.jpg",
+    description: "Daily Grocery Item"
+},
+
+{
+    id: 9,
+    name: "Electronics",
+    price: 2499,
+    category: "electronics",
+    image: "images/electronics/item1.jpg",
+    description: "Electronic Product"
+},
