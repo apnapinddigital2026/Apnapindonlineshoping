@@ -39,3 +39,15 @@ function displayProducts(productList){
 }
 
 displayProducts(products);
+// Search Products
+searchInput.addEventListener("keyup", function () {
+
+    const searchValue = this.value.toLowerCase();
+
+    const filteredProducts = products.filter(product =>
+        product.name.toLowerCase().includes(searchValue)
+    );
+
+    displayProducts(filteredProducts);
+
+});
