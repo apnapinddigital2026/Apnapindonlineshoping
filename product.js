@@ -84,3 +84,40 @@ const products = [
     image: "images/electronics/item1.jpg",
     description: "Electronic Product"
 },
+{
+    id: 10,
+    name: "Home & Kitchen",
+    price: 899,
+    category: "home-kitchen",
+    image: "images/home-kitchen/item1.jpg",
+    description: "Home & Kitchen Product"
+},
+
+{
+    id: 11,
+    name: "Stationery",
+    price: 199,
+    category: "stationery",
+    image: "images/stationery/item1.jpg",
+    description: "Stationery Item"
+},
+
+{
+    id: 12,
+    name: "Toy",
+    price: 599,
+    category: "toys",
+    image: "images/toys/toy1.jpg",
+    description: "Kids Toy"
+},
+
+{
+    id: 13,
+    name: "Special Offer",
+    price: 499,
+    category: "offers",
+    image: "images/offers/offer1.jpg",
+    description: "Today's Best Offer"
+}
+
+];
