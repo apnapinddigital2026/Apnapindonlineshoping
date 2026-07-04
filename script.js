@@ -51,3 +51,27 @@ searchInput.addEventListener("keyup", function () {
     displayProducts(filteredProducts);
 
 });
+// Category Filter
+const categoryButtons = document.querySelectorAll(".category-grid button");
+
+categoryButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const category = button.dataset.category;
+
+        if (category === "all") {
+
+            displayProducts(products);
+
+        } else {
+
+            const filteredProducts = products.filter(product => product.category === category);
+
+            displayProducts(filteredProducts);
+
+        }
+
+    });
+
+});
