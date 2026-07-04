@@ -94,8 +94,9 @@ nav a:hover{
 
 .hero-banner{
     width:100%;
-    max-height:500px;
-    object-fit:contain;
+    height:450px;
+    object-fit:cover;
+    display:block;
     border-radius:12px;
 }
 
