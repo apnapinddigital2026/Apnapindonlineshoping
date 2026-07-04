@@ -26,7 +26,12 @@ function displayProducts(productList){
 
                 <p class="category">${product.category}</p>
 
-                <a href="#" class="btn">Buy Now</a>
+                <a
+    href="https://wa.me/919607718703?text=Hello,%20I%20want%20to%20buy%20${product.name}"
+    target="_blank"
+    class="btn">
+    Buy Now
+</a>
 
             </div>
 
