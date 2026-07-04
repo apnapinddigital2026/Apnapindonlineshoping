@@ -119,5 +119,49 @@ const products = [
     image: "images/offers/offer1.jpg",
     description: "Today's Best Offer"
 }
+,
+{
+    id: 14,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/ladies/IMG-20260628-WA0033.jpg",
+    description: "Latest Ladies Suit"
+},
 
+{
+    id: 15,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/ladies/IMG-20260628-WA0034.jpg",
+    description: "Latest Ladies Suit"
+},
+
+{
+    id: 16,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/ladies/IMG-20260628-WA0035.jpg",
+    description: "Latest Ladies Suit"
+},
+
+{
+    id: 17,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/ladies/IMG-20260628-WA0036.jpg",
+    description: "Latest Ladies Suit"
+},
+
+{
+    id: 18,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/ladies/IMG-20260628-WA0037.jpg",
+    description: "Latest Ladies Suit"
+},
 ];
