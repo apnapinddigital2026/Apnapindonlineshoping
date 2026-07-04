@@ -31,6 +31,7 @@ function displayProducts(productList){
     target="_blank"
     class="btn">
     Buy Now
+    
 </a>
 
             </div>
