@@ -18,28 +18,26 @@ function displayProducts(productList){
 
             <img src="${product.image}" alt="${product.name}">
 
-            <div class="card-body">
+          <div class="card-body">
 
-                <h3>${product.name}</h3>
+    <h3>${product.name}</h3>
 
-                <p class="price">₹${product.price}</p>
+    <p class="price">₹${product.price}</p>
 
-                <p class="category">${product.category}</p>
+    <p class="category">${product.category}</p>
 
-               <p class="category">${product.category}</p>
+    <button class="cart-btn" onclick="addToCart(${product.id})">
+        🛒 Add to Cart
+    </button>
 
-<button class="cart-btn" onclick="addToCart(${product.id})">
-    🛒 Add to Cart
-</button>
+    <a
+        href="https://wa.me/919607718703?text=Hello,%20I%20want%20to%20buy%20${product.name}"
+        target="_blank"
+        class="btn">
+        Buy Now
+    </a>
 
-<a
-    href="https://wa.me/919607718703?text=Hello,%20I%20want%20to%20buy%20${product.name}"
-    target="_blank"
-    class="btn">
-    Buy Now
-</a>
-
-            </div>
+</div>
 
         </div>
 
