@@ -166,7 +166,6 @@ const products = [
 },
 {
     id: 19,
-    id: 19,
     name: "Ladies Suit",
     price: 1499,
     category: "ladies",
