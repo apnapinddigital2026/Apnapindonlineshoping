@@ -118,8 +118,7 @@ const products = [
     category: "offers",
     image: "images/offers/offer1.jpg",
     description: "Today's Best Offer"
-}
-,
+},
 {
     id: 14,
     name: "Ladies Suit",
@@ -207,8 +206,7 @@ const products = [
     category: "ladies",
     image: "images/ladies/IMG-20260628-WA0042.jpg",
     description: "Latest Ladies Suit"
-}
-,
+},
 {
     id: 24,
     name: "Ladies Suit",
@@ -341,7 +339,7 @@ const products = [
     category: "ladies",
     image: "images/ladies/IMG-20260628-WA0057.jpg",
     description: "Latest Ladies Suit"
-}
+},
 {
     id: 39,
     name: "Ladies Suit",
@@ -449,5 +447,4 @@ const products = [
     image: "images/ladies/IMG-20260628-WA0069.jpg",
     description: "Latest Ladies Suit"
 }
-
 ];
