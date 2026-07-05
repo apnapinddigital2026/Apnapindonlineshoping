@@ -8,12 +8,11 @@ const products = [
 {
     id: 1,
     name: "Ladies Suit",
-    price: 999,
+    price: 1499,
     category: "ladies",
-    image: "images/ladies/suit1.jpg",
-    description: "Premium Ladies Suit"
+    image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
+    description: "Latest Ladies Suit"
 },
-
 {
     id: 2,
     name: "Ladies Suit 2",
