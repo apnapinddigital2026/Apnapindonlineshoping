@@ -26,7 +26,9 @@ function displayProducts(productList){
 
                 <p class="category">${product.category}</p>
 
-                <button class="cart-btn" onclick="addToCart(${product.id})">
+               <p class="category">${product.category}</p>
+
+<button class="cart-btn" onclick="addToCart(${product.id})">
     🛒 Add to Cart
 </button>
 
