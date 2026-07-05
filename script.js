@@ -84,3 +84,19 @@ categoryButtons.forEach(button => {
     });
 
 });
+// ==============================
+// ADD TO CART
+// ==============================
+
+let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+function addToCart(id) {
+
+    const product = products.find(item => item.id === id);
+
+    cart.push(product);
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    alert(product.name + " added to cart successfully!");
+}
