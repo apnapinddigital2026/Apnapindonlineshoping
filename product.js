@@ -860,6 +860,158 @@ const products = [
     image: "images/logo/men/IMG-20260628-WA0034.jpg",
     description: "Premium Men Wear"
 },
+{
+    id: 108,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0001.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 109,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0002.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 110,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0003.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 111,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0004.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 112,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0009.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 113,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0010.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 114,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0012.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 115,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0016.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 116,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0018.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 117,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0019.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 118,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0020.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 119,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0022.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 120,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0023.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 121,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0079.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 122,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0083.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 123,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0084.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 124,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0085.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 125,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0093.jpg",
+    description: "Stylish Women Handbag"
+},
+{
+    id: 126,
+    name: "Women Handbag",
+    price: 899,
+    category: "ladies-handbags",
+    image: "images/logo/women-handbags/IMG-20260628-WA0113.jpg",
+    description: "Stylish Women Handbag"
+},
        
 ];
 
