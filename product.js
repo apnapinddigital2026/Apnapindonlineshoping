@@ -691,7 +691,120 @@ const products = [
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0178.jpg",
-    description: "Latest Ladies  
+    description: "Latest Ladies Suit"
+},
+{
+    id: 87,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0180.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 88,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0181.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 89,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0182.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 90,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0183.jpg",
+    description: "Latest Ladies Suit"
+},{
+    id: 91,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0185.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 92,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0199.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 93,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0200.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 94,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0202.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 95,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0210.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 96,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0211.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 97,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0213.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 98,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0214.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 99,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0215.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 100,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0216.jpg",
+    description: "Latest Ladies Suit"
+},
+       
 ];
 
    
