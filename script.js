@@ -16,8 +16,9 @@ function displayProducts(productList){
 
         <div class="card">
 
-            <img src="${product.image}" alt="${product.name}">
-
+            <a href="${product.image}" target="_blank">
+    <img src="${product.image}" alt="${product.name}">
+</a>
           <div class="card-body">
 
     <h3>${product.name}</h3>
