@@ -404,7 +404,87 @@ const products = [
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0131.jpg",
     description: "Latest Ladies Suit"
-},   
+},
+{
+    id: 51,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0132.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 52,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0134.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 53,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0135.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 54,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0136.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 55,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0137.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 56,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0138.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 57,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0139.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 58,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0140.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 59,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0141.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 60,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0142.jpg",
+    description: "Latest Ladies Suit"
+},  
 ];
 
    
