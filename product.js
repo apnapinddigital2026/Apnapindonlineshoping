@@ -85,6 +85,86 @@ const products = [
     image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
     description: "Latest Ladies Suit"
        }
+   {
+    id: 11,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0041.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 12,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0042.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 13,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0044.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 14,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0050.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 15,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0051.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 16,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0053.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 17,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0054.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 18,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0055.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 19,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0056.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 20,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0057.jpg",
+    description: "Latest Ladies Suit"
+},
 ];
 
    
