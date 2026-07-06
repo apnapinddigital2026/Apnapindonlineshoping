@@ -245,6 +245,86 @@ const products = [
     image: "images/logo/women-suits/IMG-20260628-WA0071.jpg",
     description: "Latest Ladies Suit"
 },
+{
+    id: 31,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0072.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 32,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0073.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 33,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0074.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 34,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0075.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 35,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0087.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 36,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0088.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 37,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0098.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 38,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0105.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 39,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0106.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 40,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0114.jpg",
+    description: "Latest Ladies Suit"
+},   
 ];
 
    
