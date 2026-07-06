@@ -95,9 +95,18 @@ function addToCart(id) {
 
     const product = products.find(item => item.id === id);
 
-    cart.push(product);
+    const existing = cart.find(item => item.id === id);
+
+    if (existing) {
+        existing.quantity += 1;
+    } else {
+        cart.push({
+            ...product,
+            quantity: 1
+        });
+    }
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
-    alert(product.name + " added to cart successfully!");
+    alert(product.name + " Cart ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਗਿਆ।");
 }
