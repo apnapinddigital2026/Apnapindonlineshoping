@@ -803,29 +803,62 @@ const products = [
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0216.jpg",
     description: "Latest Ladies Suit"
-},{
+},
+{
     id: 101,
-    name: "Gents Shirt",
+    name: "Men Wear",
     price: 999,
     category: "gents",
-    image: "images/logo/gents-wear/IMG-20260628-WA0001.jpg",
-    description: "Premium Gents Wear"
+    image: "images/logo/men/IMG-20260628-WA0026.jpg",
+    description: "Premium Men Wear"
 },
 {
     id: 102,
-    name: "Gents Shirt",
-    price: 1099,
+    name: "Men Wear",
+    price: 999,
     category: "gents",
-    image: "images/logo/gents-wear/IMG-20260628-WA0002.jpg",
-    description: "Premium Gents Wear"
+    image: "images/logo/men/IMG-20260628-WA0027.jpg",
+    description: "Premium Men Wear"
 },
 {
     id: 103,
-    name: "Gents Shirt",
-    price: 1199,
+    name: "Men Wear",
+    price: 999,
     category: "gents",
-    image: "images/logo/gents-wear/IMG-20260628-WA0003.jpg",
-    description: "Premium Gents Wear"
+    image: "images/logo/men/IMG-20260628-WA0028.jpg",
+    description: "Premium Men Wear"
+},
+{
+    id: 104,
+    name: "Men Wear",
+    price: 999,
+    category: "gents",
+    image: "images/logo/men/IMG-20260628-WA0029.jpg",
+    description: "Premium Men Wear"
+},
+{
+    id: 105,
+    name: "Men Wear",
+    price: 999,
+    category: "gents",
+    image: "images/logo/men/IMG-20260628-WA0031.jpg",
+    description: "Premium Men Wear"
+},
+{
+    id: 106,
+    name: "Men Wear",
+    price: 999,
+    category: "gents",
+    image: "images/logo/men/IMG-20260628-WA0032.jpg",
+    description: "Premium Men Wear"
+},
+{
+    id: 107,
+    name: "Men Wear",
+    price: 999,
+    category: "gents",
+    image: "images/logo/men/IMG-20260628-WA0034.jpg",
+    description: "Premium Men Wear"
 },
        
 ];
