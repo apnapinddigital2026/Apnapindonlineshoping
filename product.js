@@ -324,6 +324,86 @@ const products = [
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0114.jpg",
     description: "Latest Ladies Suit"
+},
+{
+    id: 41,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0120.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 42,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0121.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 43,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0122.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 44,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0123.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 45,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0125.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 46,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0126.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 47,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0128.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 48,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0129.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 49,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0130.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 50,
+    name: "Ladies Suit",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0131.jpg",
+    description: "Latest Ladies Suit"
 },   
 ];
 
