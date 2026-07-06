@@ -803,6 +803,29 @@ const products = [
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0216.jpg",
     description: "Latest Ladies Suit"
+},{
+    id: 101,
+    name: "Gents Shirt",
+    price: 999,
+    category: "gents",
+    image: "images/logo/gents-wear/IMG-20260628-WA0001.jpg",
+    description: "Premium Gents Wear"
+},
+{
+    id: 102,
+    name: "Gents Shirt",
+    price: 1099,
+    category: "gents",
+    image: "images/logo/gents-wear/IMG-20260628-WA0002.jpg",
+    description: "Premium Gents Wear"
+},
+{
+    id: 103,
+    name: "Gents Shirt",
+    price: 1199,
+    category: "gents",
+    image: "images/logo/gents-wear/IMG-20260628-WA0003.jpg",
+    description: "Premium Gents Wear"
 },
        
 ];
