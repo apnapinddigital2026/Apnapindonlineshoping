@@ -164,7 +164,8 @@ const products = [
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0057.jpg",
     description: "Latest Ladies Suit"
-},{
+},
+   {
     id: 21,
     name: "Ladies Suit",
     price: 1499,
