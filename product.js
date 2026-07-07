@@ -19,361 +19,411 @@ const products = [
 {
     id: 2,
     code: "LS002",
-    name: "Ladies Suit",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Pink",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 3,
     code: "LS003",
-    name: "Ladies Suit",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Blue",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0030.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 4,
     code: "LS004",
-    name: "Ladies Suit",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Green",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0033.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 5,
     code: "LS005",
-    name: "Ladies Suit",
-    color: "Black",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Cream",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0035.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 6,
     code: "LS006",
-    name: "Ladies Suit",
-    color: "Maroon",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Black",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0036.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 7,
     code: "LS007",
-    name: "Ladies Suit",
-    color: "Mustard",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 8,
-    code: "LS008",
-    name: "Ladies Suit",
-    color: "Cream",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 9,
-    code: "LS009",
-    name: "Ladies Suit",
-    color: "Peach",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 10,
-    code: "LS010",
-    name: "Ladies Suit",
-    color: "Purple",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 11,
-    code: "LS011",
-    name: "Ladies Suit",
-    color: "Purple",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0016.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 12,
-    code: "LS012",
-    name: "Ladies Suit",
-    color: "Red",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0017.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 13,
-    code: "LS013",
-    name: "Ladies Suit",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Yellow",
     size: "Free Size",
     price: 1499,
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0018.jpg",
-    description: "Latest Ladies Suit"
+    image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
-    id: 14,
-    code: "LS014",
-    name: "Ladies Suit",
-    color: "Peach",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0019.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 15,
-    code: "LS015",
-    name: "Ladies Suit",
-    color: "Maroon",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0020.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 16,
-    code: "LS016",
-    name: "Ladies Suit",
-    color: "Navy Blue",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0021.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 17,
-    code: "LS017",
-    name: "Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0022.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 18,
-    code: "LS018",
-    name: "Ladies Suit",
-    color: "Sky Blue",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0023.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 19,
-    code: "LS019",
-    name: "Ladies Suit",
-    color: "Black",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0024.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 20,
-    code: "LS020",
-    name: "Ladies Suit",
-    color: "Wine",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 21,
-    code: "LS021",
-    name: "Ladies Suit",
-    color: "Wine",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0041.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 22,
-    code: "LS022",
-    name: "Ladies Suit",
-    color: "Pink",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0042.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 23,
-    code: "LS023",
-    name: "Ladies Suit",
-    color: "Blue",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0043.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 24,
-    code: "LS024",
-    name: "Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0044.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 25,
-    code: "LS025",
-    name: "Ladies Suit",
-    color: "Black",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0045.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 26,
-    code: "LS026",
-    name: "Ladies Suit",
-    color: "Maroon",
-    size: "Free Size",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0046.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 27,
-    code: "LS027",
-    name: "Ladies Suit",
+    id: 8,
+    code: "LS008",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Purple",
     size: "Free Size",
     price: 1499,
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0047.jpg",
-    description: "Latest Ladies Suit"
+    image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
-    id: 28,
-    code: "LS028",
-    name: "Ladies Suit",
-    color: "Cream",
+    id: 9,
+    code: "LS009",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Maroon",
     size: "Free Size",
     price: 1499,
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0048.jpg",
-    description: "Latest Ladies Suit"
+    image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
-    id: 29,
-    code: "LS029",
-    name: "Ladies Suit",
+    id: 10,
+    code: "LS010",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Wine",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 11,
+    code: "LS011",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Peach",
     size: "Free Size",
     price: 1499,
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0049.jpg",
-    description: "Latest Ladies Suit"
+    image: "images/logo/women-suits/IMG-20260628-WA0041.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
-    id: 30,
-    code: "LS030",
-    name: "Ladies Suit",
+    id: 12,
+    code: "LS012",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Red",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0042.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 13,
+    code: "LS013",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Grey",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0044.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 14,
+    code: "LS014",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Navy Blue",
     size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0050.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
+{
+    id: 15,
+    code: "LS015",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Mustard",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0051.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 16,
+    code: "LS016",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Sky Blue",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0053.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 17,
+    code: "LS017",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Orange",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0054.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 18,
+    code: "LS018",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0055.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 19,
+    code: "LS019",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0056.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 20,
+    code: "LS020",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Chocolate",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0057.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+   
+{
+    id: 21,
+    code: "LS021",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Wine",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0058.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 22,
+    code: "LS022",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0060.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 23,
+    code: "LS023",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0061.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 24,
+    code: "LS024",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0062.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 25,
+    code: "LS025",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0065.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 26,
+    code: "LS026",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0067.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 27,
+    code: "LS027",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Grey",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0068.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 28,
+    code: "LS028",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0069.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 29,
+    code: "LS029",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0070.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
+    id: 30,
+    code: "LS030",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0071.jpg",
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+},
+
+{
     id: 31,
-    name: "Ladies Suit",
+    code: "LS031",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Red",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0072.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 32,
-    name: "Ladies Suit",
+    code: "LS032",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Orange",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0073.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 33,
-    name: "Ladies Suit",
+    code: "LS033",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Sky Blue",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0074.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 34,
-    name: "Ladies Suit",
+    code: "LS034",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "White",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0075.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 35,
-    name: "Ladies Suit",
+    code: "LS035",
+    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0087.jpg",
-    description: "Latest Ladies Suit"
+    description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+   
 {
     id: 36,
     name: "Ladies Suit",
