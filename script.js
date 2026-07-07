@@ -110,3 +110,27 @@ function addToCart(id) {
 
     alert(product.name + " Cart ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਗਿਆ।");
 }
+
+// =============================
+// CART COUNT
+// =============================
+
+function updateCartCount(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let count = document.getElementById("cart-count");
+
+    if(count){
+
+        let total = 0;
+
+        cart.forEach(item=>{
+            total += item.qty;
+        });
+
+        count.innerHTML = "(" + total + ")";
+    }
+}
+
+updateCartCount();
