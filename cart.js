@@ -74,7 +74,7 @@ function saveCart()
 
     if(window.opener && window.opener.updateCartCount){
         window.opener.updateCartCount();
-    }
+}
 
 }
 // WHATSAPP CHECKOUT
