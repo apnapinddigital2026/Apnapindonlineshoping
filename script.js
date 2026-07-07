@@ -134,3 +134,37 @@ function updateCartCount(){
 }
 
 updateCartCount();
+
+function openInquiry(id){
+
+    const product = products.find(p => p.id === id);
+
+    let name = prompt("ਆਪਣਾ ਨਾਮ ਲਿਖੋ / Enter Your Name");
+
+    if(!name) return;
+
+    let mobile = prompt("ਮੋਬਾਈਲ ਨੰਬਰ / Mobile Number");
+
+    if(!mobile) return;
+
+    let msg =
+`🛒 ਨਵੀਂ ਪੁੱਛਗਿੱਛ / New Inquiry
+
+ਨਾਮ / Name : ${name}
+
+ਮੋਬਾਈਲ / Mobile : ${mobile}
+
+ਪ੍ਰੋਡਕਟ / Product : ${product.name}
+
+ਕੋਡ / Code : ${product.code}
+
+ਕੀਮਤ / Price : ₹${product.price}
+
+ਕਿਰਪਾ ਕਰਕੇ ਮੇਰੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।
+
+Please contact me.`;
+
+    window.open(
+        "https://wa.me/919607718703?text="+encodeURIComponent(msg)
+    );
+}
