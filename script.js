@@ -139,11 +139,11 @@ function openInquiry(id){
 
     const product = products.find(p => p.id === id);
 
-    let name = prompt("ਆਪਣਾ ਨਾਮ / Enter Your Name");
+    let customerName = prompt("ਆਪਣਾ ਨਾਮ ਲਿਖੋ");
 
-    if(!name) return;
+    if(!customerName) return;
 
-    let mobile = prompt("ਮੋਬਾਈਲ ਨੰਬਰ / Mobile Number");
+    let mobile = prompt("ਆਪਣਾ ਮੋਬਾਈਲ ਨੰਬਰ ਲਿਖੋ");
 
     if(!mobile) return;
 
@@ -152,11 +152,14 @@ function openInquiry(id){
 
 ━━━━━━━━━━━━━━━━━━
 
-👤 ਗਾਹਕ ਦਾ ਨਾਮ / Customer Name
-${name}
+👤 ਨਾਮ / Name
+${customerName}
 
-📱 ਮੋਬਾਈਲ ਨੰਬਰ / Mobile
+📱 ਮੋਬਾਈਲ / Mobile
 ${mobile}
+
+🌍 ਰਾਜ / State
+Punjab
 
 ━━━━━━━━━━━━━━━━━━
 
@@ -183,13 +186,9 @@ Please send me the details of this product.
 
 🙏 ਧੰਨਵਾਦ / Thank You`;
 
-    const confirmOrder = confirm(
-`ਕੀ ਤੁਸੀਂ ਇਹ ਪੁੱਛਗਿੱਛ ਭੇਜਣੀ ਚਾਹੁੰਦੇ ਹੋ?
+    const ok = confirm("ਕੀ ਤੁਸੀਂ ਇਹ ਪੁੱਛਗਿੱਛ WhatsApp 'ਤੇ ਭੇਜਣੀ ਚਾਹੁੰਦੇ ਹੋ?");
 
-Do you want to send this inquiry?`
-    );
-
-    if(confirmOrder){
+    if(ok){
 
         window.open(
             "https://wa.me/919607718703?text=" + encodeURIComponent(msg),
