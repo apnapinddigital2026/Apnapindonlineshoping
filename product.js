@@ -116,6 +116,116 @@ const products = [
     description: "Latest Ladies Suit"
 },
 {
+    id: 11,
+    code: "LS011",
+    name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0016.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 12,
+    code: "LS012",
+    name: "Ladies Suit",
+    color: "Red",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0017.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 13,
+    code: "LS013",
+    name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0018.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 14,
+    code: "LS014",
+    name: "Ladies Suit",
+    color: "Peach",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0019.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 15,
+    code: "LS015",
+    name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0020.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 16,
+    code: "LS016",
+    name: "Ladies Suit",
+    color: "Navy Blue",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0021.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 17,
+    code: "LS017",
+    name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0022.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 18,
+    code: "LS018",
+    name: "Ladies Suit",
+    color: "Sky Blue",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0023.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 19,
+    code: "LS019",
+    name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0024.jpg",
+    description: "Latest Ladies Suit"
+},
+{
+    id: 20,
+    code: "LS020",
+    name: "Ladies Suit",
+    color: "Wine",
+    size: "Free Size",
+    price: 1499,
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
+    description: "Latest Ladies Suit"
+},
+{
     id: 21,
     name: "Ladies Suit",
     price: 1499,
