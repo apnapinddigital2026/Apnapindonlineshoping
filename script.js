@@ -139,7 +139,7 @@ function openInquiry(id){
 
     const product = products.find(p => p.id === id);
 
-    let name = prompt("ਆਪਣਾ ਨਾਮ ਲਿਖੋ / Enter Your Name");
+    let name = prompt("ਆਪਣਾ ਨਾਮ / Enter Your Name");
 
     if(!name) return;
 
@@ -150,21 +150,52 @@ function openInquiry(id){
     let msg =
 `🛒 ਨਵੀਂ ਪੁੱਛਗਿੱਛ / New Inquiry
 
-ਨਾਮ / Name : ${name}
+━━━━━━━━━━━━━━━━━━
 
-ਮੋਬਾਈਲ / Mobile : ${mobile}
+👤 ਗਾਹਕ ਦਾ ਨਾਮ / Customer Name
+${name}
 
-ਪ੍ਰੋਡਕਟ / Product : ${product.name}
+📱 ਮੋਬਾਈਲ ਨੰਬਰ / Mobile
+${mobile}
 
-ਕੋਡ / Code : ${product.code}
+━━━━━━━━━━━━━━━━━━
 
-ਕੀਮਤ / Price : ₹${product.price}
+🛍️ ਪ੍ਰੋਡਕਟ / Product
+${product.name}
 
-ਕਿਰਪਾ ਕਰਕੇ ਮੇਰੇ ਨਾਲ ਸੰਪਰਕ ਕਰੋ।
+🆔 ਕੋਡ / Code
+${product.code}
 
-Please contact me.`;
+🎨 ਰੰਗ / Colour
+${product.color || "-"}
 
-    window.open(
-        "https://wa.me/919607718703?text="+encodeURIComponent(msg)
+📏 ਸਾਈਜ਼ / Size
+${product.size || "-"}
+
+💰 ਕੀਮਤ / Price
+₹${product.price}
+
+━━━━━━━━━━━━━━━━━━
+
+ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਪ੍ਰੋਡਕਟ ਦੀ ਜਾਣਕਾਰੀ ਭੇਜੋ।
+
+Please send me the details of this product.
+
+🙏 ਧੰਨਵਾਦ / Thank You`;
+
+    const confirmOrder = confirm(
+`ਕੀ ਤੁਸੀਂ ਇਹ ਪੁੱਛਗਿੱਛ ਭੇਜਣੀ ਚਾਹੁੰਦੇ ਹੋ?
+
+Do you want to send this inquiry?`
     );
+
+    if(confirmOrder){
+
+        window.open(
+            "https://wa.me/919607718703?text=" + encodeURIComponent(msg),
+            "_blank"
+        );
+
+    }
+
 }
