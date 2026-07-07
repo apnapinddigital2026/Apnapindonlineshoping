@@ -88,3 +88,7 @@ function checkout(){
     "https://wa.me/919607718703?text=" + encodeURIComponent(msg)
   );
 }
+// Auto Load Cart
+document.addEventListener("DOMContentLoaded", function () {
+    showCart();
+});
