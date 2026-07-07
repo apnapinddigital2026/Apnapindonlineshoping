@@ -9,16 +9,19 @@ const products = [
     id: 1,
     code: "LS001",
     name: "Ladies Suit",
-    price: 1499,
     color: "Wine",
     size: "Free Size",
+    price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
     description: "Latest Ladies Suit"
 },
 {
     id: 2,
+    code: "LS002",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
@@ -26,7 +29,10 @@ const products = [
 },
 {
     id: 3,
+    code: "LS003",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0030.jpg",
@@ -34,7 +40,10 @@ const products = [
 },
 {
     id: 4,
+    code: "LS004",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0033.jpg",
@@ -42,7 +51,10 @@ const products = [
 },
 {
     id: 5,
+    code: "LS005",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0035.jpg",
@@ -50,7 +62,10 @@ const products = [
 },
 {
     id: 6,
+    code: "LS006",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0036.jpg",
@@ -58,7 +73,10 @@ const products = [
 },
 {
     id: 7,
+    code: "LS007",
     name: "Ladies Suit",
+    color: "Mustard",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
@@ -66,7 +84,10 @@ const products = [
 },
 {
     id: 8,
+    code: "LS008",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
@@ -74,7 +95,10 @@ const products = [
 },
 {
     id: 9,
+    code: "LS009",
     name: "Ladies Suit",
+    color: "Peach",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
@@ -82,90 +106,13 @@ const products = [
 },
 {
     id: 10,
+    code: "LS010",
     name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
     price: 1499,
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 11,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0041.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 12,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0042.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 13,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0044.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 14,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0050.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 15,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0051.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 16,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0053.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 17,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0054.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 18,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0055.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 19,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0056.jpg",
-    description: "Latest Ladies Suit"
-},
-{
-    id: 20,
-    name: "Ladies Suit",
-    price: 1499,
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0057.jpg",
     description: "Latest Ladies Suit"
 },
 {
