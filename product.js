@@ -7,8 +7,11 @@ const products = [
 
 {
     id: 1,
+    code: "LS001",
     name: "Ladies Suit",
     price: 1499,
+    color: "Wine",
+    size: "Free Size",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
     description: "Latest Ladies Suit"
