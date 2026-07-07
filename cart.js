@@ -65,11 +65,18 @@ function removeItem(i){
 }
 
 // SAVE CART
-function saveCart(){
-  localStorage.setItem("cart", JSON.stringify(cart));
-  showCart();
-}
+function saveCart()
+{
 
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    showCart();
+
+    if(window.opener && window.opener.updateCartCount){
+        window.opener.updateCartCount();
+    }
+
+}
 // WHATSAPP CHECKOUT
 function checkout(){
 
