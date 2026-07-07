@@ -85,9 +85,14 @@ function checkout(){
   let total = 0;
 
   cart.forEach(item=>{
-    msg += `${item.name} x ${item.qty} = ₹${item.price * item.qty}\n`;
-    total += item.price * item.qty;
-  });
+    msg += `🛍️ ${item.name}
+Code : ${item.code}
+Color : ${item.color}
+Size : ${item.size}
+Qty : ${item.qty}
+Price : ₹${item.price}
+Total : ₹${item.price * item.qty}`;
+});
 
   msg += `\nTotal = ₹${total}`;
 
