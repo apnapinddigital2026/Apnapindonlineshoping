@@ -126,12 +126,12 @@ nav a:hover{
 }
 
 @media(max-width:768px){
-
 .hero-content{
     width:92%;
     padding:12px;
-    background:rgba(255,255,255,0.80);
-    backdrop-filter:none;
+    background:rgba(255,255,255,0.20);
+    backdrop-filter:blur(3px);
+    -webkit-backdrop-filter:blur(3px);
 }
 
 .hero-content h2{
