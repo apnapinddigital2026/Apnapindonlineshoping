@@ -399,13 +399,10 @@ footer p{
    MOBILE RESPONSIVE
 ========================= */
 
-@media (max-width:768px){
-
-    .header{
-        flex-direction:column;
-        text-align:center;
-        padding:15px;
-    }
+.logo img{
+    width:70px;
+    height:70px;
+}
 
     .logo{
         flex-direction:column;
