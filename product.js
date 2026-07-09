@@ -537,288 +537,533 @@ const products = [
    
 {
     id: 36,
+    code: "LS036",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0088.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 37,
+    code: "LS037",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0098.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 38,
+    code: "LS038",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0105.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 39,
+    code: "LS039",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0106.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 40,
+    code: "LS040",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0114.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 41,
+    code: "LS041",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0120.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 42,
+    code: "LS042",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0121.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 43,
+    code: "LS043",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0122.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 44,
+    code: "LS044",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0123.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 45,
+    code: "LS045",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0125.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 46,
+    code: "LS046",
     name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0126.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 47,
+    code: "LS047",
     name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0128.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 48,
+    code: "LS048",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0129.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 49,
+    code: "LS049",
     name: "Ladies Suit",
+    color: "Red",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0130.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 50,
+    code: "LS050",
     name: "Ladies Suit",
+    color: "Orange",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0131.jpg",
     description: "Latest Ladies Suit"
-},
-{
+},{
     id: 51,
+    code: "LS051",
     name: "Ladies Suit",
+    color: "Red",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0132.jpg",
     description: "Latest Ladies Suit"
 },
+   
 {
     id: 52,
+    code: "LS052",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0134.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 53,
+    code: "LS053",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0135.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 54,
+    code: "LS054",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0136.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 55,
+    code: "LS055",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0137.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 56,
+    code: "LS056",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0138.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 57,
+    code: "LS057",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0139.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 58,
+    code: "LS058",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0140.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 59,
+    code: "LS059",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0141.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 60,
+    code: "LS060",
     name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0142.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 61,
+    code: "LS061",
     name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0143.jpg",
     description: "Latest Ladies Suit"
 },
+   
 {
     id: 62,
+    code: "LS062",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0144.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 63,
+    code: "LS063",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0145.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 64,
+    code: "LS064",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0147.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 65,
+    code: "LS065",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0148.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 66,
+    code: "LS066",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0149.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 67,
+    code: "LS067",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0150.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 68,
+    code: "LS068",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0151.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 69,
+    code: "LS069",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0152.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 70,
+    code: "LS070",
     name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0153.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 71,
+    code: "LS071",
     name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0154.jpg",
     description: "Latest Ladies Suit"
