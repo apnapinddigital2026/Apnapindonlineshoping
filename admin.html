@@ -1,1 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Admin Panel</title>
 
+<style>
+
+body{
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+margin:0;
+padding:20px;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+background:#fff;
+padding:25px;
+border-radius:12px;
+box-shadow:0 0 15px rgba(0,0,0,.15);
+}
+
+h1{
+text-align:center;
+color:#6a1b9a;
+}
+
+.card{
+margin-top:20px;
+padding:20px;
+border:1px solid #ddd;
+border-radius:10px;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:8px 0;
+border:1px solid #ccc;
+border-radius:8px;
+}
+
+button{
+background:#6a1b9a;
+color:#fff;
+border:none;
+padding:12px 18px;
+border-radius:8px;
+cursor:pointer;
+margin-top:10px;
+}
+
+button:hover{
+background:#4a148c;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Apna Pind Admin Panel</h1>
+
+<div class="card">
+
+<h2>Add Product</h2>
+
+<input type="text" placeholder="Product Name">
+
+<input type="text" placeholder="Product Code">
+
+<input type="text" placeholder="Category">
+
+<input type="text" placeholder="Colour">
+
+<input type="text" placeholder="Size">
+
+<input type="number" placeholder="Old Price">
+
+<input type="number" placeholder="New Price">
+
+<input type="text" placeholder="Offer">
+
+<input type="text" placeholder="Image Path">
+
+<button>Add Product</button>
+
+</div>
+
+<div class="card">
+
+<h2>Manage Website</h2>
+
+<button>Change Banner</button>
+
+<button>Update Offer</button>
+
+<button>Update Price</button>
+
+<button>Delete Product</button>
+
+<button>Stock Update</button>
+
+</div>
+
+</div>
+
+</body>
+</html>
