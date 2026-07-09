@@ -18,89 +18,127 @@ function addToCart(id){
 
 // SHOW CART (if cart page use)
 function showCart(){
-  let box = document.getElementById("cartBox");
-  if(!box) return;
 
-  box.innerHTML = "";
+    let box = document.getElementById("cartBox");
 
-  let total = 0;
+    if(!box) return;
 
-  cart.forEach((item, index) => {
-    total += item.price * item.qty;
+    box.innerHTML = "";
 
-    box.innerHTML += `
-      <div class="cart-item">
-        <h3>${item.name}</h3>
-        <p>₹${item.price} x ${item.qty}</p>
+    let total = 0;
 
-        <button onclick="increase(${index})">+</button>
-        <button onclick="decrease(${index})">-</button>
-        <button onclick="removeItem(${index})">Remove</button>
-      </div>
-    `;
-  });
+    cart.forEach((item,index)=>{
 
-  box.innerHTML += `<h2>Total: ₹${total}</h2>`;
+        total += item.price * item.quantity;
+
+        box.innerHTML += `
+        <div class="cart-item">
+
+            <h3>${item.name}</h3>
+
+            <p>
+            Code : ${item.code}<br>
+            Colour : ${item.color}<br>
+            Size : ${item.size}<br>
+            ₹${item.price} × ${item.quantity}
+            </p>
+
+            <button onclick="increase(${index})">+</button>
+            <button onclick="decrease(${index})">-</button>
+            <button onclick="removeItem(${index})">Remove</button>
+
+        </div>
+        `;
+
+    });
+
+    box.innerHTML += `<h2>Total : ₹${total}</h2>`;
 }
 
 // INCREASE
 function increase(i){
-  cart[i].qty++;
-  saveCart();
+
+    cart[i].quantity++;
+
+    saveCart();
+
 }
 
 // DECREASE
 function decrease(i){
-  cart[i].qty--;
-  if(cart[i].qty <= 0){
-    cart.splice(i,1);
-  }
-  saveCart();
+
+    cart[i].quantity--;
+
+    if(cart[i].quantity <= 0){
+
+        cart.splice(i,1);
+
+    }
+
+    saveCart();
+
 }
 
-// REMOVE ITEM
+// REMOVE
 function removeItem(i){
-  cart.splice(i,1);
-  saveCart();
+
+    cart.splice(i,1);
+
+    saveCart();
+
 }
 
 // SAVE CART
-function saveCart()
-{
+function saveCart(){
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
     showCart();
 
     if(window.opener && window.opener.updateCartCount){
+
         window.opener.updateCartCount();
-}
+
+    }
 
 }
+
 // WHATSAPP CHECKOUT
 function checkout(){
 
-  let msg = "🛒 Order Details:\n\n";
+    let msg = "🛒 Order Details\n\n";
 
-  let total = 0;
+    let total = 0;
 
-  cart.forEach(item=>{
-    msg += `🛍️ ${item.name}
+    cart.forEach(item=>{
+
+        total += item.price * item.quantity;
+
+        msg += `🛍️ ${item.name}
+
 Code : ${item.code}
 Color : ${item.color}
 Size : ${item.size}
-Qty : ${item.qty}
+Qty : ${item.quantity}
 Price : ₹${item.price}
-Total : ₹${item.price * item.qty}`;
-});
+Total : ₹${item.price * item.quantity}
 
-  msg += `\nTotal = ₹${total}`;
+`;
 
-  window.open(
-    "https://wa.me/919607718703?text=" + encodeURIComponent(msg)
-  );
+    });
+
+    msg += `Grand Total = ₹${total}`;
+
+    window.open(
+        "https://wa.me/919607718703?text=" + encodeURIComponent(msg),
+        "_blank"
+    );
+
 }
+
 // Auto Load Cart
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded",function(){
+
     showCart();
+
 });
