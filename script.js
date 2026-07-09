@@ -31,12 +31,13 @@ function displayProducts(productList){
         🛒 Add to Cart
     </button>
 
-    <a
-        href="https://wa.me/919607718703?text=Hello,%20I%20want%20to%20buy%20${product.name}"
-        target="_blank"
-        class="btn">
-        Buy Now
-    </a>
+   <button
+    class="btn"
+    onclick="openInquiry(${product.id})">
+
+    ਹੁਣੇ ਪੁੱਛਗਿੱਛ ਕਰੋ / Buy Now
+
+</button>>
 
 </div>
 
