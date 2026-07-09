@@ -129,7 +129,9 @@ nav a:hover{
 
 .hero-content{
     width:92%;
-    padding:15px;
+    padding:12px;
+    background:rgba(255,255,255,0.80);
+    backdrop-filter:none;
 }
 
 .hero-content h2{
