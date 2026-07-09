@@ -16,9 +16,17 @@ function displayProducts(productList){
 
         <div class="card">
 
-            <a href="${product.image}" target="_blank">
-    <img src="${product.image}" alt="${product.name}">
-</a>
+            <div class="image-box">
+
+    <a href="${product.image}" target="_blank">
+        <img src="${product.image}" alt="${product.name}">
+    </a>
+
+    <div class="product-code">
+        ${product.code}
+    </div>
+
+</div>
           <div class="card-body">
 
     <h3>${product.name}</h3>
