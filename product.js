@@ -1068,444 +1068,793 @@ const products = [
     image: "images/logo/women-suits/IMG-20260628-WA0154.jpg",
     description: "Latest Ladies Suit"
 },
+   
 {
     id: 72,
+    code: "LS072",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size", 
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0155.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 73,
+    code: "LS073",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0156.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 74,
+    code: "LS074",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0157.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 75,
+    code: "LS075",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0158.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 76,
+    code: "LS076",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0159.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 77,
+    code: "LS077",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0160.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 78,
+    code: "LS078",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0161.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 79,
+    code: "LS079",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0163.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 80,
+    code: "LS080",
     name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0164.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 81,
+    code: "LS081",
     name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0165.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 82,
+    code: "LS082",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0166.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 83,
+    code: "LS083",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0167.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 84,
+    code: "LS084",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0168.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 85,
+    code: "LS085",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0169.jpg",
     description: "Latest Ladies Suit"
 },
+   
 {
     id: 86,
+    code: "LS086",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0178.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 87,
+    code: "LS087",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0180.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 88,
+    code: "LS088",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0181.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 89,
+    code: "LS089",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0182.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 90,
+    code: "LS090",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0183.jpg",
     description: "Latest Ladies Suit"
-},{
+},
+
+{
     id: 91,
+    code: "LS091",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0185.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 92,
+    code: "LS092",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0199.jpg",
     description: "Latest Ladies Suit"
 },
+   
 {
     id: 93,
+    code: "LS093",
     name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0200.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 94,
+    code: "LS094",
     name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0202.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 95,
+    code: "LS095",
     name: "Ladies Suit",
+    color: "Blue",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0210.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 96,
+    code: "LS096",
     name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0211.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 97,
+    code: "LS097",
     name: "Ladies Suit",
+    color: "Maroon",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0213.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 98,
+    code: "LS098",
     name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0214.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 99,
+    code: "LS099",
     name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0215.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 100,
+    code: "LS100",
     name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+
+    oldPrice: 2499,
     price: 1499,
+    offer: "40% OFF",
+
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0216.jpg",
     description: "Latest Ladies Suit"
 },
+
 {
     id: 101,
+    code: "GT001",
     name: "Men Wear",
+    color: "Black",
+    size: "XL",
+
+    oldPrice: 1499,
     price: 999,
+    offer: "33% OFF",
+
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0026.jpg",
     description: "Premium Men Wear"
 },
+   
 {
     id: 102,
+    code: "GT002",
     name: "Men Wear",
+    color: "Black",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0027.jpg",
     description: "Premium Men Wear"
 },
+
 {
     id: 103,
+    code: "GT003",
     name: "Men Wear",
+    color: "Blue",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0028.jpg",
     description: "Premium Men Wear"
 },
+
 {
     id: 104,
+    code: "GT004",
     name: "Men Wear",
+    color: "White",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0029.jpg",
     description: "Premium Men Wear"
 },
+
 {
     id: 105,
+    code: "GT005",
     name: "Men Wear",
+    color: "Grey",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0031.jpg",
     description: "Premium Men Wear"
 },
+
 {
     id: 106,
+    code: "GT006",
     name: "Men Wear",
+    color: "Navy Blue",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0032.jpg",
     description: "Premium Men Wear"
 },
+
 {
     id: 107,
+    code: "GT007",
     name: "Men Wear",
+    color: "Olive",
+    size: "M-XL",
+    oldPrice: 1599,
     price: 999,
+    offer: "38% OFF",
     category: "gents",
     image: "images/logo/men/IMG-20260628-WA0034.jpg",
     description: "Premium Men Wear"
 },
+   
 {
-    id: 108,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0001.jpg",
-    description: "Stylish Women Handbag"
+    id:108,
+    code:"HB001",
+    name:"Women Handbag",
+    color:"Brown",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0001.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 109,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0002.jpg",
-    description: "Stylish Women Handbag"
+    id:109,
+    code:"HB002",
+    name:"Women Handbag",
+    color:"Black",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0002.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 110,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0003.jpg",
-    description: "Stylish Women Handbag"
+    id:110,
+    code:"HB003",
+    name:"Women Handbag",
+    color:"Pink",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0003.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 111,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0004.jpg",
-    description: "Stylish Women Handbag"
+    id:111,
+    code:"HB004",
+    name:"Women Handbag",
+    color:"White",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0004.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 112,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0009.jpg",
-    description: "Stylish Women Handbag"
+    id:112,
+    code:"HB005",
+    name:"Women Handbag",
+    color:"Cream",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0009.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 113,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0010.jpg",
-    description: "Stylish Women Handbag"
+    id:113,
+    code:"HB006",
+    name:"Women Handbag",
+    color:"Blue",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0010.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 114,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0012.jpg",
-    description: "Stylish Women Handbag"
+    id:114,
+    code:"HB007",
+    name:"Women Handbag",
+    color:"Green",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0012.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 115,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0016.jpg",
-    description: "Stylish Women Handbag"
+    id:115,
+    code:"HB008",
+    name:"Women Handbag",
+    color:"Purple",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0016.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 116,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0018.jpg",
-    description: "Stylish Women Handbag"
+    id:116,
+    code:"HB009",
+    name:"Women Handbag",
+    color:"Maroon",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0018.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 117,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0019.jpg",
-    description: "Stylish Women Handbag"
+    id:117,
+    code:"HB010",
+    name:"Women Handbag",
+    color:"Grey",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0019.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 118,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0020.jpg",
-    description: "Stylish Women Handbag"
+    id:118,
+    code:"HB011",
+    name:"Women Handbag",
+    color:"Brown",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0020.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 119,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0022.jpg",
-    description: "Stylish Women Handbag"
+    id:119,
+    code:"HB012",
+    name:"Women Handbag",
+    color:"Black",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0022.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 120,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0023.jpg",
-    description: "Stylish Women Handbag"
+    id:120,
+    code:"HB013",
+    name:"Women Handbag",
+    color:"Pink",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0023.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 121,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0079.jpg",
-    description: "Stylish Women Handbag"
+    id:121,
+    code:"HB014",
+    name:"Women Handbag",
+    color:"White",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0079.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 122,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0083.jpg",
-    description: "Stylish Women Handbag"
+    id:122,
+    code:"HB015",
+    name:"Women Handbag",
+    color:"Cream",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0083.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 123,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0084.jpg",
-    description: "Stylish Women Handbag"
+    id:123,
+    code:"HB016",
+    name:"Women Handbag",
+    color:"Blue",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0084.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 124,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0085.jpg",
-    description: "Stylish Women Handbag"
+    id:124,
+    code:"HB017",
+    name:"Women Handbag",
+    color:"Green",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0085.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 125,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0093.jpg",
-    description: "Stylish Women Handbag"
+    id:125,
+    code:"HB018",
+    name:"Women Handbag",
+    color:"Purple",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0093.jpg",
+    description:"Stylish Women Handbag"
 },
+
 {
-    id: 126,
-    name: "Women Handbag",
-    price: 899,
-    category: "ladies-handbags",
-    image: "images/logo/women-handbags/IMG-20260628-WA0113.jpg",
-    description: "Stylish Women Handbag"
+    id:126,
+    code:"HB019",
+    name:"Women Handbag",
+    color:"Maroon",
+    size:"Standard",
+    oldPrice:1499,
+    price:899,
+    offer:"40% OFF",
+    category:"ladies-handbags",
+    image:"images/logo/women-handbags/IMG-20260628-WA0113.jpg",
+    description:"Stylish Women Handbag"
 },
        
 ];
