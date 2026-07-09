@@ -398,6 +398,7 @@ footer p{
 }/* =========================
    MOBILE RESPONSIVE
 ========================= */
+
 @media (max-width:768px){
 
 .header{  
@@ -406,76 +407,76 @@ footer p{
     padding:15px;  
 }  
 
-    .logo{
-        flex-direction:column;
-    }
+.logo{  
+    flex-direction:column;  
+}  
 
-    .logo img{
-    width:70px;
-    height:70px;
-    }
+.logo img{  
+    width:120px;  
+    height:120px;  
+}  
 
-    nav{
-        justify-content:center;
-        margin-top:15px;
-        gap:12px;
-    }
+nav{  
+    justify-content:center;  
+    margin-top:15px;  
+    gap:12px;  
+}  
 
-    .hero-banner{
-        width:100%;
-        max-height:none;
-        border-radius:10px;
-    }
+.hero-banner{  
+    width:100%;  
+    max-height:none;  
+    border-radius:10px;  
+}  
 
-    .hero-content h2{
-        font-size:26px;
-    }
+.hero-content h2{  
+    font-size:26px;  
+}  
 
-    .hero-content p{
-        font-size:16px;
-    }
+.hero-content p{  
+    font-size:16px;  
+}  
 
-    .search-box{
-        flex-direction:column;
-    }
+.search-box{  
+    flex-direction:column;  
+}  
 
-    #search,
-    #searchBtn{
-        width:100%;
-    }
+#search,  
+#searchBtn{  
+    width:100%;  
+}  
 
-    .category-grid{
-        flex-direction:column;
-        align-items:center;
-    }
+.category-grid{  
+    flex-direction:column;  
+    align-items:center;  
+}  
 
-    .category-grid button{
-        width:90%;
-        max-width:320px;
-    }
+.category-grid button{  
+    width:90%;  
+    max-width:320px;  
+}  
 
-    .grid{
-        grid-template-columns:1fr;
-    }
+.grid{  
+    grid-template-columns:1fr;  
+}  
 
-    .card img{
-        height:250px;
-    }
+.card img{  
+    height:250px;  
+}  
 
-    .whatsapp{
-        right:15px;
-        bottom:15px;
-        font-size:16px;
-        padding:12px 18px;
-    } /* HERO OVERLAY */
+.whatsapp{  
+    right:15px;  
+    bottom:15px;  
+    font-size:16px;  
+    padding:12px 18px;  
+} /* HERO OVERLAY */
 
 .hero{
-    position: relative;
+position: relative;
 }
 
 .hero-banner{
-    width:100%;
-    display:block;
+width:100%;
+display:block; 
 }
 
 .hero-content{
