@@ -31,8 +31,21 @@ function displayProducts(productList){
 
     <h3>${product.name}</h3>
 
-    <p class="price">₹${product.price}</p>
+    <div class="offer-box">
 
+<span class="offer-badge">
+${product.offer}
+</span>
+
+<p class="old-price">
+₹${product.oldPrice}
+</p>
+
+<p class="price">
+₹${product.price}
+</p>
+
+</div>
     <p class="category">${product.category}</p>
 
     <button class="cart-btn" onclick="addToCart(${product.id})">
