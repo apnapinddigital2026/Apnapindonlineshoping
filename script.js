@@ -135,11 +135,11 @@ function updateCartCount(){
         let total = 0;
 
         cart.forEach(item=>{
-            total += item.qty;
-        });
+    total += item.quantity || 1;
+});
 
-        count.innerHTML = "(" + total + ")";
-    }
+count.textContent = "(" + total + ")";
+}
 }
 
 updateCartCount();
