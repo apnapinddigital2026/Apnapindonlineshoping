@@ -191,10 +191,13 @@ Please send me the details of this product.
 
     if(ok){
 
-        window.open(
-            "https://wa.me/919607718703?text=" + encodeURIComponent(msg),
-            "_blank"
-        );
+       const phone = "919607718703";
+
+const whatsappURL =
+    "https://wa.me/" + phone +
+    "?text=" + encodeURIComponent(msg);
+
+window.location.href = whatsappURL;
 
     }
 
