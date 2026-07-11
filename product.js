@@ -59,7 +59,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0033.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0033.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -72,7 +72,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/AG-20260628-WA0035.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0035.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -85,7 +85,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0036.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0036.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -98,7 +98,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0037.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -111,7 +111,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0038.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -124,7 +124,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0039.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -137,7 +137,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0040.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -150,7 +150,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0041.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0041.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -163,7 +163,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0042.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0042.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -176,7 +176,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0043.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0043.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -189,7 +189,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0044.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0044.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -202,7 +202,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0045.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0045.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -215,7 +215,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0046.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0046.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
@@ -228,7 +228,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0047.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0047.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 
@@ -242,7 +242,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0048.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0048.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 
@@ -256,7 +256,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0049.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0049.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 
@@ -270,7 +270,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0050.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0050.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 
