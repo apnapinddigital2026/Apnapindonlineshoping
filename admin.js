@@ -43,3 +43,81 @@ function addProduct() {
 
 location.reload();
 }
+
+// ==============================
+// LOAD PRODUCT TABLE
+// ==============================
+
+function loadProducts() {
+
+    let table = document.getElementById("productTable");
+
+    if (!table) return;
+
+    table.innerHTML = "";
+
+    products.forEach(product => {
+
+        table.innerHTML += `
+
+<tr>
+
+<td>${product.code}</td>
+
+<td>${product.name}</td>
+
+<td>${product.category}</td>
+
+<td>₹${product.price}</td>
+
+<td>${product.offer}</td>
+
+<td>${product.stock}</td>
+
+</tr>
+
+`;
+
+    });
+
+}
+
+// ==============================
+// SEARCH PRODUCT
+// ==============================
+
+function searchProduct() {
+
+    let code = document.getElementById("searchCode").value.trim();
+
+    let product = products.find(p => p.code === code);
+
+    if (!product) {
+
+        alert("Product Not Found");
+
+        return;
+
+    }
+
+    document.getElementById("code").value = product.code;
+
+    document.getElementById("name").value = product.name;
+
+    document.getElementById("category").value = product.category;
+
+    document.getElementById("color").value = product.color;
+
+    document.getElementById("size").value = product.size;
+
+    document.getElementById("oldPrice").value = product.oldPrice;
+
+    document.getElementById("price").value = product.price;
+
+    document.getElementById("offer").value = product.offer;
+
+    document.getElementById("image").value = product.image;
+
+    document.getElementById("description").value = product.description;
+
+}
