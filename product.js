@@ -9,134 +9,6 @@ const products = [
     id: 1,
     code: "LS001",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Pink",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0001.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 2,
-    code: "LS002",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0002.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 3,
-    code: "LS003",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Blue",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0003.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 4,
-    code: "LS004",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Yellow",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0004.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 5,
-    code: "LS005",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "White",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0005.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 6,
-    code: "LS006",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Black",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0006.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 7,
-    code: "LS007",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Purple",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0007.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 8,
-    code: "LS008",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Maroon",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0008.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 1,
-    code: "LS001",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Blue",
     size: "Free Size",
     oldPrice: 2499,
@@ -263,377 +135,137 @@ const products = [
     image: "images/logo/women-suits/MG-20260628-WA0040.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-   
 {
     id: 11,
     code: "LS011",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Pink",
+    color: "Maroon",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0011.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0041.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 12,
     code: "LS012",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Green",
+    color: "Sky Blue",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0012.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0042.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 13,
     code: "LS013",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Blue",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0043.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 14,
     code: "LS014",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Yellow",
+    color: "Green",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0014.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0044.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 15,
     code: "LS015",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "White",
+    color: "Pink",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0015.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0045.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 16,
     code: "LS016",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Black",
+    color: "Bottle Green",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0016.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0046.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 17,
     code: "LS017",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Purple",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0017.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0047.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 18,
     code: "LS018",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Cream",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0018.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0048.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 19,
     code: "LS019",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Maroon",
+    color: "Orange",
     size: "Free Size",
-
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
-
     category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0019.jpg",
+    image: "images/logo/women-suits/MG-20260628-WA0049.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
-
 {
     id: 20,
     code: "LS020",
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Bottle Green",
-    size: "Free Size",
-
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0020.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-   
-{
-    id: 21,
-    code: "LS021",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Pink",
+    color: "Red",
     size: "Free Size",
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "...",
+    image: "images/logo/women-suits/MG-20260628-WA0050.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 
-{
-    id: 22,
-    code: "LS022",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 23,
-    code: "LS023",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Blue",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 24,
-    code: "LS024",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Yellow",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 25,
-    code: "LS025",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "White",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 26,
-    code: "LS026",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Black",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 27,
-    code: "LS027",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Purple",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 28,
-    code: "LS028",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Cream",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 29,
-    code: "LS029",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Maroon",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 30,
-    code: "LS030",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Bottle Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 31,
-    code: "LS031",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Pink",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 32,
-    code: "LS032",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 33,
-    code: "LS033",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Blue",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 34,
-    code: "LS034",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "White",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-
-{
-    id: 35,
-    code: "LS035",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Bottle Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "...",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
-},
-   
 {
     id: 36,
     code: "LS036",
