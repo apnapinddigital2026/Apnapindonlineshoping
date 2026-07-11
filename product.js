@@ -46,7 +46,7 @@ const products = [
     price: 1499,
     offer: "40% OFF",
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0030.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0030.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
