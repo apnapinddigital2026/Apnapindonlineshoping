@@ -7,7 +7,7 @@ const products = [
    
 {
     id: 1,
-    code: "LS036",
+    code: "LS001",
     name: "Ladies Suit",
     color: "Pink",
     size: "Free Size",
