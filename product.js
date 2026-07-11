@@ -226,6 +226,7 @@ const products = [
     image: "images/logo/women-suits/MG-20260628-WA0047.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 18,
     code: "LS018",
@@ -239,6 +240,7 @@ const products = [
     image: "images/logo/women-suits/MG-20260628-WA0048.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 19,
     code: "LS019",
@@ -252,6 +254,7 @@ const products = [
     image: "images/logo/women-suits/MG-20260628-WA0049.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
+
 {
     id: 20,
     code: "LS020",
