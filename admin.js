@@ -4,7 +4,6 @@ let products = JSON.parse(localStorage.getItem("products")) || [];
 // Save Products
 function saveProducts() {
     localStorage.setItem("products", JSON.stringify(products));
-    alert("✅ Product Saved Successfully");
 }
 
 // Add Product
