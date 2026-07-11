@@ -330,3 +330,71 @@ function updateStock() {
     alert("Stock Updated Successfully!");
 
 }
+
+// ==============================
+// CHANGE BANNER
+// ==============================
+
+function changeBanner() {
+
+    let banner = document.getElementById("bannerImage").value;
+
+    localStorage.setItem("bannerImage", banner);
+
+    alert("Banner Updated Successfully!");
+
+}
+
+// ==============================
+// REFRESH PRODUCT LIST
+// ==============================
+
+function refreshProducts() {
+
+    products = JSON.parse(localStorage.getItem("products")) || [];
+
+    loadProducts();
+
+}
+
+// ==============================
+// EXPORT PRODUCTS
+// ==============================
+
+function exportProducts() {
+
+    const data = JSON.stringify(products, null, 2);
+
+    const blob = new Blob([data], { type: "application/json" });
+
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+
+    a.href = url;
+
+    a.download = "products.json";
+
+    a.click();
+
+}
+
+// ==============================
+// IMPORT PRODUCTS
+// ==============================
+
+function importProducts() {
+
+    alert("Import Feature Coming Soon");
+
+}
+
+// ==============================
+// PAGE LOAD
+// ==============================
+
+window.onload = function () {
+
+    loadProducts();
+
+};
