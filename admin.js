@@ -183,3 +183,64 @@ function deleteProduct() {
     alert("Product Deleted Successfully!");
 
 }
+// ==============================
+// UPDATE PRODUCT
+// ==============================
+
+function updateProduct() {
+
+    let code = document.getElementById("code").value;
+
+    let product = products.find(p => p.code === code);
+
+    if (!product) {
+
+        alert("Product Not Found");
+
+        return;
+
+    }
+
+    product.name = document.getElementById("name").value;
+
+    product.category = document.getElementById("category").value;
+
+    product.color = document.getElementById("color").value;
+
+    product.size = document.getElementById("size").value;
+
+    product.oldPrice = Number(document.getElementById("oldPrice").value);
+
+    product.price = Number(document.getElementById("price").value);
+
+    product.offer = document.getElementById("offer").value;
+
+    product.image = document.getElementById("image").value;
+
+    product.description = document.getElementById("description").value;
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("Product Updated Successfully!");
+
+}
+
+// ==============================
+// DELETE PRODUCT
+// ==============================
+
+function deleteProduct() {
+
+    let code = document.getElementById("code").value;
+
+    products = products.filter(p => p.code !== code);
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("Product Deleted Successfully!");
+
+}
