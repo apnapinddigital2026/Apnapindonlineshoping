@@ -244,3 +244,89 @@ function deleteProduct() {
     alert("Product Deleted Successfully!");
 
 }
+
+// ==============================
+// UPDATE PRICE
+// ==============================
+
+function updatePrice() {
+
+    let code = document.getElementById("code").value;
+
+    let product = products.find(p => p.code === code);
+
+    if (!product) {
+
+        alert("Product Not Found");
+
+        return;
+
+    }
+
+    product.oldPrice = Number(document.getElementById("oldPrice").value);
+
+    product.price = Number(document.getElementById("price").value);
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("Price Updated Successfully!");
+
+}
+
+// ==============================
+// UPDATE OFFER
+// ==============================
+
+function updateOffer() {
+
+    let code = document.getElementById("code").value;
+
+    let product = products.find(p => p.code === code);
+
+    if (!product) {
+
+        alert("Product Not Found");
+
+        return;
+
+    }
+
+    product.offer = document.getElementById("offer").value;
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("Offer Updated Successfully!");
+
+}
+
+// ==============================
+// UPDATE STOCK
+// ==============================
+
+function updateStock() {
+
+    let code = document.getElementById("code").value;
+
+    let product = products.find(p => p.code === code);
+
+    if (!product) {
+
+        alert("Product Not Found");
+
+        return;
+
+    }
+
+    product.stock = document.getElementById("stock").value;
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("Stock Updated Successfully!");
+
+}
