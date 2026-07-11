@@ -39,4 +39,7 @@ function addProduct() {
 
     saveProducts();
 
+    alert("Product Added Successfully!");
+
+location.reload();
 }
