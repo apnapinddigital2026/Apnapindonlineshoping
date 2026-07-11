@@ -27,11 +27,13 @@ const products = [
     name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
     color: "Pink",
     size: "Free Size",
+   
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
+   
     category: "ladies",
-    image: "images/logo/women-suits/MG-20260628-WA0025.jpg",
+    image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
     description: "ਲੇਡੀਜ਼ ਸੂਟ"
 },
 {
