@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Panel</title>
+
+<title>Apna Pind Admin Panel</title>
 
 <style>
 
@@ -35,12 +37,14 @@ border:1px solid #ddd;
 border-radius:10px;
 }
 
-input{
+input,textarea{
 width:100%;
 padding:12px;
 margin:8px 0;
 border:1px solid #ccc;
 border-radius:8px;
+font-size:15px;
+box-sizing:border-box;
 }
 
 button{
@@ -51,6 +55,7 @@ padding:12px 18px;
 border-radius:8px;
 cursor:pointer;
 margin-top:10px;
+margin-right:8px;
 }
 
 button:hover{
@@ -65,31 +70,33 @@ background:#4a148c;
 
 <div class="container">
 
-<h1>Apna Pind Admin Panel</h1>
+<h1>🛒 Apna Pind Admin Panel</h1>
 
 <div class="card">
 
 <h2>Add Product</h2>
 
-<input type="text" placeholder="Product Name">
+<input id="name" type="text" placeholder="Product Name">
 
-<input type="text" placeholder="Product Code">
+<input id="code" type="text" placeholder="Product Code">
 
-<input type="text" placeholder="Category">
+<input id="category" type="text" placeholder="Category">
 
-<input type="text" placeholder="Colour">
+<input id="color" type="text" placeholder="Colour">
 
-<input type="text" placeholder="Size">
+<input id="size" type="text" placeholder="Size">
 
-<input type="number" placeholder="Old Price">
+<input id="oldPrice" type="number" placeholder="Old Price">
 
-<input type="number" placeholder="New Price">
+<input id="price" type="number" placeholder="New Price">
 
-<input type="text" placeholder="Offer">
+<input id="offer" type="text" placeholder="Offer">
 
-<input type="text" placeholder="Image Path">
+<input id="image" type="text" placeholder="Image Path">
 
-<button>Add Product</button>
+<textarea id="description" placeholder="Description"></textarea>
+
+<button onclick="addProduct()">➕ Add Product</button>
 
 </div>
 
@@ -97,27 +104,35 @@ background:#4a148c;
 
 <h2>Manage Website</h2>
 
-<button>Change Banner</button>
+<button>🖼 Change Banner</button>
 
-<button>Update Offer</button>
+<button>🏷 Update Offer</button>
 
-<button>Update Price</button>
+<button>💰 Update Price</button>
 
-<button>Delete Product</button>
+<button>🗑 Delete Product</button>
 
-<button>Stock Update</button>
+<button>📦 Stock Update</button>
+
+</div>
 
 </div>
 
 <script>
+
 const password = prompt("Enter Admin Password");
 
 if(password !== "ApnaPind@2026"){
-    alert("Wrong Password!");
-    window.location.href = "index.html";
+
+alert("Wrong Password!");
+
+window.location.href="index.html";
+
 }
+
 </script>
+
+<script src="admin.js"></script>
 
 </body>
 </html>
-
