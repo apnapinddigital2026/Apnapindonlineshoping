@@ -4,20 +4,23 @@
 ========================================== */
 
 const products = [
-
+   
 {
     id: 1,
-    code: "LS001",
-    name: "ਲੇਡੀਜ਼ ਸੂਟ / Ladies Suit",
-    color: "Blue",
+    code: "LS036",
+    name: "Ladies Suit",
+    color: "Pink",
     size: "Free Size",
+
     oldPrice: 2499,
     price: 1499,
     offer: "40% OFF",
+
     category: "ladies",
-    image: "images/logo/women-suits/AG-20260628-WA0013.jpg",
-    description: "ਲੇਡੀਜ਼ ਸੂਟ"
+    image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
+    description: "Latest Ladies Suit"
 },
+   
 {
     id: 2,
     code: "LS002",
