@@ -288,3 +288,33 @@ placeholder="Banner Image Path">
 </button>
 
 </div>  
+
+ <script src="product.js"></script>
+
+<script src="admin.js"></script>
+
+<script>
+
+const password = prompt("Enter Admin Password");
+
+if(password !== "ApnaPind@2026"){
+
+alert("Wrong Password!");
+
+window.location.href = "index.html";
+
+}
+
+if(typeof loadProducts === "function"){
+
+loadProducts();
+
+}
+
+</script>
+
+</div>
+
+</body>
+
+</html> 
