@@ -1790,13 +1790,13 @@ let products = [
     image:"images/logo/women-handbags/IMG-20260628-WA0113.jpg",
     description:"Stylish Women Handbag"
 },
-const savedProducts = localStorage.getItem("products");
+
+];
+
+ const savedProducts = localStorage.getItem("products");
 
 if (savedProducts) {
     products = JSON.parse(savedProducts);
 } else {
     localStorage.setItem("products", JSON.stringify(products));
-}       
-];
-
-   
+}  
