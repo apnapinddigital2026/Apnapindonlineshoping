@@ -504,3 +504,65 @@ function updateProduct(){
 
     alert("✅ Product Loaded. ਹੁਣ ਜਾਣਕਾਰੀ ਬਦਲੋ ਅਤੇ Save Update ਦਬਾਓ।");
 }
+
+// ==============================
+// SAVE UPDATED PRODUCT
+// ==============================
+
+function saveUpdatedProduct(){
+
+    if(editingProductId === null){
+
+        alert("ਪਹਿਲਾਂ Product Search ਕਰੋ।");
+
+        return;
+
+    }
+
+    const index = products.findIndex(item => item.id === editingProductId);
+
+    if(index === -1){
+
+        alert("Product ਨਹੀਂ ਮਿਲਿਆ।");
+
+        return;
+
+    }
+
+    products[index] = {
+
+        id: editingProductId,
+
+        code: document.getElementById("code").value,
+
+        name: document.getElementById("name").value,
+
+        category: document.getElementById("category").value,
+
+        color: document.getElementById("color").value,
+
+        size: document.getElementById("size").value,
+
+        oldPrice: Number(document.getElementById("oldPrice").value),
+
+        price: Number(document.getElementById("price").value),
+
+        offer: document.getElementById("offer").value,
+
+        image: document.getElementById("image").value,
+
+        description: document.getElementById("description").value,
+
+        stock: document.getElementById("stock").value
+
+    };
+
+    saveProducts();
+
+    loadProducts();
+
+    editingProductId = null;
+
+    alert("✅ Product Successfully Updated!");
+
+}
