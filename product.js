@@ -18,7 +18,7 @@ let products = [
 
     category: "ladies",
     image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
-    description: "Latest Ladies Suit"
+    description: "Latest Ladies Suit",
     
    stock: "In Stock"
 },
