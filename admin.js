@@ -398,3 +398,45 @@ window.onload = function () {
     loadProducts();
 
 };
+
+// ==============================
+// SEARCH PRODUCT
+// ==============================
+
+function searchProduct() {
+
+    const code = document.getElementById("searchCode").value.trim();
+
+    const result = document.getElementById("searchResult");
+
+    const product = products.find(item => item.code === code);
+
+    if (!product) {
+
+        result.innerHTML = `
+        <p style="color:red;font-weight:bold;">
+        ❌ Product Not Found
+        </p>
+        `;
+
+        return;
+    }
+
+    result.innerHTML = `
+    <div style="padding:15px;border:1px solid #ddd;border-radius:10px;margin-top:10px;">
+
+        <h3>${product.name}</h3>
+
+        <p><b>Code:</b> ${product.code}</p>
+
+        <p><b>Category:</b> ${product.category}</p>
+
+        <p><b>Price:</b> ₹${product.price}</p>
+
+        <p><b>Offer:</b> ${product.offer}</p>
+
+        <p><b>Stock:</b> ${product.stock}</p>
+
+    </div>
+    `;
+}
