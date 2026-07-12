@@ -88,6 +88,11 @@ function loadProducts() {
 
 function searchProduct() {
 
+    alert("Search Button Working");
+
+    console.log(products);
+alert(products.length);
+    
     let code = document.getElementById("searchCode").value.trim();
 
     let product = products.find(p => p.code === code);
