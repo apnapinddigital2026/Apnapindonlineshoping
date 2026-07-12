@@ -53,17 +53,29 @@ ${product.offer}
 ${product.stock}
 </p>
 
+${product.stock === "In Stock" ? `
+
 <button class="cart-btn" onclick="addToCart(${product.id})">
 🛒 Add to Cart
 </button>
 
-   <button
-    class="btn"
-    onclick="openInquiry(${product.id})">
+<button class="btn" onclick="openInquiry(${product.id})">
+ਹੁਣੇ ਪੁੱਛਗਿੱਛ ਕਰੋ / Buy Now
+</button>
 
-    ਹੁਣੇ ਪੁੱਛਗਿੱਛ ਕਰੋ / Buy Now
+` : `
 
-</button>>
+<button class="cart-btn" disabled
+style="background:#999;cursor:not-allowed;">
+${product.stock}
+</button>
+
+<button class="btn" disabled
+style="background:#999;cursor:not-allowed;">
+${product.stock}
+</button>
+
+`}
 
 </div>
 
