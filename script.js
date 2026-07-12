@@ -50,10 +50,10 @@ ${product.offer}
 <p class="category">${product.category}</p>
 
 <p class="stock ${product.stock.replace(/\s+/g,'-').toLowerCase()}">
-${product.stock}
+${product.stock || "In Stock"}
 </p>
 
-${product.stock === "In Stock" ? `
+${(product.stock || "In Stock") === "In Stock" ? `
 
 <button class="cart-btn" onclick="addToCart(${product.id})">
 🛒 Add to Cart
