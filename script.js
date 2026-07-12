@@ -49,9 +49,7 @@ ${product.offer}
 
 <p class="category">${product.category}</p>
 
-<p class="stock ${product.stock.replace(/\s+/g,'-').toLowerCase()}">
-${product.stock || "In Stock"}
-</p>
+<p class="stock ${((product.stock || "In Stock").replace(/\s+/g,'-').toLowerCase())}">
 
 ${(product.stock || "In Stock") === "In Stock" ? `
 
