@@ -32,7 +32,7 @@ function addProduct() {
 
         description: document.getElementById("description").value,
 
-        stock: "In Stock"
+       stock: document.getElementById("stock").value
     };
 
     products.push(product);
