@@ -86,16 +86,35 @@ ${product.stock}
 }
 
 displayProducts(products);
-// Search Products
-searchInput.addEventListener("keyup", function () {
+// Fast Search
+let searchTimer;
 
-    const searchValue = this.value.toLowerCase();
+searchInput.addEventListener("input", function () {
 
-    const filteredProducts = products.filter(product =>
-        product.name.toLowerCase().includes(searchValue)
-    );
+    clearTimeout(searchTimer);
 
-    displayProducts(filteredProducts);
+    const value = this.value.toLowerCase().trim();
+
+    searchTimer = setTimeout(() => {
+
+        if (value === "") {
+            displayProducts(products);
+            return;
+        }
+
+        const filteredProducts = products.filter(product =>
+
+            (product.name || "").toLowerCase().includes(value) ||
+
+            (product.code || "").toLowerCase().includes(value) ||
+
+            (product.category || "").toLowerCase().includes(value)
+
+        );
+
+        displayProducts(filteredProducts);
+
+    }, 250);
 
 });
 // Category Filter
