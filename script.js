@@ -46,11 +46,16 @@ ${product.offer}
 </p>
 
 </div>
-    <p class="category">${product.category}</p>
 
-    <button class="cart-btn" onclick="addToCart(${product.id})">
-        🛒 Add to Cart
-    </button>
+<p class="category">${product.category}</p>
+
+<p class="stock ${product.stock.replace(/\s+/g,'-').toLowerCase()}">
+${product.stock}
+</p>
+
+<button class="cart-btn" onclick="addToCart(${product.id})">
+🛒 Add to Cart
+</button>
 
    <button
     class="btn"
