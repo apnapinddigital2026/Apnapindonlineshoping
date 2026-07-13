@@ -17,6 +17,8 @@ function saveProducts(){
 
 }
 
+alert("Admin.js Loaded");
+
 // ==============================
 // LOAD PRODUCT TABLE
 // ==============================
