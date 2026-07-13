@@ -52,3 +52,88 @@ function loadProducts(){
     });
 
 }
+
+// ==============================
+// ADD PRODUCT
+// ==============================
+
+function addProduct(){
+
+    const product = {
+
+        id: Date.now(),
+
+        code: document.getElementById("code").value,
+
+        name: document.getElementById("name").value,
+
+        category: document.getElementById("category").value,
+
+        color: document.getElementById("color").value,
+
+        size: document.getElementById("size").value,
+
+        oldPrice: Number(document.getElementById("oldPrice").value),
+
+        price: Number(document.getElementById("price").value),
+
+        offer: document.getElementById("offer").value,
+
+        image: document.getElementById("image").value,
+
+        description: document.getElementById("description").value,
+
+        stock: document.getElementById("stock").value
+
+    };
+
+    products.push(product);
+
+    saveProducts();
+
+    loadProducts();
+
+    alert("✅ Product Added Successfully");
+
+}
+
+// ==============================
+// SEARCH PRODUCT
+// ==============================
+
+function searchProduct(){
+
+    const code = document.getElementById("searchCode").value.trim();
+
+    const result = document.getElementById("searchResult");
+
+    const product = products.find(item => item.code === code);
+
+    if(!product){
+
+        result.innerHTML =
+        "<p style='color:red;font-weight:bold;'>❌ Product Not Found</p>";
+
+        return;
+
+    }
+
+    result.innerHTML = `
+
+    <div style="padding:15px;border:1px solid #ccc;border-radius:10px;">
+
+        <h3>${product.name}</h3>
+
+        <p><b>Code:</b> ${product.code}</p>
+
+        <p><b>Price:</b> ₹${product.price}</p>
+
+        <p><b>Offer:</b> ${product.offer}</p>
+
+        <p><b>Stock:</b> ${product.stock}</p>
+
+    </div>
+
+    `;
+
+}
