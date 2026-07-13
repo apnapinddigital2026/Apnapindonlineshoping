@@ -235,3 +235,95 @@ function saveUpdatedProduct(){
     alert("✅ Product Updated Successfully");
 
 }
+
+// ==============================
+// DELETE PRODUCT
+// ==============================
+
+function deleteProduct(){
+
+    const code = document.getElementById("searchCode").value.trim();
+
+    const index = products.findIndex(item => item.code === code);
+
+    if(index === -1){
+
+        alert("❌ Product Not Found");
+
+        return;
+
+    }
+
+    if(confirm("ਕੀ ਤੁਸੀਂ ਇਹ Product Delete ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?")){
+
+        products.splice(index,1);
+
+        saveProducts();
+
+        loadProducts();
+
+        document.getElementById("searchResult").innerHTML = "";
+
+        alert("✅ Product Deleted Successfully");
+
+    }
+
+}
+
+// ==============================
+// PLACEHOLDER FUNCTIONS
+// ==============================
+
+function updatePrice(){
+
+    alert("💰 Price Update Feature Coming Soon");
+
+}
+
+function updateOffer(){
+
+    alert("🏷 Offer Update Feature Coming Soon");
+
+}
+
+function updateStock(){
+
+    alert("📦 Stock Updated");
+
+}
+
+function changeBanner(){
+
+    alert("🖼 Banner Change Feature Coming Soon");
+
+}
+
+function refreshProducts(){
+
+    loadProducts();
+
+    alert("🔄 Product List Refreshed");
+
+}
+
+function exportProducts(){
+
+    alert("⬇ Export Feature Coming Soon");
+
+}
+
+function importProducts(){
+
+    alert("⬆ Import Feature Coming Soon");
+
+}
+
+// ==============================
+// PAGE LOAD
+// ==============================
+
+window.onload = function(){
+
+    loadProducts();
+
+};
