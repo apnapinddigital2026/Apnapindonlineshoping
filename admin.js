@@ -3,7 +3,14 @@
    ADMIN.JS
 ========================================== */
 
-let products = JSON.parse(localStorage.getItem("products")) || [];
+let products = [];
+
+if (localStorage.getItem("products")) {
+    products = JSON.parse(localStorage.getItem("products"));
+} else if (typeof window.products !== "undefined") {
+    products = window.products;
+    localStorage.setItem("products", JSON.stringify(products));
+}
 
 let editingProductId = null;
 
