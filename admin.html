@@ -7,189 +7,328 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>APNA PIND DIGITAL ONLINE SHOPPING MALL</title>
+<title>APNA PIND DIGITAL ADMIN PANEL</title>
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+body{
+
+background:#f4f4f4;
+
+}
+
+.admin-container{
+
+max-width:1200px;
+
+margin:20px auto;
+
+background:#fff;
+
+padding:25px;
+
+border-radius:12px;
+
+box-shadow:0 0 15px rgba(0,0,0,.15);
+
+}
+
+.admin-title{
+
+text-align:center;
+
+color:#6a1b9a;
+
+margin-bottom:25px;
+
+font-size:30px;
+
+}
+
+.admin-card{
+
+background:#fafafa;
+
+border:1px solid #ddd;
+
+padding:20px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+}
+
+.admin-card h2{
+
+color:#6a1b9a;
+
+margin-bottom:15px;
+
+}
+
+.admin-card input,
+.admin-card textarea,
+.admin-card select{
+
+width:100%;
+
+padding:12px;
+
+margin:8px 0;
+
+border:1px solid #ccc;
+
+border-radius:8px;
+
+font-size:15px;
+
+}
+
+.admin-card button{
+
+background:#6a1b9a;
+
+color:#fff;
+
+border:none;
+
+padding:12px 18px;
+
+border-radius:8px;
+
+cursor:pointer;
+
+margin-top:10px;
+
+margin-right:8px;
+
+}
+
+.admin-card button:hover{
+
+background:#4a148c;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!-- HEADER -->
-<!-- ========================= -->
+<div class="admin-container">
 
-<header>
+<h1 class="admin-title">
 
-<div class="logo-area">
-
-<img
-src="images/logo/IMG_20260629_002124.png"
-class="logo"
-alt="Logo">
-
-<h1>
-
-APNA PIND DIGITAL
+🛒 APNA PIND DIGITAL ADMIN PANEL
 
 </h1>
 
+ <!-- ========================= -->
+<!-- ADMIN LOGIN -->
+<!-- ========================= -->
+
+<div class="admin-card">
+
+<h2>🔐 Admin Login</h2>
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Admin Password">
+
+<button onclick="adminLogin()">
+
+🔓 Login
+
+</button>
+
 </div>
 
-<nav>
-
-<a href="index.html">Home</a>
-
-<a href="#products">Products</a>
-
-<a href="#offers">Offers</a>
-
-<a href="cart.html">
-
-🛒 Cart
-
-<span id="cart-count">
-
-0
-
-</span>
-
-</a>
-
-<a href="admin.html">
-
-Admin
-
-</a>
-
-</nav>
-
-</header>
-
- <!-- ========================= -->
-<!-- BANNER -->
+<!-- ========================= -->
+<!-- ADD NEW PRODUCT -->
 <!-- ========================= -->
 
-<section class="banner">
+<div class="admin-card" id="admin-panel" style="display:none;">
 
-<img
-id="banner-image"
-src="images/logo/IMG_20260703_001627.png"
-alt="Banner">
+<h2>➕ Add New Product</h2>
 
-</section>
+<input type="text" id="code" placeholder="Product Code">
+
+<input type="text" id="name" placeholder="Product Name">
+
+<input type="text" id="category" placeholder="Category">
+
+<input type="text" id="colour" placeholder="Colour">
+
+<input type="text" id="size" placeholder="Size">
+
+<input type="number" id="oldPrice" placeholder="Old Price">
+
+<input type="number" id="price" placeholder="New Price">
+
+<input type="text" id="offer" placeholder="Offer">
+
+<input type="text" id="image" placeholder="Image Path">
+
+<textarea id="description" placeholder="Description"></textarea>
+
+<select id="stock">
+
+<option>In Stock</option>
+
+<option>Out of Stock</option>
+
+<option>Sold Out</option>
+
+</select>
+
+<button onclick="addProduct()">
+
+➕ Add Product
+
+</button>
+
+<button onclick="updateProduct()">
+
+💾 Save Update
+
+</button>
+
+</div>
 
 <!-- ========================= -->
-<!-- SEARCH -->
+<!-- SEARCH PRODUCT -->
 <!-- ========================= -->
 
-<section class="search-section">
+<div class="admin-card" id="admin-search" style="display:none;">
+
+<h2>🔍 Search Product</h2>
 
 <input
 type="text"
-id="searchBox"
-placeholder="🔍 Search Products..."
-onkeyup="searchProducts()">
+id="searchCode"
+placeholder="Enter Product Code">
 
-</section>
+<button onclick="searchProduct()">
 
-<!-- ========================= -->
-<!-- CATEGORY -->
-<!-- ========================= -->
+🔍 Search Product
 
-<section class="categories">
-
-<button onclick="filterCategory('All')">All</button>
-
-<button onclick="filterCategory('Women Suits')">Women Suits</button>
-
-<button onclick="filterCategory('Women Handbags')">Women Handbags</button>
-
-<button onclick="filterCategory('Men')">Men</button>
-
-<button onclick="filterCategory('Kids')">Kids</button>
-
-<button onclick="filterCategory('Footwear')">Footwear</button>
-
-<button onclick="filterCategory('Cosmetics')">Cosmetics</button>
-
-<button onclick="filterCategory('Electronics')">Electronics</button>
-
-<button onclick="filterCategory('Grocery')">Grocery</button>
-
-<button onclick="filterCategory('Home Kitchen')">Home Kitchen</button>
-
-<button onclick="filterCategory('Stationery')">Stationery</button>
-
-<button onclick="filterCategory('Toys')">Toys</button>
-
-</section>
-
- <!-- ========================= -->
-<!-- LATEST PRODUCTS -->
-<!-- ========================= -->
-
-<section id="products" class="products-section">
-
-<h2>🛍 Latest Products</h2>
-
-<div id="product-container" class="product-grid">
-
-<!-- Products Load from product.js -->
+</button>
 
 </div>
 
-</section>
-
-<!-- ========================= -->
-<!-- TODAY OFFERS -->
+ <!-- ========================= -->
+<!-- PRODUCT MANAGEMENT -->
 <!-- ========================= -->
 
-<section id="offers" class="offers-section">
+<div class="admin-card" id="admin-manage" style="display:none;">
 
-<h2>🔥 Today's Special Offers</h2>
+<h2>⚙ Product Management</h2>
 
-<p>
+<button onclick="deleteProduct()">🗑 Delete Product</button>
 
-Daily New Deals | Best Prices | Fast Delivery
+<button onclick="updatePrice()">💰 Update Price</button>
 
-</p>
+<button onclick="updateOffer()">🏷 Update Offer</button>
 
-</section>
+<button onclick="updateStock()">📦 Stock Update</button>
 
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
-<footer>
-
-<p>
-
-© 2026 APNA PIND DIGITAL ONLINE SHOPPING MALL
-
-</p>
-
-<p>
-
-Village Kala Bana | District Gurdaspur | Punjab
-
-</p>
-
-<p>
-
-Customer Care : +91 8872776620
-
-</p>
-
-</footer>
+</div>
 
 <!-- ========================= -->
-<!-- JAVASCRIPT -->
+<!-- BANNER MANAGEMENT -->
 <!-- ========================= -->
 
-<script src="product.js"></script>
+<div class="admin-card" id="admin-banner" style="display:none;">
 
-<script src="script.js"></script>
+<h2>🖼 Banner Management</h2>
+
+<input
+type="text"
+id="bannerPath"
+placeholder="Banner Image Path">
+
+<button onclick="changeBanner()">
+
+🖼 Change Banner
+
+</button>
+
+</div>
+
+<!-- ========================= -->
+<!-- PRODUCT LIST -->
+<!-- ========================= -->
+
+<div class="admin-card" id="admin-list" style="display:none;">
+
+<h2>📋 Product List</h2>
+
+<table border="1" width="100%" cellspacing="0" cellpadding="8">
+
+<thead>
+
+<tr>
+
+<th>Code</th>
+
+<th>Name</th>
+
+<th>Category</th>
+
+<th>Price</th>
+
+<th>Offer</th>
+
+<th>Stock</th>
+
+</tr>
+
+</thead>
+
+<tbody id="productTable">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- ========================= -->
+<!-- WEBSITE SETTINGS -->
+<!-- ========================= -->
+
+<div class="admin-card" id="admin-settings" style="display:none;">
+
+<h2>📊 Website Settings</h2>
+
+<button onclick="refreshProducts()">
+
+🔄 Refresh Product List
+
+</button>
+
+<button onclick="exportProducts()">
+
+⬇ Export Products
+
+</button>
+
+<button onclick="importProducts()">
+
+⬆ Import Products
+
+</button>
+
+</div>
+
+<script src="admin.js"></script>
+
+</div>
 
 </body>
 
