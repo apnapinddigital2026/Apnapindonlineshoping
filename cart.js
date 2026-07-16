@@ -1,144 +1,152 @@
+// ==========================================
+// APNA PIND DIGITAL ONLINE SHOPPING MALL
+// CART.JS
+// ==========================================
+
+// Load Cart
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// ADD TO CART
-function addToCart(id){
-  let product = products.find(p => p.id === id);
+// ---------------------
+// Save Cart
+// ---------------------
 
-  let exist = cart.find(item => item.id === id);
-
-  if(exist){
-    exist.qty += 1;
-  } else {
-    cart.push({...product, qty:1});
-  }
-
-  localStorage.setItem("cart", JSON.stringify(cart));
-  alert("Product Added to Cart");
-}
-
-// SHOW CART (if cart page use)
-function showCart(){
-
-    let box = document.getElementById("cartBox");
-
-    if(!box) return;
-
-    box.innerHTML = "";
-
-    let total = 0;
-
-    cart.forEach((item,index)=>{
-
-        total += item.price * item.quantity;
-
-        box.innerHTML += `
-        <div class="cart-item">
-
-            <h3>${item.name}</h3>
-
-            <p>
-            Code : ${item.code}<br>
-            Colour : ${item.color}<br>
-            Size : ${item.size}<br>
-            ₹${item.price} × ${item.quantity}
-            </p>
-
-            <button onclick="increase(${index})">+</button>
-            <button onclick="decrease(${index})">-</button>
-            <button onclick="removeItem(${index})">Remove</button>
-
-        </div>
-        `;
-
-    });
-
-    box.innerHTML += `<h2>Total : ₹${total}</h2>`;
-}
-
-// INCREASE
-function increase(i){
-
-    cart[i].quantity++;
-
-    saveCart();
-
-}
-
-// DECREASE
-function decrease(i){
-
-    cart[i].quantity--;
-
-    if(cart[i].quantity <= 0){
-
-        cart.splice(i,1);
-
-    }
-
-    saveCart();
-
-}
-
-// REMOVE
-function removeItem(i){
-
-    cart.splice(i,1);
-
-    saveCart();
-
-}
-
-// SAVE CART
 function saveCart(){
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+localStorage.setItem("cart",JSON.stringify(cart));
 
-    showCart();
-
-    if(window.opener && window.opener.updateCartCount){
-
-        window.opener.updateCartCount();
-
-    }
+loadCart();
 
 }
 
-// WHATSAPP CHECKOUT
-function checkout(){
+// ---------------------
+// Load Cart
+// ---------------------
 
-    let msg = "🛒 Order Details\n\n";
+function loadCart(){
 
-    let total = 0;
+const container=document.getElementById("cart-container");
 
-    cart.forEach(item=>{
+const total=document.getElementById("cart-total");
 
-        total += item.price * item.quantity;
+if(!container) return;
 
-        msg += `🛍️ ${item.name}
+container.innerHTML="";
 
-Code : ${item.code}
-Color : ${item.color}
-Size : ${item.size}
-Qty : ${item.quantity}
-Price : ₹${item.price}
-Total : ₹${item.price * item.quantity}
+let grandTotal=0;
+
+cart.forEach((product,index)=>{
+
+grandTotal+=Number(product.price);
+
+container.innerHTML+=`
+
+<div class="product-card">
+
+<img src="${product.image}" alt="${product.name}">
+
+<h3>${product.name}</h3>
+
+<p>${product.category}</p>
+
+<h4>₹${product.price}</h4>
+
+<button onclick="removeCart(${index})">
+
+🗑 Remove
+
+</button>
+
+</div>
 
 `;
 
-    });
+});
 
-    msg += `Grand Total = ₹${total}`;
+if(total){
 
-    window.open(
-        "https://wa.me/919607718703?text=" + encodeURIComponent(msg),
-        "_blank"
-    );
+total.innerText=grandTotal;
 
 }
 
-// Auto Load Cart
-document.addEventListener("DOMContentLoaded",function(){
+}
 
-    showCart();
+// ---------------------
+// Remove Product
+// ---------------------
+
+function removeCart(index){
+
+cart.splice(index,1);
+
+saveCart();
+
+}
+
+// ---------------------
+// WhatsApp Order
+// ---------------------
+
+function sendWhatsAppOrder(){
+
+const name=document.getElementById("customerName").value.trim();
+
+const phone=document.getElementById("customerPhone").value.trim();
+
+const address=document.getElementById("customerAddress").value.trim();
+
+if(name==="" || phone==="" || address===""){
+
+alert("Please Fill Customer Details");
+
+return;
+
+}
+
+if(cart.length===0){
+
+alert("Cart is Empty");
+
+return;
+
+}
+
+let message="🛒 APNA PIND DIGITAL ORDER\n\n";
+
+message+="👤 Name : "+name+"\n";
+
+message+="📞 Phone : "+phone+"\n";
+
+message+="🏠 Address : "+address+"\n\n";
+
+let total=0;
+
+cart.forEach((p,i)=>{
+
+message+=(i+1)+". "+p.name+" - ₹"+p.price+"\n";
+
+total+=Number(p.price);
+
+});
+
+message+="\n💰 Total : ₹"+total;
+
+// ਤੁਹਾਡਾ WhatsApp ਨੰਬਰ
+const adminNumber="918872776620";
+
+window.open(
+"https://wa.me/"+adminNumber+"?text="+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+// ---------------------
+// Website Start
+// ---------------------
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+loadCart();
 
 });
