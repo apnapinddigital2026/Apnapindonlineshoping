@@ -1,29 +1,40 @@
-/* ===================================
+/* ==========================================
 APNA PIND DIGITAL ONLINE SHOPPING MALL
 STYLE.CSS
-=================================== */
+VERSION 2026
+========================================== */
 
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
+font-family:Arial,sans-serif;
 }
 
 body{
-
-font-family:Arial,sans-serif;
-
-background:#f4f4f4;
-
+background:#f5f5f5;
 color:#222;
-
 }
 
-/* =======================
-HEADER
-======================= */
+a{
+text-decoration:none;
+color:inherit;
+}
 
-.header{
+img{
+display:block;
+max-width:100%;
+}
+
+/* =========================
+HEADER
+========================= */
+
+header{
+
+background:#6a1b9a;
+
+padding:15px 25px;
 
 display:flex;
 
@@ -31,13 +42,9 @@ justify-content:space-between;
 
 align-items:center;
 
-padding:15px 30px;
-
-background:#6a1b9a;
-
-color:#fff;
-
 flex-wrap:wrap;
+
+color:white;
 
 }
 
@@ -51,7 +58,7 @@ gap:15px;
 
 }
 
-.logo-area img{
+.logo{
 
 width:70px;
 
@@ -59,9 +66,11 @@ height:70px;
 
 border-radius:50%;
 
-background:#fff;
+background:white;
 
-padding:5px;
+padding:4px;
+
+object-fit:cover;
 
 }
 
@@ -69,109 +78,49 @@ padding:5px;
 
 font-size:28px;
 
-}
-
-.logo-area p{
-
-font-size:14px;
-
-letter-spacing:2px;
+font-weight:bold;
 
 }
 
-/* =======================
-MENU
-======================= */
-
-.header ul{
+nav{
 
 display:flex;
 
-list-style:none;
+gap:18px;
 
-gap:20px;
+flex-wrap:wrap;
 
 }
 
-.header a{
+nav a{
 
-color:white;
+padding:10px 15px;
 
-text-decoration:none;
+border-radius:8px;
+
+transition:.3s;
 
 font-weight:bold;
 
 }
 
-.header a:hover{
+nav a:hover{
 
-color:#ffeb3b;
-
-}
-
-/* =======================
-SEARCH
-======================= */
-
-.search-section{
-
-padding:20px;
-
-text-align:center;
-
-background:white;
+background:#ffffff22;
 
 }
 
-.search-section input{
-
-width:60%;
-
-padding:12px;
-
-border:1px solid #ccc;
-
-border-radius:6px;
-
-font-size:16px;
-
-}
-
-.search-section button{
-
-padding:12px 20px;
-
-background:#6a1b9a;
-
-color:white;
-
-border:none;
-
-border-radius:6px;
-
-cursor:pointer;
-
-margin-left:10px;
-
-}
-
-.search-section button:hover{
-
-background:#4a148c;
-
-}
-
-/* =======================
-BANNER SECTION
-======================= */
+/* =========================
+BANNER
+========================= */
 
 .banner{
 
 width:100%;
 
-overflow:hidden;
-
 background:white;
+
+padding:10px;
 
 }
 
@@ -179,206 +128,81 @@ background:white;
 
 width:100%;
 
-height:350px;
+height:420px;
 
 object-fit:cover;
-
-display:block;
-
-}
-
-
-/* =======================
-CATEGORY SECTION
-======================= */
-
-.categories{
-
-padding:30px;
-
-background:#fff;
-
-text-align:center;
-
-}
-
-.categories h2{
-
-color:#6a1b9a;
-
-margin-bottom:20px;
-
-font-size:28px;
-
-}
-
-
-.category-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
-
-gap:20px;
-
-}
-
-
-.category-card{
-
-background:#f8f8f8;
 
 border-radius:12px;
 
-padding:15px;
-
-box-shadow:0 3px 10px rgba(0,0,0,0.1);
-
-cursor:pointer;
-
-transition:0.3s;
-
 }
 
+/* =========================
+SEARCH
+========================= */
 
-.category-card:hover{
+.search-section{
 
-transform:translateY(-5px);
-
-background:#f3e5f5;
-
-}
-
-
-.category-card img{
-
-width:100px;
-
-height:100px;
-
-object-fit:cover;
-
-border-radius:50%;
-
-}
-
-
-.category-card h3{
-
-margin-top:10px;
-
-color:#4a148c;
-
-}
-
-
-/* =======================
-PRODUCT SECTION
-======================= */
-
-.products-section{
-
-padding:30px;
-
-}
-
-
-.products-section h2{
-
-text-align:center;
-
-color:#6a1b9a;
-
-margin-bottom:25px;
-
-}
-
-
-.product-container{
-
-display:grid;
-
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-
-gap:25px;
-
-}
-
-
-.product-card{
+padding:20px;
 
 background:white;
 
-padding:15px;
-
-border-radius:12px;
-
-box-shadow:0 3px 12px rgba(0,0,0,0.15);
-
 text-align:center;
 
-transition:0.3s;
-
 }
 
+.search-section input{
 
-.product-card:hover{
+width:70%;
 
-transform:scale(1.03);
+max-width:700px;
 
-}
+padding:14px;
 
+font-size:16px;
 
-.product-card img{
-
-width:100%;
-
-height:220px;
-
-object-fit:cover;
+border:2px solid #6a1b9a;
 
 border-radius:10px;
 
-}
-
-
-.product-card h3{
-
-margin:12px 0;
-
-color:#333;
+outline:none;
 
 }
 
+.search-section input:focus{
 
-.product-card h4{
-
-font-size:22px;
-
-color:#6a1b9a;
+border-color:#ff9800;
 
 }
 
+/* =========================
+CATEGORY SECTION
+========================= */
 
-.product-card del{
+.categories{
 
-color:red;
+display:flex;
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:12px;
+
+padding:25px;
+
+background:#fafafa;
 
 }
 
-/* =======================
-BUTTONS
-======================= */
+.categories button{
 
-.btn{
+background:#6a1b9a;
 
-display:inline-block;
-
-padding:10px 16px;
-
-margin:6px;
+color:white;
 
 border:none;
+
+padding:12px 18px;
 
 border-radius:8px;
 
@@ -392,85 +216,195 @@ transition:.3s;
 
 }
 
-.btn-cart{
+.categories button:hover{
 
 background:#ff9800;
 
-color:#fff;
+transform:translateY(-2px);
 
 }
 
-.btn-cart:hover{
+/* =========================
+PRODUCT SECTION
+========================= */
 
-background:#ef6c00;
+.products-section{
 
-}
-
-.btn-buy{
-
-background:#4caf50;
-
-color:#fff;
+padding:30px;
 
 }
 
-.btn-buy:hover{
-
-background:#2e7d32;
-
-}
-
-.btn-admin{
-
-background:#6a1b9a;
-
-color:#fff;
-
-}
-
-.btn-admin:hover{
-
-background:#4a148c;
-
-}
-
-/* =======================
-FOOTER
-======================= */
-
-footer{
-
-margin-top:40px;
-
-background:#6a1b9a;
-
-color:white;
-
-padding:25px;
+.products-section h2{
 
 text-align:center;
 
+font-size:30px;
+
+color:#6a1b9a;
+
+margin-bottom:25px;
+
 }
 
-footer h3{
+.product-grid{
 
-margin-bottom:10px;
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr
+
+ /* =========================
+BUTTONS
+========================= */
+
+.product-card button{
+
+margin:6px;
+
+padding:10px 14px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:14px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.product-card button:hover{
+
+transform:scale(1.05);
+
+}
+
+.product-card button:nth-child(1){
+
+background:#2196F3;
+
+color:#fff;
+
+}
+
+.product-card button:nth-child(2){
+
+background:#FF9800;
+
+color:#fff;
+
+}
+
+.product-card button:nth-child(3){
+
+background:#25D366;
+
+color:#fff;
+
+}
+
+/* =========================
+OFFER BADGE
+========================= */
+
+.offer-badge{
+
+display:inline-block;
+
+background:#f44336;
+
+color:#fff;
+
+padding:5px 10px;
+
+border-radius:6px;
+
+font-size:13px;
+
+font-weight:bold;
+
+margin:8px 0;
+
+}
+
+/* =========================
+STOCK BADGE
+========================= */
+
+.stock-badge{
+
+display:inline-block;
+
+padding:5px 10px;
+
+border-radius:6px;
+
+font-size:13px;
+
+font-weight:bold;
+
+margin-top:8px;
+
+}
+
+.in-stock{
+
+background:#4CAF50;
+
+color:#fff;
+
+}
+
+.out-stock{
+
+background:#FF9800;
+
+color:#fff;
+
+}
+
+.sold-out{
+
+background:#F44336;
+
+color:#fff;
+
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+
+background:#6a1b9a;
+
+color:#fff;
+
+text-align:center;
+
+padding:25px;
+
+margin-top:40px;
 
 }
 
 footer p{
 
-margin:6px 0;
+margin:8px 0;
 
 }
 
-/* =======================
-RESPONSIVE
-======================= */
+/* =========================
+MOBILE RESPONSIVE
+========================= */
 
 @media(max-width:768px){
 
-.header{
+header{
 
 flex-direction:column;
 
@@ -478,9 +412,9 @@ text-align:center;
 
 }
 
-.header ul{
+nav{
 
-flex-direction:column;
+justify-content:center;
 
 margin-top:15px;
 
@@ -488,17 +422,7 @@ margin-top:15px;
 
 .search-section input{
 
-width:100%;
-
-margin-bottom:10px;
-
-}
-
-.search-section button{
-
-width:100%;
-
-margin-left:0;
+width:95%;
 
 }
 
@@ -508,9 +432,9 @@ height:220px;
 
 }
 
-.logo-area{
+.product-card img{
 
-flex-direction:column;
+height:180px;
 
 }
 
@@ -520,175 +444,4 @@ font-size:22px;
 
 }
 
-.categories{
-
-padding:20px;
-
-}
-
-.products-section{
-
-padding:20px;
-
-}
-
-}
-
-@media(max-width:480px){
-
-.product-card img{
-
-height:180px;
-
-}
-
-.product-card h3{
-
-font-size:16px;
-
-}
-
-.product-card h4{
-
-font-size:18px;
-
-}
-
-.category-card img{
-
-width:80px;
-
-height:80px;
-
-}
-
-}
-
-/* ===========================
-BADGES
-=========================== */
-
-.offer-badge{
-display:inline-block;
-background:red;
-color:#fff;
-padding:4px 8px;
-border-radius:5px;
-font-size:13px;
-font-weight:bold;
-margin-bottom:8px;
-}
-
-.stock-badge{
-display:inline-block;
-padding:4px 8px;
-border-radius:5px;
-font-size:13px;
-font-weight:bold;
-margin-top:8px;
-}
-
-.in-stock{
-background:#4caf50;
-color:white;
-}
-
-.out-stock{
-background:#ff9800;
-color:white;
-}
-
-.sold-out{
-background:#f44336;
-color:white;
-}
-
-/* ===========================
-WHATSAPP BUTTON
-=========================== */
-
-.whatsapp-btn{
-display:inline-block;
-background:#25D366;
-color:white;
-padding:10px 18px;
-border-radius:8px;
-text-decoration:none;
-font-weight:bold;
-margin-top:10px;
-transition:.3s;
-}
-
-.whatsapp-btn:hover{
-background:#128C7E;
-}
-
-/* ===========================
-CART ICON
-=========================== */
-
-.cart-link{
-position:relative;
-}
-
-#cart-count{
-background:red;
-color:white;
-border-radius:50%;
-padding:2px 7px;
-font-size:12px;
-margin-left:5px;
-}
-
-/* ===========================
-LOADING
-=========================== */
-
-.loader{
-
-display:none;
-
-width:60px;
-
-height:60px;
-
-border:6px solid #ddd;
-
-border-top:6px solid #6a1b9a;
-
-border-radius:50%;
-
-animation:spin 1s linear infinite;
-
-margin:auto;
-
-}
-
-@keyframes spin{
-
-0%{transform:rotate(0deg);}
-
-100%{transform:rotate(360deg);}
-
-}
-
-/* ===========================
-SCROLL BAR
-=========================== */
-
-::-webkit-scrollbar{
-width:8px;
-}
-
-::-webkit-scrollbar-thumb{
-background:#6a1b9a;
-border-radius:10px;
-}
-
-::-webkit-scrollbar-track{
-background:#eee;
-}
-
-/* ===========================
-END OF STYLE.CSS
-=========================== */
+} 
