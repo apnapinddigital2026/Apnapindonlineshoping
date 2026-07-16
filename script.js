@@ -81,3 +81,139 @@ function loadProducts() {
     });
 
 }
+
+/* ==========================
+   CREATE PRODUCT CARD
+========================== */
+
+function createProductCard(product) {
+
+    let stockClass = "stock-green";
+
+    if (product.stock === "Sold Out") {
+        stockClass = "stock-red";
+    } else if (product.stock === "Out of Stock") {
+        stockClass = "stock-orange";
+    }
+
+    return `
+
+    <div class="product-card">
+
+        <img src="${product.image}" alt="${product.name}">
+
+        <h3>${product.name}</h3>
+
+        <p><b>Code:</b> ${product.code}</p>
+
+        <p>${product.offer}</p>
+
+        <p>
+
+            <del>₹${product.oldPrice}</del>
+
+            <br>
+
+            <span class="price">₹${product.price}</span>
+
+        </p>
+
+        <p class="${stockClass}">
+            ${product.stock || "In Stock"}
+        </p>
+
+        <button onclick="addToCart('${product.code}')">
+            🛒 Add To Cart
+        </button>
+
+        <button onclick="buyNow('${product.code}')">
+            ⚡ Buy Now
+        </button>
+
+    </div>
+
+    `;
+
+}
+
+/* ==========================
+PRODUCT CARD
+========================== */
+
+.product-card{
+
+background:#fff;
+
+border-radius:12px;
+
+padding:15px;
+
+box-shadow:0 3px 12px rgba(0,0,0,.15);
+
+text-align:center;
+
+transition:.3s;
+
+}
+
+.product-card:hover{
+
+transform:translateY(-5px);
+
+}
+
+.product-card img{
+
+width:100%;
+
+height:250px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+.product-card h3{
+
+margin:10px 0;
+
+font-size:18px;
+
+}
+
+.price{
+
+font-size:22px;
+
+font-weight:bold;
+
+color:#6a1b9a;
+
+}
+
+.product-card button{
+
+width:100%;
+
+margin-top:8px;
+
+padding:10px;
+
+border:none;
+
+border-radius:8px;
+
+background:#6a1b9a;
+
+color:white;
+
+cursor:pointer;
+
+}
+
+.product-card button:hover{
+
+background:#4a148c;
+
+}
