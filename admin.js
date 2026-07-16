@@ -307,3 +307,88 @@ function updatePrice() {
     alert("💰 Price Updated Successfully");
 
 }
+
+/* ==========================
+   UPDATE OFFER
+========================== */
+
+function updateOffer() {
+
+    if (editingProductId === null) {
+        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+        return;
+    }
+
+    const index = products.findIndex(p => p.id === editingProductId);
+
+    if (index === -1) {
+        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
+        return;
+    }
+
+    products[index].offer = document.getElementById("offer").value.trim();
+
+    saveProducts();
+    loadProducts();
+
+    alert("🏷 Offer Updated Successfully");
+
+}
+
+/* ==========================
+   UPDATE STOCK
+========================== */
+
+function updateStock() {
+
+    if (editingProductId === null) {
+        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+        return;
+    }
+
+    const index = products.findIndex(p => p.id === editingProductId);
+
+    if (index === -1) {
+        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
+        return;
+    }
+
+    products[index].stock = document.getElementById("stock").value;
+
+    saveProducts();
+    loadProducts();
+
+    alert("📦 Stock Updated Successfully");
+
+}
+
+/* ==========================
+   CHANGE BANNER
+========================== */
+
+function changeBanner() {
+
+    const banner = document.getElementById("bannerImage").value.trim();
+
+    if (banner === "") {
+        alert("Banner Image Path ਲਿਖੋ");
+        return;
+    }
+
+    localStorage.setItem("bannerImage", banner);
+
+    alert("🖼 Banner Updated Successfully");
+
+}
+
+/* ==========================
+   REFRESH PRODUCT LIST
+========================== */
+
+function refreshProducts() {
+
+    loadProducts();
+
+    alert("🔄 Product List Refreshed");
+
+}
