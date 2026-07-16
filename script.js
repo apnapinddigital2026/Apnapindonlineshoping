@@ -287,6 +287,5 @@ function updateCartCount(){
     });
 
     counter.innerHTML=total;
-
 }
 
