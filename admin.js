@@ -123,3 +123,65 @@ function searchProduct() {
     alert("✅ Product Loaded Successfully");
 
 }
+
+/* ==========================
+   ADD PRODUCT
+========================== */
+
+function addProduct() {
+
+    const product = {
+
+        id: Date.now(),
+
+        code: document.getElementById("code").value.trim(),
+
+        name: document.getElementById("name").value.trim(),
+
+        category: document.getElementById("category").value.trim(),
+
+        color: document.getElementById("color").value.trim(),
+
+        size: document.getElementById("size").value.trim(),
+
+        oldPrice: Number(document.getElementById("oldPrice").value),
+
+        price: Number(document.getElementById("price").value),
+
+        offer: document.getElementById("offer").value.trim(),
+
+        image: document.getElementById("image").value.trim(),
+
+        description: document.getElementById("description").value.trim(),
+
+        stock: document.getElementById("stock").value
+
+    };
+
+    if(product.code==="" || product.name===""){
+
+        alert("Please Enter Product Code & Product Name");
+
+        return;
+
+    }
+
+    if(products.find(p=>p.code===product.code)){
+
+        alert("Product Code Already Exists");
+
+        return;
+
+    }
+
+    products.push(product);
+
+    saveProducts();
+
+    loadProducts();
+
+    clearForm();
+
+    alert("✅ Product Added Successfully");
+
+}
