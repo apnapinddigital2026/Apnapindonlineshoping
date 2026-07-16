@@ -1,33 +1,22 @@
 // ==========================================
 // APNA PIND DIGITAL ONLINE SHOPPING MALL
 // SCRIPT.JS
+// Version 2026
 // ==========================================
 
-// Products from product.js
-let allProducts = JSON.parse(localStorage.getItem("products")) || products;
+// -------------------------
+// Load Products
+// -------------------------
 
-// Cart
+let allProducts = JSON.parse(localStorage.getItem("products")) || [];
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// ----------------------
-// Update Cart Count
-// ----------------------
-function updateCartCount() {
-
-    const cartCount = document.getElementById("cart-count");
-
-    if(cartCount){
-
-        cartCount.innerText = cart.length;
-
-    }
-
-}
-
-// ----------------------
+// -------------------------
 // Save Cart
-// ----------------------
-function saveCart(){
+// -------------------------
+
+function saveCart() {
 
     localStorage.setItem("cart", JSON.stringify(cart));
 
@@ -35,125 +24,277 @@ function saveCart(){
 
 }
 
-// ----------------------
-// Add To Cart
-// ----------------------
-function addToCart(productCode){
+// -------------------------
+// Cart Counter
+// -------------------------
 
-    const product = allProducts.find(p => p.code === productCode);
+function updateCartCount() {
 
-    if(!product){
+    const counter = document.getElementById("cart-count");
 
-        alert("Product Not Found");
+    if(counter){
 
-        return;
+        counter.innerText = cart.length;
 
     }
 
-    cart.push(product);
-
-    saveCart();
-
-    alert(product.name + " Added To Cart");
-
 }
 
-// ----------------------
-// Search Products
-// ----------------------
-function searchProducts(){
-
-    const searchBox = document.getElementById("searchBox");
-
-    if(!searchBox) return;
-
-    const keyword = searchBox.value.toLowerCase();
-
-    const filtered = allProducts.filter(product =>
-
-        product.name.toLowerCase().includes(keyword) ||
-
-        product.code.toLowerCase().includes(keyword) ||
-
-        product.category.toLowerCase().includes(keyword)
-
-    );
-
-    loadProducts(filtered);
-
-}
-
-// ----------------------
+// -------------------------
 // Load Products
-// ----------------------
+// -------------------------
+
 function loadProducts(productList = allProducts){
 
-    const productContainer = document.getElementById("product-container");
+    const container = document.getElementById("product-container");
 
-    if(!productContainer) return;
+    if(!container) return;
 
-    productContainer.innerHTML = "";
+    container.innerHTML = "";
 
     productList.forEach(product=>{
 
-        productContainer.innerHTML += `
-
-        <div class="product-card">
-
-            <img src="${product.image}" alt="${product.name}">
-
-            <h3>${product.name}</h3>
-
-            <p>${product.offer}</p>
-
-            <h4>₹${product.price}</h4>
-
-            <del>₹${product.oldPrice}</del>
-
-            <br><br>
-
-            <button onclick="addToCart('${product.code}')">
-
-                🛒 Add To Cart
-
-            </button>
-
-        </div>
-
-        `;
+        container.innerHTML += createProductCard(product);
 
     });
 
 }
 
-// ----------------------
-// Banner
-// ----------------------
-function loadBanner(){
+// -------------------------
+// Create Product Card
+// -------------------------
 
-    const banner = document.getElementById("banner-image");
+function createProductCard(product){
 
-    if(!banner) return;
+let stockColor = "#28a745";
 
-    const savedBanner = localStorage.getItem("banner");
+if(product.stock==="Out of Stock") stockColor="#ff9800";
 
-    if(savedBanner){
+if(product.stock==="Sold Out") stockColor="#f44336";
 
-        banner.src = savedBanner;
+return `
 
-    }
+<div class="product-card">
+
+<img src="${product.image}" alt="${product.name}">
+
+<h3>${product.name}</h3>
+
+<p>${product.category}</p>
+
+<h4>
+
+₹${product.price}
+
+<del>₹${product.oldPrice}</del>
+
+</h4>
+
+<p style="color:green;font-weight:bold;">
+
+${product.offer}
+
+</p>
+
+<p style="color:${stockColor};font-weight:bold;">
+
+${product.stock}
+
+</p>
+
+<button onclick="viewProduct('${product.code}')">
+
+👁 View
+
+</button>
+
+<button onclick="addToCart('${product.code}')">
+
+🛒 Add To Cart
+
+</button>
+
+<button onclick="whatsappOrder('${product.code}')">
+
+📲 Order
+
+</button>
+
+</div>
+
+`;
 
 }
 
-// ----------------------
-// Start Website
-// ----------------------
-document.addEventListener("DOMContentLoaded", ()=>{
+// -------------------------
+// Add To Cart
+// -------------------------
 
-    updateCartCount();
+function addToCart(code){
 
-    loadProducts();
+const product = allProducts.find(p=>p.code===code);
 
-    loadBanner();
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+cart.push(product);
+
+saveCart();
+
+alert(product.name+" Added To Cart");
+
+}
+
+// -------------------------
+// Search Products
+// -------------------------
+
+function searchProducts(){
+
+const searchBox = document.getElementById("searchBox");
+
+if(!searchBox) return;
+
+const keyword = searchBox.value.toLowerCase().trim();
+
+const filtered = allProducts.filter(product =>
+
+(product.name || "").toLowerCase().includes(keyword) ||
+
+(product.code || "").toLowerCase().includes(keyword) ||
+
+(product.category || "").toLowerCase().includes(keyword)
+
+);
+
+loadProducts(filtered);
+
+}
+
+// -------------------------
+// View Product Details
+// -------------------------
+
+function viewProduct(code){
+
+const product = allProducts.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+alert(
+
+"Product : " + product.name +
+
+"\n\nCategory : " + product.category +
+
+"\nColour : " + product.color +
+
+"\nSize : " + product.size +
+
+"\nPrice : ₹" + product.price +
+
+"\nOffer : " + product.offer +
+
+"\nStock : " + product.stock +
+
+"\n\nDescription :\n" + product.description
+
+);
+
+}
+
+// -------------------------
+// Category Filter
+// -------------------------
+
+function filterCategory(category){
+
+if(category==="All"){
+
+loadProducts();
+
+return;
+
+}
+
+const filtered = allProducts.filter(
+
+p => p.category===category
+
+);
+
+loadProducts(filtered);
+
+}
+
+// -------------------------
+// WhatsApp Order
+// -------------------------
+
+function whatsappOrder(code){
+
+const product = allProducts.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+const customerName = prompt("Customer Name");
+
+if(!customerName) return;
+
+const customerPhone = prompt("Mobile Number");
+
+if(!customerPhone) return;
+
+const customerAddress = prompt("Delivery Address");
+
+if(!customerAddress) return;
+
+// ਆਪਣਾ WhatsApp Number ਇੱਥੇ ਪਾਓ
+const adminNumber = "918872776620";
+const message =
+"🛒 NEW ORDER\n\n"+
+"👤 Name : "+customerName+"\n"+
+"📞 Phone : "+customerPhone+"\n"+
+"🏠 Address : "+customerAddress+"\n\n"+
+"📦 Product : "+product.name+"\n"+
+"🆔 Code : "+product.code+"\n"+
+"💰 Price : ₹"+product.price+"\n"+
+"🎁 Offer : "+product.offer;
+
+window.open(
+"https://wa.me/"+adminNumber+
+"?text="+encodeURIComponent(message),
+"_blank"
+);
+
+}
+
+// -------------------------
+// Website Start
+// -------------------------
+
+document.addEventListener("DOMContentLoaded",()=>{
+
+updateCartCount();
+
+loadProducts();
 
 });
+
