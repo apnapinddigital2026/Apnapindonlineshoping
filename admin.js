@@ -392,3 +392,34 @@ function refreshProducts() {
     alert("🔄 Product List Refreshed");
 
 }
+
+/* ==========================
+   EXPORT PRODUCTS
+========================== */
+
+function exportProducts() {
+
+    const data = JSON.stringify(products, null, 2);
+
+    const blob = new Blob([data], { type: "application/json" });
+
+    const a = document.createElement("a");
+
+    a.href = URL.createObjectURL(blob);
+
+    a.download = "products-backup.json";
+
+    a.click();
+
+}
+
+/* ==========================
+   IMPORT PRODUCTS
+========================== */
+
+function importProducts() {
+
+    alert("ਇਹ Feature ਅਗਲੇ Step ਵਿੱਚ File Upload ਨਾਲ ਜੋੜਾਂਗੇ।");
+
+}
+
