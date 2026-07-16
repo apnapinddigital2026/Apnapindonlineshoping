@@ -217,3 +217,76 @@ cursor:pointer;
 background:#4a148c;
 
 }
+
+/* ==========================
+ADD TO CART
+========================== */
+
+function addToCart(code){
+
+    const product = allProducts.find(p => p.code === code);
+
+    if(!product) return;
+
+    let existing = cart.find(p => p.code === code);
+
+    if(existing){
+
+        existing.qty += 1;
+
+    }else{
+
+        cart.push({
+
+            ...product,
+
+            qty:1
+
+        });
+
+    }
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+
+    updateCartCount();
+
+    alert(product.name + " added to cart.");
+
+}
+
+
+/* ==========================
+BUY NOW
+========================== */
+
+function buyNow(code){
+
+    addToCart(code);
+
+    window.location.href="cart.html";
+
+}
+
+
+/* ==========================
+UPDATE CART COUNT
+========================== */
+
+function updateCartCount(){
+
+    const counter=document.getElementById("cartCount");
+
+    if(!counter) return;
+
+    let total=0;
+
+    cart.forEach(item=>{
+
+        total+=item.qty;
+
+    });
+
+    counter.innerHTML=total;
+
+}
+
