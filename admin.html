@@ -7,328 +7,190 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Apna Pind Digital Admin Panel</title>
+<title>APNA PIND DIGITAL ONLINE SHOPPING MALL</title>
 
 <link rel="stylesheet" href="style.css">
-
-<style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
-
-body{
-font-family:Arial,sans-serif;
-background:#f4f4f4;
-padding:20px;
-}
-
-.container{
-max-width:1200px;
-margin:auto;
-background:#ffffff;
-padding:25px;
-border-radius:12px;
-box-shadow:0 0 15px rgba(0,0,0,.15);
-}
-
-h1{
-text-align:center;
-color:#6a1b9a;
-margin-bottom:25px;
-}
-
-.card{
-background:#fafafa;
-border:1px solid #ddd;
-border-radius:10px;
-padding:20px;
-margin-bottom:25px;
-}
-
-.card h2{
-margin-bottom:15px;
-color:#4a148c;
-}
-
-input,
-select,
-textarea{
-
-width:100%;
-padding:12px;
-margin:8px 0;
-border:1px solid #ccc;
-border-radius:8px;
-font-size:16px;
-
-}
-
-button{
-
-background:#6a1b9a;
-color:white;
-border:none;
-padding:12px 18px;
-border-radius:8px;
-cursor:pointer;
-margin-top:10px;
-margin-right:10px;
-
-}
-
-button:hover{
-
-background:#4a148c;
-
-}
-
-table{
-
-width:100%;
-border-collapse:collapse;
-margin-top:20px;
-
-}
-
-table th{
-
-background:#6a1b9a;
-color:white;
-padding:10px;
-border:1px solid #ddd;
-
-}
-
-table td{
-
-padding:10px;
-border:1px solid #ddd;
-text-align:center;
-
-}
-
-.stock-green{
-
-color:green;
-font-weight:bold;
-
-}
-
-.stock-red{
-
-color:red;
-font-weight:bold;
-
-}
-
-.stock-orange{
-
-color:#ff6600;
-font-weight:bold;
-
-}
-
-</style>
 
 </head>
 
 <body>
 
-<div class="container">
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
 
-<h1>🛒 APNA PIND DIGITAL ADMIN PANEL</h1>
+<header>
 
-<div class="card">
+<div class="logo-area">
 
-<h2>➕ Add New Product</h2>
+<img
+src="images/logo/IMG_20260629_002124.png"
+class="logo"
+alt="Logo">
 
-<input id="code" type="text" placeholder="Product Code">
+<h1>
 
-<input id="name" type="text" placeholder="Product Name">
+APNA PIND DIGITAL
 
-<input id="category" type="text" placeholder="Category">
-
-<input id="color" type="text" placeholder="Colour">
-
-<input id="size" type="text" placeholder="Size">
-
-<input id="oldPrice" type="number" placeholder="Old Price">
-
-<input id="price" type="number" placeholder="New Price">
-
-<input id="offer" type="text" placeholder="Offer">
-
-<input id="image" type="text" placeholder="Image Path">
-
-<input id="description" type="text" placeholder="Description">
-
-<select id="stock">
-
-<option value="In Stock">🟢 In Stock</option>
-
-<option value="Out of Stock">🟠 Out of Stock</option>
-
-<option value="Sold Out">🔴 Sold Out</option>
-
-</select>
-
-<button onclick="addProduct()">➕ Add Product</button>
-
- <button onclick="saveUpdatedProduct()">💾 Save Update</button>
- 
-</div>
-
-<div class="card">
-
-<h2>🔍 Search Product</h2>
-
-<input id="searchCode" type="text" placeholder="Enter Product Code">
-
-<button onclick="searchProduct()">🔍 Search Product</button>
-
-<div id="searchResult"></div>
+</h1>
 
 </div>
 
-<div class="card">
+<nav>
 
-<h2>⚙ Product Management</h2>
+<a href="index.html">Home</a>
 
-<button onclick="updateProduct()">✏ Update Product</button>
+<a href="#products">Products</a>
 
-<button onclick="deleteProduct()">🗑 Delete Product</button>
+<a href="#offers">Offers</a>
 
-<button onclick="updatePrice()">💰 Update Price</button>
+<a href="cart.html">
 
-<button onclick="updateOffer()">🏷 Update Offer</button>
+🛒 Cart
 
-<button onclick="updateStock()">📦 Stock Update</button>
+<span id="cart-count">
 
-<button onclick="changeBanner()">🖼 Change Banner</button>
+0
 
-</div>
+</span>
 
-<div class="card">
+</a>
 
-<h2>📋 Product List</h2>
+<a href="admin.html">
 
-<table>
+Admin
 
-<thead>
+</a>
 
-<tr>
+</nav>
 
-<th>Code</th>
-<th>Name</th>
-<th>Category</th>
-<th>Price</th>
-<th>Offer</th>
-<th>Stock</th>
+</header>
 
-</tr>
+ <!-- ========================= -->
+<!-- BANNER -->
+<!-- ========================= -->
 
-</thead>
+<section class="banner">
 
-<tbody id="productTable">
+<img
+id="banner-image"
+src="images/logo/IMG_20260703_001627.png"
+alt="Banner">
 
-</tbody>
+</section>
 
-</table>
+<!-- ========================= -->
+<!-- SEARCH -->
+<!-- ========================= -->
 
-</div>  
-
-<div class="card">
-
-<h2>📦 Stock Management</h2>
-
-<select id="stock">
-
-<option value="In Stock">✅ In Stock</option>
-
-<option value="Out of Stock">❌ Out of Stock</option>
-
-<option value="Sold Out">🚫 Sold Out</option>
-
-</select>
-
-<button onclick="updateStock()">
-
-📦 Save Stock
-
-</button>
-
-</div>
-
-<div class="card">
-
-<h2>🖼 Banner Management</h2>
+<section class="search-section">
 
 <input
-id="bannerImage"
 type="text"
-placeholder="Banner Image Path">
+id="searchBox"
+placeholder="🔍 Search Products..."
+onkeyup="searchProducts()">
 
-<button onclick="changeBanner()">
+</section>
 
-🖼 Change Banner
+<!-- ========================= -->
+<!-- CATEGORY -->
+<!-- ========================= -->
 
-</button>
+<section class="categories">
 
-</div>
+<button onclick="filterCategory('All')">All</button>
 
-<div class="card">
+<button onclick="filterCategory('Women Suits')">Women Suits</button>
 
-<h2>📊 Website Settings</h2>
+<button onclick="filterCategory('Women Handbags')">Women Handbags</button>
 
-<button onclick="refreshProducts()">
+<button onclick="filterCategory('Men')">Men</button>
 
-🔄 Refresh Product List
+<button onclick="filterCategory('Kids')">Kids</button>
 
-</button>
+<button onclick="filterCategory('Footwear')">Footwear</button>
 
-<button onclick="exportProducts()">
+<button onclick="filterCategory('Cosmetics')">Cosmetics</button>
 
-⬇ Export Products
+<button onclick="filterCategory('Electronics')">Electronics</button>
 
-</button>
+<button onclick="filterCategory('Grocery')">Grocery</button>
 
-<button onclick="importProducts()">
+<button onclick="filterCategory('Home Kitchen')">Home Kitchen</button>
 
-⬆ Import Products
+<button onclick="filterCategory('Stationery')">Stationery</button>
 
-</button>
+<button onclick="filterCategory('Toys')">Toys</button>
 
-</div>  
+</section>
 
- <script src="product.js"></script>
+ <!-- ========================= -->
+<!-- LATEST PRODUCTS -->
+<!-- ========================= -->
 
-<script src="admin.js"></script>
+<section id="products" class="products-section">
 
-<script>
+<h2>🛍 Latest Products</h2>
 
-const password = prompt("Enter Admin Password");
+<div id="product-container" class="product-grid">
 
-if(password !== "ApnaPind@2026"){
-
-alert("Wrong Password!");
-
-window.location.href = "index.html";
-
-}
-
-if(typeof loadProducts === "function"){
-
-loadProducts();
-
-}
-
-</script>
+<!-- Products Load from product.js -->
 
 </div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TODAY OFFERS -->
+<!-- ========================= -->
+
+<section id="offers" class="offers-section">
+
+<h2>🔥 Today's Special Offers</h2>
+
+<p>
+
+Daily New Deals | Best Prices | Fast Delivery
+
+</p>
+
+</section>
+
+<!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
+
+<footer>
+
+<p>
+
+© 2026 APNA PIND DIGITAL ONLINE SHOPPING MALL
+
+</p>
+
+<p>
+
+Village Kala Bana | District Gurdaspur | Punjab
+
+</p>
+
+<p>
+
+Customer Care : +91 8872776620
+
+</p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- JAVASCRIPT -->
+<!-- ========================= -->
+
+<script src="product.js"></script>
+
+<script src="script.js"></script>
 
 </body>
 
-</html> 
+</html>
