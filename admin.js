@@ -279,3 +279,31 @@ function deleteProduct() {
     alert("🗑 Product Deleted Successfully");
 
 }
+
+/* ==========================
+   UPDATE PRICE
+========================== */
+
+function updatePrice() {
+
+    if (editingProductId === null) {
+        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+        return;
+    }
+
+    const index = products.findIndex(p => p.id === editingProductId);
+
+    if (index === -1) {
+        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
+        return;
+    }
+
+    products[index].oldPrice = Number(document.getElementById("oldPrice").value);
+    products[index].price = Number(document.getElementById("price").value);
+
+    saveProducts();
+    loadProducts();
+
+    alert("💰 Price Updated Successfully");
+
+}
