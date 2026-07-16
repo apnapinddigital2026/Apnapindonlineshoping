@@ -247,3 +247,35 @@ function saveUpdatedProduct() {
     alert("✅ Product Successfully Updated");
 
 }
+
+/* ==========================
+   DELETE PRODUCT
+========================== */
+
+function deleteProduct() {
+
+    if (editingProductId === null) {
+
+        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+
+        return;
+
+    }
+
+    if (!confirm("ਕੀ ਤੁਸੀਂ ਇਹ Product Delete ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?")) {
+
+        return;
+
+    }
+
+    products = products.filter(p => p.id !== editingProductId);
+
+    saveProducts();
+
+    loadProducts();
+
+    clearForm();
+
+    alert("🗑 Product Deleted Successfully");
+
+}
