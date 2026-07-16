@@ -1,1 +1,694 @@
+/* ===================================
+APNA PIND DIGITAL ONLINE SHOPPING MALL
+STYLE.CSS
+=================================== */
 
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+font-family:Arial,sans-serif;
+
+background:#f4f4f4;
+
+color:#222;
+
+}
+
+/* =======================
+HEADER
+======================= */
+
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:15px 30px;
+
+background:#6a1b9a;
+
+color:#fff;
+
+flex-wrap:wrap;
+
+}
+
+.logo-area{
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+}
+
+.logo-area img{
+
+width:70px;
+
+height:70px;
+
+border-radius:50%;
+
+background:#fff;
+
+padding:5px;
+
+}
+
+.logo-area h1{
+
+font-size:28px;
+
+}
+
+.logo-area p{
+
+font-size:14px;
+
+letter-spacing:2px;
+
+}
+
+/* =======================
+MENU
+======================= */
+
+.header ul{
+
+display:flex;
+
+list-style:none;
+
+gap:20px;
+
+}
+
+.header a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+}
+
+.header a:hover{
+
+color:#ffeb3b;
+
+}
+
+/* =======================
+SEARCH
+======================= */
+
+.search-section{
+
+padding:20px;
+
+text-align:center;
+
+background:white;
+
+}
+
+.search-section input{
+
+width:60%;
+
+padding:12px;
+
+border:1px solid #ccc;
+
+border-radius:6px;
+
+font-size:16px;
+
+}
+
+.search-section button{
+
+padding:12px 20px;
+
+background:#6a1b9a;
+
+color:white;
+
+border:none;
+
+border-radius:6px;
+
+cursor:pointer;
+
+margin-left:10px;
+
+}
+
+.search-section button:hover{
+
+background:#4a148c;
+
+}
+
+/* =======================
+BANNER SECTION
+======================= */
+
+.banner{
+
+width:100%;
+
+overflow:hidden;
+
+background:white;
+
+}
+
+.banner img{
+
+width:100%;
+
+height:350px;
+
+object-fit:cover;
+
+display:block;
+
+}
+
+
+/* =======================
+CATEGORY SECTION
+======================= */
+
+.categories{
+
+padding:30px;
+
+background:#fff;
+
+text-align:center;
+
+}
+
+.categories h2{
+
+color:#6a1b9a;
+
+margin-bottom:20px;
+
+font-size:28px;
+
+}
+
+
+.category-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
+
+gap:20px;
+
+}
+
+
+.category-card{
+
+background:#f8f8f8;
+
+border-radius:12px;
+
+padding:15px;
+
+box-shadow:0 3px 10px rgba(0,0,0,0.1);
+
+cursor:pointer;
+
+transition:0.3s;
+
+}
+
+
+.category-card:hover{
+
+transform:translateY(-5px);
+
+background:#f3e5f5;
+
+}
+
+
+.category-card img{
+
+width:100px;
+
+height:100px;
+
+object-fit:cover;
+
+border-radius:50%;
+
+}
+
+
+.category-card h3{
+
+margin-top:10px;
+
+color:#4a148c;
+
+}
+
+
+/* =======================
+PRODUCT SECTION
+======================= */
+
+.products-section{
+
+padding:30px;
+
+}
+
+
+.products-section h2{
+
+text-align:center;
+
+color:#6a1b9a;
+
+margin-bottom:25px;
+
+}
+
+
+.product-container{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+gap:25px;
+
+}
+
+
+.product-card{
+
+background:white;
+
+padding:15px;
+
+border-radius:12px;
+
+box-shadow:0 3px 12px rgba(0,0,0,0.15);
+
+text-align:center;
+
+transition:0.3s;
+
+}
+
+
+.product-card:hover{
+
+transform:scale(1.03);
+
+}
+
+
+.product-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+}
+
+
+.product-card h3{
+
+margin:12px 0;
+
+color:#333;
+
+}
+
+
+.product-card h4{
+
+font-size:22px;
+
+color:#6a1b9a;
+
+}
+
+
+.product-card del{
+
+color:red;
+
+}
+
+/* =======================
+BUTTONS
+======================= */
+
+.btn{
+
+display:inline-block;
+
+padding:10px 16px;
+
+margin:6px;
+
+border:none;
+
+border-radius:8px;
+
+cursor:pointer;
+
+font-size:15px;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn-cart{
+
+background:#ff9800;
+
+color:#fff;
+
+}
+
+.btn-cart:hover{
+
+background:#ef6c00;
+
+}
+
+.btn-buy{
+
+background:#4caf50;
+
+color:#fff;
+
+}
+
+.btn-buy:hover{
+
+background:#2e7d32;
+
+}
+
+.btn-admin{
+
+background:#6a1b9a;
+
+color:#fff;
+
+}
+
+.btn-admin:hover{
+
+background:#4a148c;
+
+}
+
+/* =======================
+FOOTER
+======================= */
+
+footer{
+
+margin-top:40px;
+
+background:#6a1b9a;
+
+color:white;
+
+padding:25px;
+
+text-align:center;
+
+}
+
+footer h3{
+
+margin-bottom:10px;
+
+}
+
+footer p{
+
+margin:6px 0;
+
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+
+@media(max-width:768px){
+
+.header{
+
+flex-direction:column;
+
+text-align:center;
+
+}
+
+.header ul{
+
+flex-direction:column;
+
+margin-top:15px;
+
+}
+
+.search-section input{
+
+width:100%;
+
+margin-bottom:10px;
+
+}
+
+.search-section button{
+
+width:100%;
+
+margin-left:0;
+
+}
+
+.banner img{
+
+height:220px;
+
+}
+
+.logo-area{
+
+flex-direction:column;
+
+}
+
+.logo-area h1{
+
+font-size:22px;
+
+}
+
+.categories{
+
+padding:20px;
+
+}
+
+.products-section{
+
+padding:20px;
+
+}
+
+}
+
+@media(max-width:480px){
+
+.product-card img{
+
+height:180px;
+
+}
+
+.product-card h3{
+
+font-size:16px;
+
+}
+
+.product-card h4{
+
+font-size:18px;
+
+}
+
+.category-card img{
+
+width:80px;
+
+height:80px;
+
+}
+
+}
+
+/* ===========================
+BADGES
+=========================== */
+
+.offer-badge{
+display:inline-block;
+background:red;
+color:#fff;
+padding:4px 8px;
+border-radius:5px;
+font-size:13px;
+font-weight:bold;
+margin-bottom:8px;
+}
+
+.stock-badge{
+display:inline-block;
+padding:4px 8px;
+border-radius:5px;
+font-size:13px;
+font-weight:bold;
+margin-top:8px;
+}
+
+.in-stock{
+background:#4caf50;
+color:white;
+}
+
+.out-stock{
+background:#ff9800;
+color:white;
+}
+
+.sold-out{
+background:#f44336;
+color:white;
+}
+
+/* ===========================
+WHATSAPP BUTTON
+=========================== */
+
+.whatsapp-btn{
+display:inline-block;
+background:#25D366;
+color:white;
+padding:10px 18px;
+border-radius:8px;
+text-decoration:none;
+font-weight:bold;
+margin-top:10px;
+transition:.3s;
+}
+
+.whatsapp-btn:hover{
+background:#128C7E;
+}
+
+/* ===========================
+CART ICON
+=========================== */
+
+.cart-link{
+position:relative;
+}
+
+#cart-count{
+background:red;
+color:white;
+border-radius:50%;
+padding:2px 7px;
+font-size:12px;
+margin-left:5px;
+}
+
+/* ===========================
+LOADING
+=========================== */
+
+.loader{
+
+display:none;
+
+width:60px;
+
+height:60px;
+
+border:6px solid #ddd;
+
+border-top:6px solid #6a1b9a;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin:auto;
+
+}
+
+@keyframes spin{
+
+0%{transform:rotate(0deg);}
+
+100%{transform:rotate(360deg);}
+
+}
+
+/* ===========================
+SCROLL BAR
+=========================== */
+
+::-webkit-scrollbar{
+width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+background:#6a1b9a;
+border-radius:10px;
+}
+
+::-webkit-scrollbar-track{
+background:#eee;
+}
+
+/* ===========================
+END OF STYLE.CSS
+=========================== */
