@@ -1,259 +1,83 @@
-/* ======================================
+/* ==========================================
    APNA PIND DIGITAL ONLINE SHOPPING MALL
-   SCRIPT.JS - PART 1
-====================================== */
+   SCRIPT.JS
+========================================== */
 
-const productContainer = document.getElementById("product-container");
-const searchInput = document.getElementById("search");
-
-function displayProducts(productList){
-
-    productContainer.innerHTML = "";
-
-    productList.forEach(product=>{
-
-        productContainer.innerHTML += `
-
-        <div class="card">
-
-            <div class="image-box">
-
-    <a href="${product.image}" target="_blank">
-        <img src="${product.image}" alt="${product.name}">
-    </a>
-
-    <div class="product-code">
-        ${product.code}
-    </div>
-
-</div>
-          <div class="card-body">
-
-    <h3>${product.name}</h3>
-
-    <div class="offer-box">
-
-<span class="offer-badge">
-${product.offer}
-</span>
-
-<p class="old-price">
-₹${product.oldPrice}
-</p>
-
-<p class="price">
-₹${product.price}
-</p>
-
-</div>
-
-<p class="category">${product.category}</p>
-
-<p class="stock ${((product.stock || "In Stock").replace(/\s+/g,'-').toLowerCase())}">
-
-${(product.stock || "In Stock") === "In Stock" ? `
-
-<button class="cart-btn" onclick="addToCart(${product.id})">
-🛒 Add to Cart
-</button>
-
-<button class="btn" onclick="openInquiry(${product.id})">
-ਹੁਣੇ ਪੁੱਛਗਿੱਛ ਕਰੋ / Buy Now
-</button>
-
-` : `
-
-<button class="cart-btn" disabled
-style="background:#999;cursor:not-allowed;">
-${product.stock}
-</button>
-
-<button class="btn" disabled
-style="background:#999;cursor:not-allowed;">
-${product.stock}
-</button>
-
-`}
-
-</div>
-
-        </div>
-
-        `;
-
-    });
-
-}
-
-displayProducts(products);
-// Fast Search
-let searchTimer;
-
-searchInput.addEventListener("input", function () {
-
-    clearTimeout(searchTimer);
-
-    const value = this.value.toLowerCase().trim();
-
-    searchTimer = setTimeout(() => {
-
-        if (value === "") {
-            displayProducts(products);
-            return;
-        }
-
-        const filteredProducts = products.filter(product =>
-
-            (product.name || "").toLowerCase().includes(value) ||
-
-            (product.code || "").toLowerCase().includes(value) ||
-
-            (product.category || "").toLowerCase().includes(value)
-
-        );
-
-        displayProducts(filteredProducts);
-
-    }, 250);
-
-});
-// Category Filter
-const categoryButtons = document.querySelectorAll(".category-grid button");
-
-categoryButtons.forEach(button => {
-
-    button.addEventListener("click", () => {
-
-        const category = button.dataset.category;
-
-        if (category === "all") {
-
-            displayProducts(products);
-
-        } else {
-
-            const filteredProducts = products.filter(product => product.category === category);
-
-            displayProducts(filteredProducts);
-
-        }
-
-    });
-
-});
-// ==============================
-// ADD TO CART
-// ==============================
+let allProducts = JSON.parse(localStorage.getItem("products")) || [];
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-function addToCart(id) {
+let currentCategory = "all";
 
-    const product = products.find(item => item.id === id);
+let searchKeyword = "";
 
-    const existing = cart.find(item => item.id === id);
+/* ==========================
+   LOAD WEBSITE
+========================== */
 
-    if (existing) {
-        existing.quantity += 1;
-    } else {
-        cart.push({
-            ...product,
-            quantity: 1
-        });
-    }
+window.onload = function () {
 
-    localStorage.setItem("cart", JSON.stringify(cart));
+    loadBanner();
 
-    alert(product.name + " Cart ਵਿੱਚ ਸ਼ਾਮਲ ਹੋ ਗਿਆ।");
-}
+    loadProducts();
 
-// =============================
-// CART COUNT
-// =============================
+    updateCartCount();
 
-function updateCartCount(){
+};
 
-    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+/* ==========================
+   LOAD BANNER
+========================== */
 
-    let count = document.getElementById("cart-count");
+function loadBanner() {
 
-    if(count){
+    const banner = localStorage.getItem("bannerImage");
 
-        let total = 0;
+    const img = document.getElementById("mainBanner");
 
-        cart.forEach(item=>{
-    total += item.quantity || 1;
-});
+    if (!img) return;
 
-count.textContent = "(" + total + ")";
-}
-}
+    if (banner) {
 
-updateCartCount();
-
-function openInquiry(id){
-
-    const product = products.find(p => p.id === id);
-
-    let customerName = prompt("ਆਪਣਾ ਨਾਮ ਲਿਖੋ");
-
-    if(!customerName) return;
-
-    let mobile = prompt("ਆਪਣਾ ਮੋਬਾਈਲ ਨੰਬਰ ਲਿਖੋ");
-
-    if(!mobile) return;
-
-    let msg =
-`🛒 ਨਵੀਂ ਪੁੱਛਗਿੱਛ / New Inquiry
-
-━━━━━━━━━━━━━━━━━━
-
-👤 ਨਾਮ / Name
-${customerName}
-
-📱 ਮੋਬਾਈਲ / Mobile
-${mobile}
-
-🌍 ਰਾਜ / State
-Punjab
-
-━━━━━━━━━━━━━━━━━━
-
-🛍️ ਪ੍ਰੋਡਕਟ / Product
-${product.name}
-
-🆔 ਕੋਡ / Code
-${product.code}
-
-🎨 ਰੰਗ / Colour
-${product.color || "-"}
-
-📏 ਸਾਈਜ਼ / Size
-${product.size || "-"}
-
-💰 ਕੀਮਤ / Price
-₹${product.price}
-
-━━━━━━━━━━━━━━━━━━
-
-ਕਿਰਪਾ ਕਰਕੇ ਇਸ ਪ੍ਰੋਡਕਟ ਦੀ ਜਾਣਕਾਰੀ ਭੇਜੋ।
-
-Please send me the details of this product.
-
-🙏 ਧੰਨਵਾਦ / Thank You`;
-
-    const ok = confirm("ਕੀ ਤੁਸੀਂ ਇਹ ਪੁੱਛਗਿੱਛ WhatsApp 'ਤੇ ਭੇਜਣੀ ਚਾਹੁੰਦੇ ਹੋ?");
-
-    if(ok){
-
-       const phone = "919607718703";
-
-const whatsappURL =
-    "https://wa.me/" + phone +
-    "?text=" + encodeURIComponent(msg);
-
-window.location.href = whatsappURL;
+        img.src = banner;
 
     }
+
+}
+
+/* ==========================
+   LOAD PRODUCTS
+========================== */
+
+function loadProducts() {
+
+    const container = document.getElementById("productContainer");
+
+    if (!container) return;
+
+    container.innerHTML = "";
+
+    let filtered = [...allProducts];
+
+    if (currentCategory !== "all") {
+
+        filtered = filtered.filter(p => p.category === currentCategory);
+
+    }
+
+    if (searchKeyword !== "") {
+
+        filtered = filtered.filter(p =>
+            p.name.toLowerCase().includes(searchKeyword.toLowerCase()) ||
+            p.code.toLowerCase().includes(searchKeyword.toLowerCase())
+        );
+
+    }
+
+    filtered.forEach(product => {
+
+        container.innerHTML += createProductCard(product);
+
+    });
 
 }
