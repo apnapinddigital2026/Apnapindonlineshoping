@@ -185,3 +185,65 @@ function addProduct() {
     alert("✅ Product Added Successfully");
 
 }
+
+/* ==========================
+   SAVE UPDATED PRODUCT
+========================== */
+
+function saveUpdatedProduct() {
+
+    if (editingProductId === null) {
+
+        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+
+        return;
+
+    }
+
+    const index = products.findIndex(p => p.id === editingProductId);
+
+    if (index === -1) {
+
+        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
+
+        return;
+
+    }
+
+    products[index] = {
+
+        id: editingProductId,
+
+        code: document.getElementById("code").value.trim(),
+
+        name: document.getElementById("name").value.trim(),
+
+        category: document.getElementById("category").value.trim(),
+
+        color: document.getElementById("color").value.trim(),
+
+        size: document.getElementById("size").value.trim(),
+
+        oldPrice: Number(document.getElementById("oldPrice").value),
+
+        price: Number(document.getElementById("price").value),
+
+        offer: document.getElementById("offer").value.trim(),
+
+        image: document.getElementById("image").value.trim(),
+
+        description: document.getElementById("description").value.trim(),
+
+        stock: document.getElementById("stock").value
+
+    };
+
+    saveProducts();
+
+    loadProducts();
+
+    clearForm();
+
+    alert("✅ Product Successfully Updated");
+
+}
