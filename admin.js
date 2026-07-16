@@ -1,425 +1,432 @@
-/* ==========================================
-   APNA PIND DIGITAL ONLINE SHOPPING MALL
-   ADMIN PANEL
-   Version 1.0
-========================================== */
+// ==========================================
+// APNA PIND DIGITAL ONLINE SHOPPING MALL
+// ADMIN.JS
+// PART 1
+// ==========================================
+
+// -------------------------
+// Admin Password
+// -------------------------
+
+const ADMIN_PASSWORD = "12345";
+
+// -------------------------
+// Load Products
+// -------------------------
 
 let products = JSON.parse(localStorage.getItem("products")) || [];
 
-let editingProductId = null;
+// -------------------------
+// Admin Login
+// -------------------------
 
-/* ==========================
-   SAVE PRODUCTS
-========================== */
+function adminLogin(){
 
-function saveProducts() {
-    localStorage.setItem("products", JSON.stringify(products));
-}
+const password = document.getElementById("adminPassword").value;
 
-/* ==========================
-   LOAD PRODUCT TABLE
-========================== */
+if(password !== ADMIN_PASSWORD){
 
-function loadProducts() {
+alert("Wrong Password");
 
-    const table = document.getElementById("productTable");
-
-    if (!table) return;
-
-    table.innerHTML = "";
-
-    products.forEach(product => {
-
-        table.innerHTML += `
-        <tr>
-
-            <td>${product.code}</td>
-
-            <td>${product.name}</td>
-
-            <td>${product.category}</td>
-
-            <td>₹${product.price}</td>
-
-            <td>${product.offer}</td>
-
-            <td>${product.stock}</td>
-
-        </tr>
-        `;
-
-    });
+return;
 
 }
 
-/* ==========================
-   CLEAR FORM
-========================== */
+document.getElementById("admin-panel").style.display="block";
+document.getElementById("admin-search").style.display="block";
+document.getElementById("admin-manage").style.display="block";
+document.getElementById("admin-banner").style.display="block";
+document.getElementById("admin-list").style.display="block";
+document.getElementById("admin-settings").style.display="block";
 
-function clearForm(){
-
-    document.getElementById("code").value="";
-    document.getElementById("name").value="";
-    document.getElementById("category").value="";
-    document.getElementById("color").value="";
-    document.getElementById("size").value="";
-    document.getElementById("oldPrice").value="";
-    document.getElementById("price").value="";
-    document.getElementById("offer").value="";
-    document.getElementById("image").value="";
-    document.getElementById("description").value="";
-    document.getElementById("stock").value="In Stock";
-
-    editingProductId = null;
+refreshProducts();
 
 }
 
-/* ==========================
-   START ADMIN
-========================== */
+// -------------------------
+// Save Products
+// -------------------------
 
-window.onload = function(){
+function saveProducts(){
 
-    loadProducts();
+localStorage.setItem("products",JSON.stringify(products));
+
+refreshProducts();
+
+}
+
+// -------------------------
+// Add Product
+// -------------------------
+
+function addProduct(){
+
+const product={
+
+code:document.getElementById("code").value.trim(),
+
+name:document.getElementById("name").value.trim(),
+
+category:document.getElementById("category").value.trim(),
+
+colour:document.getElementById("colour").value.trim(),
+
+size:document.getElementById("size").value.trim(),
+
+oldPrice:Number(document.getElementById("oldPrice").value),
+
+price:Number(document.getElementById("price").value),
+
+offer:document.getElementById("offer").value.trim(),
+
+image:document.getElementById("image").value.trim(),
+
+description:document.getElementById("description").value.trim(),
+
+stock:document.getElementById("stock").value
 
 };
 
-/* ==========================
-   SEARCH PRODUCT
-========================== */
+if(product.code==="" || product.name===""){
 
-function searchProduct() {
+alert("Product Code and Product Name Required");
 
-    const code = document
-        .getElementById("searchCode")
-        .value
-        .trim()
-        .toUpperCase();
-
-    const product = products.find(p => p.code.toUpperCase() === code);
-
-    if (!product) {
-
-        alert("❌ Product Not Found");
-
-        return;
-
-    }
-
-    editingProductId = product.id;
-
-    document.getElementById("code").value = product.code;
-    document.getElementById("name").value = product.name;
-    document.getElementById("category").value = product.category;
-    document.getElementById("color").value = product.color || "";
-    document.getElementById("size").value = product.size || "";
-    document.getElementById("oldPrice").value = product.oldPrice || "";
-    document.getElementById("price").value = product.price || "";
-    document.getElementById("offer").value = product.offer || "";
-    document.getElementById("image").value = product.image || "";
-    document.getElementById("description").value = product.description || "";
-    document.getElementById("stock").value = product.stock || "In Stock";
-
-    alert("✅ Product Loaded Successfully");
+return;
 
 }
 
-/* ==========================
-   ADD PRODUCT
-========================== */
+const exists = products.find(p=>p.code===product.code);
 
-function addProduct() {
+if(exists){
 
-    const product = {
+alert("Product Code Already Exists");
 
-        id: Date.now(),
-
-        code: document.getElementById("code").value.trim(),
-
-        name: document.getElementById("name").value.trim(),
-
-        category: document.getElementById("category").value.trim(),
-
-        color: document.getElementById("color").value.trim(),
-
-        size: document.getElementById("size").value.trim(),
-
-        oldPrice: Number(document.getElementById("oldPrice").value),
-
-        price: Number(document.getElementById("price").value),
-
-        offer: document.getElementById("offer").value.trim(),
-
-        image: document.getElementById("image").value.trim(),
-
-        description: document.getElementById("description").value.trim(),
-
-        stock: document.getElementById("stock").value
-
-    };
-
-    if(product.code==="" || product.name===""){
-
-        alert("Please Enter Product Code & Product Name");
-
-        return;
-
-    }
-
-    if(products.find(p=>p.code===product.code)){
-
-        alert("Product Code Already Exists");
-
-        return;
-
-    }
-
-    products.push(product);
-
-    saveProducts();
-
-    loadProducts();
-
-    clearForm();
-
-    alert("✅ Product Added Successfully");
+return;
 
 }
 
-/* ==========================
-   SAVE UPDATED PRODUCT
-========================== */
+products.push(product);
 
-function saveUpdatedProduct() {
+saveProducts();
 
-    if (editingProductId === null) {
+clearForm();
 
-        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
-
-        return;
-
-    }
-
-    const index = products.findIndex(p => p.id === editingProductId);
-
-    if (index === -1) {
-
-        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
-
-        return;
-
-    }
-
-    products[index] = {
-
-        id: editingProductId,
-
-        code: document.getElementById("code").value.trim(),
-
-        name: document.getElementById("name").value.trim(),
-
-        category: document.getElementById("category").value.trim(),
-
-        color: document.getElementById("color").value.trim(),
-
-        size: document.getElementById("size").value.trim(),
-
-        oldPrice: Number(document.getElementById("oldPrice").value),
-
-        price: Number(document.getElementById("price").value),
-
-        offer: document.getElementById("offer").value.trim(),
-
-        image: document.getElementById("image").value.trim(),
-
-        description: document.getElementById("description").value.trim(),
-
-        stock: document.getElementById("stock").value
-
-    };
-
-    saveProducts();
-
-    loadProducts();
-
-    clearForm();
-
-    alert("✅ Product Successfully Updated");
+alert("Product Added Successfully");
 
 }
 
-/* ==========================
-   DELETE PRODUCT
-========================== */
+// -------------------------
+// Refresh Product List
+// -------------------------
 
-function deleteProduct() {
+function refreshProducts(){
 
-    if (editingProductId === null) {
+const table=document.getElementById("productTable");
 
-        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
+if(!table) return;
 
-        return;
+table.innerHTML="";
 
-    }
+products.forEach(product=>{
 
-    if (!confirm("ਕੀ ਤੁਸੀਂ ਇਹ Product Delete ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?")) {
+table.innerHTML+=`
 
-        return;
+<tr>
 
-    }
+<td>${product.code}</td>
 
-    products = products.filter(p => p.id !== editingProductId);
+<td>${product.name}</td>
 
-    saveProducts();
+<td>${product.category}</td>
 
-    loadProducts();
+<td>₹${product.price}</td>
 
-    clearForm();
+<td>${product.offer}</td>
 
-    alert("🗑 Product Deleted Successfully");
+<td>${product.stock}</td>
 
-}
+</tr>
 
-/* ==========================
-   UPDATE PRICE
-========================== */
+`;
 
-function updatePrice() {
-
-    if (editingProductId === null) {
-        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
-        return;
-    }
-
-    const index = products.findIndex(p => p.id === editingProductId);
-
-    if (index === -1) {
-        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
-        return;
-    }
-
-    products[index].oldPrice = Number(document.getElementById("oldPrice").value);
-    products[index].price = Number(document.getElementById("price").value);
-
-    saveProducts();
-    loadProducts();
-
-    alert("💰 Price Updated Successfully");
+});
 
 }
 
-/* ==========================
-   UPDATE OFFER
-========================== */
+// -------------------------
+// Clear Form
+// -------------------------
 
-function updateOffer() {
+function clearForm(){
 
-    if (editingProductId === null) {
-        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
-        return;
-    }
-
-    const index = products.findIndex(p => p.id === editingProductId);
-
-    if (index === -1) {
-        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
-        return;
-    }
-
-    products[index].offer = document.getElementById("offer").value.trim();
-
-    saveProducts();
-    loadProducts();
-
-    alert("🏷 Offer Updated Successfully");
+document.getElementById("code").value="";
+document.getElementById("name").value="";
+document.getElementById("category").value="";
+document.getElementById("colour").value="";
+document.getElementById("size").value="";
+document.getElementById("oldPrice").value="";
+document.getElementById("price").value="";
+document.getElementById("offer").value="";
+document.getElementById("image").value="";
+document.getElementById("description").value="";
+document.getElementById("stock").value="In Stock";
 
 }
 
-/* ==========================
-   UPDATE STOCK
-========================== */
+// -------------------------
+// Search Product
+// -------------------------
 
-function updateStock() {
+function searchProduct(){
 
-    if (editingProductId === null) {
-        alert("❌ ਪਹਿਲਾਂ Product Search ਕਰੋ");
-        return;
-    }
+const code=document.getElementById("searchCode").value.trim();
 
-    const index = products.findIndex(p => p.id === editingProductId);
+const product=products.find(p=>p.code===code);
 
-    if (index === -1) {
-        alert("❌ Product ਨਹੀਂ ਮਿਲਿਆ");
-        return;
-    }
+if(!product){
 
-    products[index].stock = document.getElementById("stock").value;
+alert("Product Not Found");
 
-    saveProducts();
-    loadProducts();
-
-    alert("📦 Stock Updated Successfully");
+return;
 
 }
 
-/* ==========================
-   CHANGE BANNER
-========================== */
+document.getElementById("code").value=product.code;
+document.getElementById("name").value=product.name;
+document.getElementById("category").value=product.category;
+document.getElementById("colour").value=product.colour;
+document.getElementById("size").value=product.size;
+document.getElementById("oldPrice").value=product.oldPrice;
+document.getElementById("price").value=product.price;
+document.getElementById("offer").value=product.offer;
+document.getElementById("image").value=product.image;
+document.getElementById("description").value=product.description;
+document.getElementById("stock").value=product.stock;
 
-function changeBanner() {
-
-    const banner = document.getElementById("bannerImage").value.trim();
-
-    if (banner === "") {
-        alert("Banner Image Path ਲਿਖੋ");
-        return;
-    }
-
-    localStorage.setItem("bannerImage", banner);
-
-    alert("🖼 Banner Updated Successfully");
+alert("Product Loaded");
 
 }
 
-/* ==========================
-   REFRESH PRODUCT LIST
-========================== */
+// -------------------------
+// Update Product
+// -------------------------
 
-function refreshProducts() {
+function updateProduct(){
 
-    loadProducts();
+const code=document.getElementById("code").value.trim();
 
-    alert("🔄 Product List Refreshed");
+const index=products.findIndex(p=>p.code===code);
 
-}
+if(index===-1){
 
-/* ==========================
-   EXPORT PRODUCTS
-========================== */
+alert("Product Not Found");
 
-function exportProducts() {
-
-    const data = JSON.stringify(products, null, 2);
-
-    const blob = new Blob([data], { type: "application/json" });
-
-    const a = document.createElement("a");
-
-    a.href = URL.createObjectURL(blob);
-
-    a.download = "products-backup.json";
-
-    a.click();
+return;
 
 }
 
-/* ==========================
-   IMPORT PRODUCTS
-========================== */
+products[index]={
 
-function importProducts() {
+code:document.getElementById("code").value.trim(),
 
-    alert("ਇਹ Feature ਅਗਲੇ Step ਵਿੱਚ File Upload ਨਾਲ ਜੋੜਾਂਗੇ।");
+name:document.getElementById("name").value.trim(),
+
+category:document.getElementById("category").value.trim(),
+
+colour:document.getElementById("colour").value.trim(),
+
+size:document.getElementById("size").value.trim(),
+
+oldPrice:Number(document.getElementById("oldPrice").value),
+
+price:Number(document.getElementById("price").value),
+
+offer:document.getElementById("offer").value.trim(),
+
+image:document.getElementById("image").value.trim(),
+
+description:document.getElementById("description").value.trim(),
+
+stock:document.getElementById("stock").value
+
+};
+
+saveProducts();
+
+alert("Product Updated Successfully");
 
 }
 
+// -------------------------
+// Delete Product
+// -------------------------
+
+function deleteProduct(){
+
+const code=document.getElementById("code").value.trim();
+
+const index=products.findIndex(p=>p.code===code);
+
+if(index===-1){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+if(confirm("Delete this product?")){
+
+products.splice(index,1);
+
+saveProducts();
+
+clearForm();
+
+alert("Product Deleted Successfully");
+
+}
+
+}
+
+// -------------------------
+// Update Price
+// -------------------------
+
+function updatePrice(){
+
+const code=document.getElementById("code").value.trim();
+
+const product=products.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+product.oldPrice=Number(document.getElementById("oldPrice").value);
+
+product.price=Number(document.getElementById("price").value);
+
+saveProducts();
+
+alert("Price Updated");
+
+}
+
+// -------------------------
+// Update Offer
+// -------------------------
+
+function updateOffer(){
+
+const code=document.getElementById("code").value.trim();
+
+const product=products.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+product.offer=document.getElementById("offer").value;
+
+saveProducts();
+
+alert("Offer Updated");
+
+}
+
+// -------------------------
+// Update Stock
+// -------------------------
+
+function updateStock(){
+
+const code=document.getElementById("code").value.trim();
+
+const product=products.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
+
+}
+
+product.stock=document.getElementById("stock").value;
+
+saveProducts();
+
+alert("Stock Updated");
+
+}
+
+// -------------------------
+// Change Banner
+// -------------------------
+
+function changeBanner(){
+
+const path=document.getElementById("bannerPath").value.trim();
+
+if(path===""){
+
+alert("Enter Banner Image Path");
+
+return;
+
+}
+
+localStorage.setItem("banner",path);
+
+alert("Banner Updated Successfully");
+
+}
+
+// -------------------------
+// Export Products
+// -------------------------
+
+function exportProducts(){
+
+const data=JSON.stringify(products,null,2);
+
+const blob=new Blob([data],{type:"application/json"});
+
+const link=document.createElement("a");
+
+link.href=URL.createObjectURL(blob);
+
+link.download="products-backup.json";
+
+link.click();
+
+}
+
+// -------------------------
+// Import Products
+// -------------------------
+
+function importProducts(){
+
+alert("Import Feature Coming Soon");
+
+}
+
+// -------------------------
+// Auto Load
+// -------------------------
+
+window.onload=function(){
+
+refreshProducts();
+
+};
