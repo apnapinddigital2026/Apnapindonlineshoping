@@ -9,90 +9,96 @@
 
 <title>Apna Pind Digital Online Shopping Mall</title>
 
+<meta name="description"
+content="Apna Pind Digital Online Shopping Mall">
+
 <link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<!-- ==========================
-HEADER
-========================== -->
+<!-- ========================= -->
+<!-- HEADER START -->
+<!-- ========================= -->
 
 <header class="header">
 
 <div class="logo-area">
 
-<img src="images/logo/logo.png"
-id="site-logo"
-alt="Logo">
+<img
+src="images/logo/IMG_20260629_002124.png"
+alt="Apna Pind Logo">
 
 <div>
 
-<h1>APNA PIND DIGITAL</h1>
+<h1>Apna Pind</h1>
 
-<p>ONLINE SHOPPING MALL</p>
-
-</div>
+<p>Digital Online Shopping Mall</p>
 
 </div>
 
-<nav>
+</div>
 
-<ul>
+  <!-- ========================= -->
+<!-- NAVIGATION -->
+<!-- ========================= -->
 
-<li><a href="#">Home</a></li>
+<nav class="navbar">
 
-<li><a href="#categories">Categories</a></li>
+<a href="index.html">🏠 Home</a>
 
-<li><a href="#offers">Offers</a></li>
+<a href="#categories">📂 Categories</a>
 
-<li>
+<a href="#products">🛍 Products</a>
 
-<a href="cart.html">
+<a href="cart.html" class="cart-link">
 
 🛒 Cart
 
-<span id="cart-count">
-
-0
-
-</span>
+<span id="cart-count">0</span>
 
 </a>
 
-</li>
-
-<li>
-
-<a href="admin.html">
-
-Admin
-
-</a>
-
-</li>
-
-</ul>
+<a href="admin.html">⚙ Admin</a>
 
 </nav>
 
 </header>
 
-<!-- ==========================
-SEARCH BAR
-========================== -->
+<!-- ========================= -->
+<!-- HEADER END -->
+<!-- ========================= -->
+
+  <!-- ========================= -->
+<!-- BANNER SECTION -->
+<!-- ========================= -->
+
+<section class="banner">
+
+<img
+id="banner-image"
+src="images/logo/image_20828faa.png"
+alt="Banner">
+
+</section>
+
+<!-- ========================= -->
+<!-- SEARCH SECTION -->
+<!-- ========================= -->
 
 <section class="search-section">
 
 <input
-
 type="text"
-
 id="searchBox"
-
-placeholder="Search Product Name / Code"
-
+placeholder="🔍 Search Products..."
 onkeyup="searchProducts()">
 
 <button onclick="searchProducts()">
@@ -103,194 +109,138 @@ Search
 
 </section>
 
-<!-- ==========================
-BANNER
-========================== -->
+  <!-- ========================= -->
+<!-- CATEGORIES -->
+<!-- ========================= -->
 
-<section class="banner">
+<section id="categories" class="categories">
 
-<img
+<h2>🛍 Shop by Categories</h2>
 
-id="banner-image"
+<div class="category-container">
 
-src="images/logo/banner.jpg"
+<div class="category-card" onclick="filterCategory('Ladies Wear')">
+<img src="images/logo/women-suits/suit1.jpg" alt="Ladies Wear">
+<h3>Ladies Wear</h3>
+</div>
 
-alt="Banner">
+<div class="category-card" onclick="filterCategory('Ladies Handbags')">
+<img src="images/logo/women-handbags/bag1.jpg" alt="Ladies Handbags">
+<h3>Ladies Handbags</h3>
+</div>
 
-</section>
+<div class="category-card" onclick="filterCategory('Men Wear')">
+<img src="images/logo/men/shirt1.jpg" alt="Men Wear">
+<h3>Men Wear</h3>
+</div>
 
-<!-- ==========================
-CATEGORY SECTION
-========================== -->
+<div class="category-card" onclick="filterCategory('Kids Wear')">
+<img src="images/logo/kids/kid1.jpg" alt="Kids Wear">
+<h3>Kids Wear</h3>
+</div>
 
-<section
-class="categories"
-id="categories">
+<div class="category-card" onclick="filterCategory('Footwear')">
+<img src="images/logo/footwear/shoe1.jpg" alt="Footwear">
+<h3>Footwear</h3>
+</div>
 
-<h2>
+<div class="category-card" onclick="filterCategory('Cosmetics')">
+<img src="images/logo/cosmetics/cosmetic1.jpg" alt="Cosmetics">
+<h3>Cosmetics</h3>
+</div>
 
-SHOP BY CATEGORY
+<div class="category-card" onclick="filterCategory('Grocery')">
+<img src="images/logo/grocery/grocery1.jpg" alt="Grocery">
+<h3>Grocery</h3>
+</div>
 
-</h2>
+<div class="category-card" onclick="filterCategory('Electronics')">
+<img src="images/logo/electronics/electronic1.jpg" alt="Electronics">
+<h3>Electronics</h3>
+</div>
 
-<div class="category-grid">
-
-<button
-onclick="filterCategory('ladies')">
-
-Ladies Wear
-
-</button>
-
-<button
-onclick="filterCategory('gents')">
-
-Gents Wear
-
-</button>
-
-<button
-onclick="filterCategory('ladies-handbags')">
-
-Ladies Handbags
-
-</button>
-
-<button
-onclick="filterCategory('kids')">
-
-Kids Wear
-
-</button>
-
-<button
-onclick="filterCategory('footwear')">
-
-Footwear
-
-</button>
-
-<button
-onclick="filterCategory('electronics')">
-
-Electronics
-
-</button>
-
-<button
-onclick="filterCategory('grocery')">
-
-Grocery
-
-</button>
-
-<button
-onclick="filterCategory('home-kitchen')">
-
-Home & Kitchen
-
-</button>
-
-<button
-onclick="filterCategory('all')">
-
-All Products
-
-</button>
+<div class="category-card" onclick="filterCategory('Home & Kitchen')">
+<img src="images/logo/home-kitchen/home1.jpg" alt="Home & Kitchen">
+<h3>Home & Kitchen</h3>
+</div>
 
 </div>
 
 </section>
 
-<!-- ==========================
-LATEST PRODUCTS
-========================== -->
+  <!-- ========================= -->
+<!-- LATEST PRODUCTS -->
+<!-- ========================= -->
+
+<section id="products" class="products-section">
+
+<h2>🔥 Latest Products</h2>
+
+<div id="loader" class="loader"></div>
+
+<div
+id="product-container"
+class="product-container">
+
+<!-- Products Load from product.js -->
+
+</div>
+
+</section>
+
+<!-- ========================= -->
+<!-- TODAY OFFERS -->
+<!-- ========================= -->
 
 <section class="products-section">
 
-<h2>Latest Products</h2>
+<h2>🎁 Today's Special Offers</h2>
 
-<div id="product-container" class="product-grid">
+<div
+id="offer-container"
+class="product-container">
 
-<!-- Products product.js ਤੋਂ Auto Load ਹੋਣਗੇ -->
-
-</div>
-
-</section>
-
-<!-- ==========================
-SPECIAL OFFERS
-========================== -->
-
-<section id="offers" class="offers-section">
-
-<h2>🔥 Today's Special Offers</h2>
-
-<div class="offer-box">
-
-<h3>Up To 50% OFF</h3>
-
-<p>Ladies Wear • Gents Wear • Handbags • Grocery • Electronics</p>
+<!-- Offer Products -->
 
 </div>
 
 </section>
 
-<!-- ==========================
-FOOTER
-========================== -->
+  <!-- ========================= -->
+<!-- FOOTER -->
+<!-- ========================= -->
 
-<footer class="footer">
+<footer>
 
-<div class="footer-box">
+<h3>🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL</h3>
 
-<h3>Apna Pind Digital Online Shopping Mall</h3>
+<p>Your Trusted Online Shopping Destination</p>
 
-<p>Village Kala Bala, District Gurdaspur</p>
+<p>📍 Punjab | ਪੰਜਾਬ, ਭਾਰਤ</p>
 
-<p>Punjab - 143528</p>
+<p>📞 Customer Care / ਗਾਹਕ ਸਹਾਇਤਾ : +91 8872776620</p>
 
-</div>
+<p>💬 WhatsApp Support / ਵਟਸਐਪ ਸਹਾਇਤਾ : +91 8872776620</p>
 
-<div class="footer-box">
+<p>🌾 ਪੰਜਾਬੀ ਲੋਕਾਂ ਲਈ ਭਰੋਸੇਯੋਗ Online Shopping Mall</p>
 
-<h3>Quick Links</h3>
+<p>🛍 Trusted Shopping for Every Punjabi Family</p>
 
-<a href="#">Home</a><br>
+<p>🔒 ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਸੁਰੱਖਿਅਤ (Privacy Protected)</p>
 
-<a href="#categories">Categories</a><br>
-
-<a href="#offers">Offers</a><br>
-
-<a href="cart.html">Cart</a>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Customer Support</h3>
-
-<p>WhatsApp Order Available</p>
-
-<p>Fast Delivery</p>
-
-<p>Secure Shopping</p>
-
-</div>
+<p>🔐 Your Information is Safe & Secure</p>
+  
+<p>© 2026 Apna Pind Digital. All Rights Reserved.</p>
 
 </footer>
 
-<!-- ==========================
-JAVASCRIPT FILES
-========================== -->
+<!-- ========================= -->
+<!-- JAVASCRIPT FILES -->
+<!-- ========================= -->
 
 <script src="product.js"></script>
 
 <script src="script.js"></script>
-
-  <!-- ==========================
-END OF PAGE
-========================== -->
 
 </body>
 
