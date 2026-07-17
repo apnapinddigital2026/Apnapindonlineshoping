@@ -1,171 +1,174 @@
-// ----------------------
-// Remove Product
-// ----------------------
+<!DOCTYPE html>
+<html lang="en">
 
-function removeFromCart(index){
+<head>
 
-cart.splice(index,1);
+<meta charset="UTF-8">
 
-saveCart();
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-showCart();
+<title>Admin Panel</title>
 
-}
+<link rel="stylesheet" href="style.css">
 
-// ----------------------
-// WhatsApp Checkout
-// ----------------------
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-function checkoutWhatsApp(){
+</head>
 
-if(cart.length===0){
+<body>
 
-alert("Your Cart is Empty");
+<!-- ================= HEADER ================= -->
 
-return;
+<header class="header">
 
-}
+<div class="logo-area">
 
-let message = "🛒 Apna Pind Digital Shopping Order%0A%0A";
+<img src="images/logo/IMG_20260629_002124.png" alt="Logo">
 
-let total = 0;
+<div>
 
-cart.forEach((item,i)=>{
+<h1>Admin Panel</h1>
 
-message +=
-`${i+1}. ${item.name}%0A₹${item.price}%0ACode: ${item.code}%0A%0A`;
-
-total += Number(item.price);
-
-});
-
-message += `Total : ₹${total}`;
-
-window.open(
-`https://wa.me/918872776620?text=${message}`,
-"_blank"
-);
-
-}
-
-// ----------------------
-// Auto Start
-// ----------------------
-
-updateCartCount();
-
-showCart();
-
-<!-- ========================= -->
-<!-- ADMIN DASHBOARD -->
-<!-- ========================= -->
-
-<section
-id="adminDashboard"
-class="products-section"
-style="display:none;">
-
-<h2>📦 Product Management</h2>
-
-<div class="admin-form">
-
-<input
-type="text"
-id="pCode"
-placeholder="Product Code">
-
-<input
-type="text"
-id="pName"
-placeholder="Product Name">
-
-<input
-type="text"
-id="pCategory"
-placeholder="Category (women-suits / women-handbags / men)">
-
-<input
-type="number"
-id="pPrice"
-placeholder="Price">
-
-<input
-type="number"
-id="pOldPrice"
-placeholder="Old Price">
-
-<input
-type="text"
-id="pOffer"
-placeholder="Offer">
-
-<input
-type="text"
-id="pColour"
-placeholder="Colour">
-
-<input
-type="text"
-id="pSize"
-placeholder="Size">
-
-<input
-type="text"
-id="pStock"
-placeholder="Stock">
-
-<input
-type="text"
-id="pImage"
-placeholder="Image Path (images/logo/...)">
-
-<textarea
-id="pDescription"
-placeholder="Product Description"></textarea>
-
-<div style="margin-top:15px;">
-
-<button
-class="btn btn-buy"
-onclick="saveProduct()">
-
-➕ Add Product
-
-</button>
-
-<button
-class="btn btn-cart"
-onclick="clearForm()">
-
-🗑 Clear
-
-</button>
-
-  <hr>
-
-<h2>Saved Products</h2>
-
-<div
-id="adminProductList"
-class="product-container">
+<p>Apna Pind Digital Online Shopping Mall</p>
 
 </div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">🏠 Home</a></li>
+
+<li><a href="cart.html">🛒 Cart</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= LOGIN ================= -->
+
+<section class="products-section">
+
+<h2>🔐 Admin Login</h2>
+
+<div class="product-card">
+
+<input
+type="password"
+id="adminPassword"
+placeholder="Enter Admin Password">
+
+<br><br>
+
+<button
+class="btn btn-admin"
+onclick="loginAdmin()">
+
+Login
+
+</button>
 
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- JAVASCRIPT FILES -->
-<!-- ========================= -->
+<!-- ================= ADMIN AREA ================= -->
+
+<section
+id="adminArea"
+class="products-section"
+style="display:none;">
+
+<h2>📦 Product Management</h2>
+
+<div class="product-card">
+
+<input type="text" id="productName" placeholder="Product Name">
+
+<br><br>
+
+<input type="text" id="productCode" placeholder="Product Code">
+
+<br><br>
+
+<input type="text" id="productCategory" placeholder="Category">
+
+<br><br>
+
+<input type="number" id="productPrice" placeholder="Price">
+
+<br><br>
+
+<input type="number" id="productOldPrice" placeholder="Old Price">
+
+<br><br>
+
+<input type="text" id="productOffer" placeholder="Offer">
+
+<br><br>
+
+<input type="text" id="productImage" placeholder="Image Path">
+
+<br><br>
+
+<textarea
+id="productDescription"
+placeholder="Description"></textarea>
+
+<br><br>
+
+<button
+class="btn btn-buy"
+onclick="saveProduct()">
+
+💾 Save Product
+
+</button>
+
+</div>
+
+</section>
+
+<!-- ================= SAVED PRODUCTS ================= -->
+
+<section id="savedProducts" class="products-section" style="display:none;">
+
+<h2>📋 Saved Products</h2>
+
+<div id="adminProductList" class="product-container">
+
+</div>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>Apna Pind Digital Online Shopping Mall</h2>
+
+<p>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</p>
+
+<p>📍 Punjab | ਪੰਜਾਬ</p>
+
+<p>📞 Customer Care : +91 8872776620</p>
+
+<p>💬 WhatsApp : +91 8872776620</p>
+
+<p>© 2026 Apna Pind Digital Online Shopping Mall</p>
+
+</footer>
+
+<!-- ================= JAVASCRIPT ================= -->
 
 <script src="product.js"></script>
-
-<script src="script.js"></script>
 
 <script src="admin.js"></script>
 
 </body>
 
 </html>
-
