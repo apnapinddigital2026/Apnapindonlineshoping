@@ -9,9 +9,6 @@
 
 <title>Apna Pind Digital Online Shopping Mall</title>
 
-<meta name="description"
-content="Apna Pind Digital Online Shopping Mall">
-
 <link rel="stylesheet" href="style.css">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -24,9 +21,7 @@ content="Apna Pind Digital Online Shopping Mall">
 
 <body>
 
-<!-- ========================= -->
-<!-- HEADER START -->
-<!-- ========================= -->
+ <!-- ================= HEADER ================= -->
 
 <header class="header">
 
@@ -38,205 +33,216 @@ alt="Apna Pind Logo">
 
 <div>
 
-<h1>Apna Pind</h1>
+<h1>Apna Pind Digital</h1>
 
-<p>Digital Online Shopping Mall</p>
-
-</div>
+<p>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</p>
 
 </div>
 
-  <!-- ========================= -->
-<!-- NAVIGATION -->
-<!-- ========================= -->
+</div>
 
-<nav class="navbar">
+<nav>
 
-<a href="index.html">🏠 Home</a>
+<ul>
 
-<a href="#categories">📂 Categories</a>
+<li><a href="index.html">🏠 Home / ਹੋਮ</a></li>
 
-<a href="#products">🛍 Products</a>
+<li><a href="#categories">📂 Categories / ਕੈਟਾਗਰੀ</a></li>
 
-<a href="cart.html" class="cart-link">
+<li><a href="#products">🛍 Products / ਪ੍ਰੋਡਕਟ</a></li>
 
+<li>
+<a href="cart.html">
 🛒 Cart
-
 <span id="cart-count">0</span>
-
 </a>
+</li>
 
-<a href="admin.html">⚙ Admin</a>
+<li><a href="admin.html">🔐 Admin</a></li>
+
+</ul>
 
 </nav>
 
 </header>
 
-<!-- ========================= -->
-<!-- HEADER END -->
-<!-- ========================= -->
+  <!-- ================= SEARCH ================= -->
 
-  <!-- ========================= -->
-<!-- BANNER SECTION -->
-<!-- ========================= -->
+<section class="search-section">
+
+<h2>🔍 Search Products / ਪ੍ਰੋਡਕਟ ਖੋਜੋ</h2>
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search Products..."
+
+onkeyup="searchProducts()">
+
+</section>
+
+<!-- ================= BANNER ================= -->
 
 <section class="banner">
 
 <img
 id="banner-image"
 src="images/logo/image_20828faa.png"
-alt="Banner">
+alt="Shopping Banner">
 
 </section>
 
-<!-- ========================= -->
-<!-- SEARCH SECTION -->
-<!-- ========================= -->
+<!-- ================= CATEGORIES ================= -->
 
-<section class="search-section">
+<section class="categories" id="categories">
 
-<input
-type="text"
-id="searchBox"
-placeholder="🔍 Search Products..."
-onkeyup="searchProducts()">
-
-<button onclick="searchProducts()">
-
-Search
-
-</button>
-
-</section>
-
-  <!-- ========================= -->
-<!-- CATEGORIES -->
-<!-- ========================= -->
-
-<section id="categories" class="categories">
-
-<h2>🛍 Shop by Categories</h2>
+<h2>🛍 Shop By Category / ਕੈਟਾਗਰੀ ਅਨੁਸਾਰ ਖਰੀਦੋ</h2>
 
 <div class="category-container">
 
-<div class="category-card" onclick="filterCategory('Ladies Wear')">
-<img src="images/logo/women-suits/suit1.jpg" alt="Ladies Wear">
-<h3>Ladies Wear</h3>
+<div class="category-card" onclick="filterCategory('women-suits')">
+<img src="images/logo/women-suits/IMG-20260628-WA0013.jpg" alt="Women Suits">
+<h3>👗 Women Suits</h3>
+<p>ਔਰਤਾਂ ਦੇ ਸੂਟ</p>
 </div>
 
-<div class="category-card" onclick="filterCategory('Ladies Handbags')">
-<img src="images/logo/women-handbags/bag1.jpg" alt="Ladies Handbags">
-<h3>Ladies Handbags</h3>
+<div class="category-card" onclick="filterCategory('women-handbags')">
+<img src="images/logo/women-handbags/IMG-20260628-WA0001.jpg" alt="Handbags">
+<h3>👜 Handbags</h3>
+<p>ਲੇਡੀਜ਼ ਹੈਂਡਬੈਗ</p>
 </div>
 
-<div class="category-card" onclick="filterCategory('Men Wear')">
-<img src="images/logo/men/shirt1.jpg" alt="Men Wear">
-<h3>Men Wear</h3>
+<div class="category-card" onclick="filterCategory('men')">
+<img src="images/logo/men/IMG-20260628-WA0001.jpg" alt="Men Wear">
+<h3>👔 Men Wear</h3>
+<p>ਮਰਦਾਂ ਦੇ ਕੱਪੜੇ</p>
 </div>
 
-<div class="category-card" onclick="filterCategory('Kids Wear')">
-<img src="images/logo/kids/kid1.jpg" alt="Kids Wear">
-<h3>Kids Wear</h3>
+<div class="category-card" onclick="filterCategory('kids')">
+<img src="images/logo/kids/IMG-20260628-WA0001.jpg" alt="Kids Wear">
+<h3>🧒 Kids Wear</h3>
+<p>ਬੱਚਿਆਂ ਦੇ ਕੱਪੜੇ</p>
 </div>
 
-<div class="category-card" onclick="filterCategory('Footwear')">
-<img src="images/logo/footwear/shoe1.jpg" alt="Footwear">
-<h3>Footwear</h3>
+<div class="category-card" onclick="filterCategory('footwear')">
+<img src="images/logo/footwear/IMG-20260628-WA0001.jpg" alt="Footwear">
+<h3>👟 Footwear</h3>
+<p>ਜੁੱਤੇ</p>
 </div>
 
-<div class="category-card" onclick="filterCategory('Cosmetics')">
-<img src="images/logo/cosmetics/cosmetic1.jpg" alt="Cosmetics">
-<h3>Cosmetics</h3>
-</div>
-
-<div class="category-card" onclick="filterCategory('Grocery')">
-<img src="images/logo/grocery/grocery1.jpg" alt="Grocery">
-<h3>Grocery</h3>
-</div>
-
-<div class="category-card" onclick="filterCategory('Electronics')">
-<img src="images/logo/electronics/electronic1.jpg" alt="Electronics">
-<h3>Electronics</h3>
-</div>
-
-<div class="category-card" onclick="filterCategory('Home & Kitchen')">
-<img src="images/logo/home-kitchen/home1.jpg" alt="Home & Kitchen">
-<h3>Home & Kitchen</h3>
+<div class="category-card" onclick="filterCategory('grocery')">
+<img src="images/logo/grocery/IMG-20260628-WA0001.jpg" alt="Grocery">
+<h3>🛒 Grocery</h3>
+<p>ਕਿਰਾਣਾ ਸਮਾਨ</p>
 </div>
 
 </div>
 
 </section>
 
-  <!-- ========================= -->
-<!-- LATEST PRODUCTS -->
-<!-- ========================= -->
+<!-- ================= LATEST PRODUCTS ================= -->
 
-<section id="products" class="products-section">
+<section class="products-section" id="products">
 
-<h2>🔥 Latest Products</h2>
+<h2>🔥 Latest Products / ਨਵੇਂ ਪ੍ਰੋਡਕਟ</h2>
 
 <div id="loader" class="loader"></div>
 
-<div
-id="product-container"
-class="product-container">
+<div id="product-container" class="product-container">
 
-<!-- Products Load from product.js -->
+<!-- Products will load from product.js -->
 
 </div>
 
 </section>
 
-<!-- ========================= -->
-<!-- TODAY OFFERS -->
-<!-- ========================= -->
+<!-- ================= OFFERS ================= -->
 
 <section class="products-section">
 
-<h2>🎁 Today's Special Offers</h2>
+<h2>🎁 Today's Offers / ਅੱਜ ਦੀਆਂ ਖਾਸ ਆਫਰਾਂ</h2>
 
-<div
-id="offer-container"
-class="product-container">
+<div class="product-container">
 
-<!-- Offer Products -->
+<div class="product-card">
+
+<h3>💥 Special Discount</h3>
+
+<p>Women Suits</p>
+
+<h4>Flat 25% OFF</h4>
+
+</div>
+
+<div class="product-card">
+
+<h3>🎉 Combo Offer</h3>
+
+<p>Handbag + Suit</p>
+
+<h4>Save More</h4>
+
+</div>
+
+<div class="product-card">
+
+<h3>🚚 Free Delivery</h3>
+
+<p>Selected Products</p>
+
+<h4>Punjab Only</h4>
+
+</div>
 
 </div>
 
 </section>
 
-  <!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
+<!-- ================= FOOTER ================= -->
 
 <footer>
 
-<h3>🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL</h3>
+<h2>Apna Pind Digital Online Shopping Mall</h2>
 
-<p>Your Trusted Online Shopping Destination</p>
+<p>
+ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall
+</p>
 
-<p>📍 Punjab | ਪੰਜਾਬ, ਭਾਰਤ</p>
+<p>
+🛍 Your Trusted Shopping Partner
+</p>
 
-<p>📞 Customer Care / ਗਾਹਕ ਸਹਾਇਤਾ : +91 8872776620</p>
+<p>
+📍 Punjab | ਪੰਜਾਬ
+</p>
 
-<p>💬 WhatsApp Support / ਵਟਸਐਪ ਸਹਾਇਤਾ : +91 8872776620</p>
+<p>
+📞 Customer Care / ਗਾਹਕ ਸੇਵਾ :
++91 8872776620
+</p>
 
-<p>🌾 ਪੰਜਾਬੀ ਲੋਕਾਂ ਲਈ ਭਰੋਸੇਯੋਗ Online Shopping Mall</p>
+<p>
+💬 WhatsApp Order :
++91 8872776620
+</p>
 
-<p>🛍 Trusted Shopping for Every Punjabi Family</p>
+<p>
 
-<p>🔒 ਤੁਹਾਡੀ ਜਾਣਕਾਰੀ ਸੁਰੱਖਿਅਤ (Privacy Protected)</p>
+🌾
 
-<p>🔐 Your Information is Safe & Secure</p>
-  
-<p>© 2026 Apna Pind Digital. All Rights Reserved.</p>
+ਪੰਜਾਬੀ ਲੋਕਾਂ ਲਈ ਪੰਜਾਬੀ ਵਿੱਚ Online Shopping
+
+</p>
+
+<p>
+
+© 2026 Apna Pind Digital Online Shopping Mall
+
+</p>
 
 </footer>
 
-<!-- ========================= -->
-<!-- JAVASCRIPT FILES -->
-<!-- ========================= -->
+<!-- ================= JAVASCRIPT ================= -->
 
 <script src="product.js"></script>
 
