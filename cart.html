@@ -1,1 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Shopping Cart</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+<div class="logo-area">
+
+<img src="images/logo/IMG_20260629_002124.png" alt="Logo">
+
+<div>
+
+<h1>Apna Pind Digital</h1>
+
+<p>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</p>
+
+</div>
+
+</div>
+
+<nav>
+
+<ul>
+
+<li><a href="index.html">🏠 Home</a></li>
+
+<li><a href="product.html">🛍 Products</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- ================= CART ================= -->
+
+<section class="products-section">
+
+<h2>🛒 My Shopping Cart</h2>
+
+<h3>ਮੇਰਾ ਖਰੀਦਦਾਰੀ ਕਾਰਟ</h3>
+
+<div id="cartItems" class="product-container">
+
+</div>
+
+</section>
+
+<!-- ================= TOTAL ================= -->
+
+<section class="products-section">
+
+<h2 id="cartTotal">
+
+Total : ₹0
+
+</h2>
+
+<button
+
+class="btn btn-buy"
+
+id="checkoutBtn">
+
+💬 Checkout on WhatsApp
+
+</button>
+
+</section>
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<h2>Apna Pind Digital Online Shopping Mall</h2>
+
+<p>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</p>
+
+<p>📍 Punjab | ਪੰਜਾਬ</p>
+
+<p>📞 Customer Care : +91 8872776620</p>
+
+<p>💬 WhatsApp : +91 8872776620</p>
+
+<p>© 2026 Apna Pind Digital Online Shopping Mall</p>
+
+</footer>
+
+<!-- ================= JS ================= -->
+
+<script src="product.js"></script>
+
+<script src="cart.js"></script>
+
+<script>
+
+showCart();
+
+document.getElementById("checkoutBtn").onclick = checkout;
+
+</script>
+
+</body>
+
+</html>
+
 
