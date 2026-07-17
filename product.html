@@ -1,1 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Product Details | Apna Pind Digital</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- HEADER -->
+<!-- ========================= -->
+
+<header class="header">
+
+<div class="logo-area">
+
+<img
+src="images/logo/IMG_20260629_002124.png"
+alt="Logo">
+
+<div>
+
+<h1>Apna Pind</h1>
+
+<p>Digital Online Shopping Mall</p>
+
+</div>
+
+</div>
+
+<nav class="navbar">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="cart.html">
+
+🛒 Cart
+
+<span id="cart-count">0</span>
+
+</a>
+
+</nav>
+
+</header>
+
+  <!-- ========================= -->
+<!-- PRODUCT DETAILS -->
+<!-- ========================= -->
+
+<section class="product-details">
+
+<div class="product-image">
+
+<img
+id="product-image"
+src=""
+alt="Product">
+
+</div>
+
+<div class="product-info">
+
+<h2 id="product-name"></h2>
+
+<p id="product-description"></p>
+
+<h3>
+
+₹<span id="product-price"></span>
+
+<del>
+
+₹<span id="product-old-price"></span>
+
+</del>
+
+</h3>
+
+<span
+id="product-offer"
+class="offer-badge">
+
+</span>
+
+<br><br>
+
+<p>
+
+<b>Colour :</b>
+
+<span id="product-colour"></span>
+
+</p>
+
+<p>
+
+<b>Size :</b>
+
+<span id="product-size"></span>
+
+</p>
+
+<p>
+
+<b>Stock :</b>
+
+<span id="product-stock"
+class="stock-badge"></span>
+
+</p>
+
+<br>
+
+<button
+class="btn btn-cart"
+onclick="addCurrentToCart()">
+
+🛒 Add To Cart
+
+</button>
+
+<button
+class="btn btn-buy"
+onclick="buyNow()">
+
+💬 Buy on WhatsApp
+
+</button>
+
+<br><br>
+
+<a
+href="index.html"
+class="btn btn-admin">
+
+⬅ Back to Shop
+
+</a>
+
+</div>
+
+</section>
+
+  <!-- ========================= -->
+<!-- JAVASCRIPT FILES -->
+<!-- ========================= -->
+
+<script src="product.js"></script>
+
+<script src="script.js"></script>
+
+<script>
+
+// ----------------------------
+// Load Selected Product
+// ----------------------------
+
+const selectedCode = localStorage.getItem("selectedProduct");
+
+const product = getProduct(selectedCode);
+
+if(product){
+
+document.getElementById("product-image").src = product.image;
+
+document.getElementById("product-name").innerText = product.name;
+
+document.getElementById("product-description").innerText = product.description;
+
+document.getElementById("product-price").innerText = product.price;
+
+document.getElementById("product-old-price").innerText = product.oldPrice;
+
+document.getElementById("product-offer").innerText = product.offer;
+
+document.getElementById("product-colour").innerText = product.colour;
+
+document.getElementById("product-size").innerText = product.size;
+
+const stock = document.getElementById("product-stock");
+
+stock.innerText = product.stock;
+
+stock.classList.add("in-stock");
+
+}
+
+// ----------------------------
+// Add Current Product To Cart
+// ----------------------------
+
+function addCurrentToCart(){
+
+addToCart(selectedCode);
+
+}
+
+// ----------------------------
+// Buy Now (WhatsApp)
+// ----------------------------
+
+function buyNow(){
+
+const p = getProduct(selectedCode);
+
+const message =
+`Hello, I want to buy:
+
+${p.name}
+
+Price : ₹${p.price}
+
+Product Code : ${p.code}`;
+
+window.open(
+`https://wa.me/918872776620?text=${encodeURIComponent(message)}`,
+"_blank"
+);
+
+}
+
+updateCartCount();
+
+</script>
+
+</body>
+
+</html>
+
 
