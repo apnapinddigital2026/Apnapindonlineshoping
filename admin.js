@@ -1,151 +1,156 @@
-// ==========================================
-// APNA PIND DIGITAL ONLINE SHOPPING MALL
-// ADMIN.JS
-// PART 1
-// ==========================================
+/* ==========================================
+   APNA PIND DIGITAL ONLINE SHOPPING MALL
+   ADMIN.JS
+========================================== */
 
-// -------------------------
-// Admin Password
-// -------------------------
-
-const ADMIN_PASSWORD = "12345";
-
-// -------------------------
-// Load Products
-// -------------------------
-
-let products = JSON.parse(localStorage.getItem("products")) || [];
-
-// -------------------------
+// ----------------------
 // Admin Login
-// -------------------------
+// ----------------------
 
-function adminLogin(){
+const ADMIN_USERNAME = "admin";
+const ADMIN_PASSWORD = "1234";
 
-const password = document.getElementById("adminPassword").value;
+// ----------------------
+// Login Function
+// ----------------------
 
-if(password !== ADMIN_PASSWORD){
+function adminLogin() {
 
-alert("Wrong Password");
+const username = document.getElementById("adminUser").value.trim();
 
-return;
+const password = document.getElementById("adminPass").value.trim();
 
-}
+if (username === ADMIN_USERNAME && password === ADMIN_PASSWORD) {
 
-document.getElementById("admin-panel").style.display="block";
-document.getElementById("admin-search").style.display="block";
-document.getElementById("admin-manage").style.display="block";
-document.getElementById("admin-banner").style.display="block";
-document.getElementById("admin-list").style.display="block";
-document.getElementById("admin-settings").style.display="block";
+alert("✅ Login Successful");
 
-refreshProducts();
+document.getElementById("adminDashboard").style.display = "block";
 
-}
+} else {
 
-// -------------------------
-// Save Products
-// -------------------------
-
-function saveProducts(){
-
-localStorage.setItem("products",JSON.stringify(products));
-
-refreshProducts();
+alert("❌ Invalid Username or Password");
 
 }
 
-// -------------------------
-// Add Product
-// -------------------------
+}
 
-function addProduct(){
+// ----------------------
+// Save Product (Local)
+// ----------------------
 
-const product={
+function saveProduct() {
 
-code:document.getElementById("code").value.trim(),
+const product = {
 
-name:document.getElementById("name").value.trim(),
+code: document.getElementById("pCode").value,
 
-category:document.getElementById("category").value.trim(),
+name: document.getElementById("pName").value,
 
-colour:document.getElementById("colour").value.trim(),
+category: document.getElementById("pCategory").value,
 
-size:document.getElementById("size").value.trim(),
+price: Number(document.getElementById("pPrice").value),
 
-oldPrice:Number(document.getElementById("oldPrice").value),
+oldPrice: Number(document.getElementById("pOldPrice").value),
 
-price:Number(document.getElementById("price").value),
+offer: document.getElementById("pOffer").value,
 
-offer:document.getElementById("offer").value.trim(),
+colour: document.getElementById("pColour").value,
 
-image:document.getElementById("image").value.trim(),
+size: document.getElementById("pSize").value,
 
-description:document.getElementById("description").value.trim(),
+stock: document.getElementById("pStock").value,
 
-stock:document.getElementById("stock").value
+image: document.getElementById("pImage").value,
+
+description: document.getElementById("pDescription").value
 
 };
 
-if(product.code==="" || product.name===""){
+// Save in Browser (LocalStorage)
+let adminProducts =
+JSON.parse(localStorage.getItem("adminProducts")) || [];
 
-alert("Product Code and Product Name Required");
+adminProducts.push(product);
 
-return;
+localStorage.setItem(
+"adminProducts",
+JSON.stringify(adminProducts)
+);
 
-}
-
-const exists = products.find(p=>p.code===product.code);
-
-if(exists){
-
-alert("Product Code Already Exists");
-
-return;
-
-}
-
-products.push(product);
-
-saveProducts();
+alert("✅ Product Saved Successfully");
 
 clearForm();
 
-alert("Product Added Successfully");
+}
+
+// ----------------------
+// Clear Form
+// ----------------------
+
+function clearForm(){
+
+document.getElementById("pCode").value="";
+
+document.getElementById("pName").value="";
+
+document.getElementById("pCategory").value="";
+
+document.getElementById("pPrice").value="";
+
+document.getElementById("pOldPrice").value="";
+
+document.getElementById("pOffer").value="";
+
+document.getElementById("pColour").value="";
+
+document.getElementById("pSize").value="";
+
+document.getElementById("pStock").value="";
+
+document.getElementById("pImage").value="";
+
+document.getElementById("pDescription").value="";
 
 }
 
-// -------------------------
-// Refresh Product List
-// -------------------------
+// ==========================================
+// PRODUCT LIST
+// ==========================================
 
-function refreshProducts(){
+function loadAdminProducts(){
 
-const table=document.getElementById("productTable");
+const list=document.getElementById("adminProductList");
 
-if(!table) return;
+if(!list) return;
 
-table.innerHTML="";
+let adminProducts=
+JSON.parse(localStorage.getItem("adminProducts"))||[];
 
-products.forEach(product=>{
+list.innerHTML="";
 
-table.innerHTML+=`
+adminProducts.forEach((item,index)=>{
 
-<tr>
+list.innerHTML+=`
 
-<td>${product.code}</td>
+<div class="product-card">
 
-<td>${product.name}</td>
+<img src="${item.image}" alt="${item.name}">
 
-<td>${product.category}</td>
+<h3>${item.name}</h3>
 
-<td>₹${product.price}</td>
+<p>${item.category}</p>
 
-<td>${product.offer}</td>
+<h4>₹${item.price}</h4>
 
-<td>${product.stock}</td>
+<button
+class="btn btn-cart"
+onclick="deleteProduct(${index})">
 
-</tr>
+🗑 Delete
+
+</button>
+
+</div>
 
 `;
 
@@ -153,280 +158,34 @@ table.innerHTML+=`
 
 }
 
-// -------------------------
-// Clear Form
-// -------------------------
+// ==========================================
+// DELETE PRODUCT
+// ==========================================
 
-function clearForm(){
+function deleteProduct(index){
 
-document.getElementById("code").value="";
-document.getElementById("name").value="";
-document.getElementById("category").value="";
-document.getElementById("colour").value="";
-document.getElementById("size").value="";
-document.getElementById("oldPrice").value="";
-document.getElementById("price").value="";
-document.getElementById("offer").value="";
-document.getElementById("image").value="";
-document.getElementById("description").value="";
-document.getElementById("stock").value="In Stock";
+let adminProducts=
+JSON.parse(localStorage.getItem("adminProducts"))||[];
 
-}
+adminProducts.splice(index,1);
 
-// -------------------------
-// Search Product
-// -------------------------
+localStorage.setItem(
+"adminProducts",
+JSON.stringify(adminProducts)
+);
 
-function searchProduct(){
+loadAdminProducts();
 
-const code=document.getElementById("searchCode").value.trim();
-
-const product=products.find(p=>p.code===code);
-
-if(!product){
-
-alert("Product Not Found");
-
-return;
+alert("✅ Product Deleted");
 
 }
 
-document.getElementById("code").value=product.code;
-document.getElementById("name").value=product.name;
-document.getElementById("category").value=product.category;
-document.getElementById("colour").value=product.colour;
-document.getElementById("size").value=product.size;
-document.getElementById("oldPrice").value=product.oldPrice;
-document.getElementById("price").value=product.price;
-document.getElementById("offer").value=product.offer;
-document.getElementById("image").value=product.image;
-document.getElementById("description").value=product.description;
-document.getElementById("stock").value=product.stock;
+// ==========================================
+// AUTO START
+// ==========================================
 
-alert("Product Loaded");
+document.addEventListener("DOMContentLoaded",()=>{
 
-}
+loadAdminProducts();
 
-// -------------------------
-// Update Product
-// -------------------------
-
-function updateProduct(){
-
-const code=document.getElementById("code").value.trim();
-
-const index=products.findIndex(p=>p.code===code);
-
-if(index===-1){
-
-alert("Product Not Found");
-
-return;
-
-}
-
-products[index]={
-
-code:document.getElementById("code").value.trim(),
-
-name:document.getElementById("name").value.trim(),
-
-category:document.getElementById("category").value.trim(),
-
-colour:document.getElementById("colour").value.trim(),
-
-size:document.getElementById("size").value.trim(),
-
-oldPrice:Number(document.getElementById("oldPrice").value),
-
-price:Number(document.getElementById("price").value),
-
-offer:document.getElementById("offer").value.trim(),
-
-image:document.getElementById("image").value.trim(),
-
-description:document.getElementById("description").value.trim(),
-
-stock:document.getElementById("stock").value
-
-};
-
-saveProducts();
-
-alert("Product Updated Successfully");
-
-}
-
-// -------------------------
-// Delete Product
-// -------------------------
-
-function deleteProduct(){
-
-const code=document.getElementById("code").value.trim();
-
-const index=products.findIndex(p=>p.code===code);
-
-if(index===-1){
-
-alert("Product Not Found");
-
-return;
-
-}
-
-if(confirm("Delete this product?")){
-
-products.splice(index,1);
-
-saveProducts();
-
-clearForm();
-
-alert("Product Deleted Successfully");
-
-}
-
-}
-
-// -------------------------
-// Update Price
-// -------------------------
-
-function updatePrice(){
-
-const code=document.getElementById("code").value.trim();
-
-const product=products.find(p=>p.code===code);
-
-if(!product){
-
-alert("Product Not Found");
-
-return;
-
-}
-
-product.oldPrice=Number(document.getElementById("oldPrice").value);
-
-product.price=Number(document.getElementById("price").value);
-
-saveProducts();
-
-alert("Price Updated");
-
-}
-
-// -------------------------
-// Update Offer
-// -------------------------
-
-function updateOffer(){
-
-const code=document.getElementById("code").value.trim();
-
-const product=products.find(p=>p.code===code);
-
-if(!product){
-
-alert("Product Not Found");
-
-return;
-
-}
-
-product.offer=document.getElementById("offer").value;
-
-saveProducts();
-
-alert("Offer Updated");
-
-}
-
-// -------------------------
-// Update Stock
-// -------------------------
-
-function updateStock(){
-
-const code=document.getElementById("code").value.trim();
-
-const product=products.find(p=>p.code===code);
-
-if(!product){
-
-alert("Product Not Found");
-
-return;
-
-}
-
-product.stock=document.getElementById("stock").value;
-
-saveProducts();
-
-alert("Stock Updated");
-
-}
-
-// -------------------------
-// Change Banner
-// -------------------------
-
-function changeBanner(){
-
-const path=document.getElementById("bannerPath").value.trim();
-
-if(path===""){
-
-alert("Enter Banner Image Path");
-
-return;
-
-}
-
-localStorage.setItem("banner",path);
-
-alert("Banner Updated Successfully");
-
-}
-
-// -------------------------
-// Export Products
-// -------------------------
-
-function exportProducts(){
-
-const data=JSON.stringify(products,null,2);
-
-const blob=new Blob([data],{type:"application/json"});
-
-const link=document.createElement("a");
-
-link.href=URL.createObjectURL(blob);
-
-link.download="products-backup.json";
-
-link.click();
-
-}
-
-// -------------------------
-// Import Products
-// -------------------------
-
-function importProducts(){
-
-alert("Import Feature Coming Soon");
-
-}
-
-// -------------------------
-// Auto Load
-// -------------------------
-
-window.onload=function(){
-
-refreshProducts();
-
-};
+});
