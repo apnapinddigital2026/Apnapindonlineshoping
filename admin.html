@@ -1,335 +1,149 @@
-<!DOCTYPE html>
-<html lang="en">
+// ----------------------
+// Remove Product
+// ----------------------
 
-<head>
+function removeFromCart(index){
 
-<meta charset="UTF-8">
+cart.splice(index,1);
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+saveCart();
 
-<title>APNA PIND DIGITAL ADMIN PANEL</title>
-
-<link rel="stylesheet" href="style.css">
-
-<style>
-
-body{
-
-background:#f4f4f4;
+showCart();
 
 }
 
-.admin-container{
+// ----------------------
+// WhatsApp Checkout
+// ----------------------
 
-max-width:1200px;
+function checkoutWhatsApp(){
 
-margin:20px auto;
+if(cart.length===0){
 
-background:#fff;
+alert("Your Cart is Empty");
 
-padding:25px;
-
-border-radius:12px;
-
-box-shadow:0 0 15px rgba(0,0,0,.15);
+return;
 
 }
 
-.admin-title{
+let message = "🛒 Apna Pind Digital Shopping Order%0A%0A";
 
-text-align:center;
+let total = 0;
 
-color:#6a1b9a;
+cart.forEach((item,i)=>{
 
-margin-bottom:25px;
+message +=
+`${i+1}. ${item.name}%0A₹${item.price}%0ACode: ${item.code}%0A%0A`;
 
-font-size:30px;
+total += Number(item.price);
 
-}
+});
 
-.admin-card{
+message += `Total : ₹${total}`;
 
-background:#fafafa;
-
-border:1px solid #ddd;
-
-padding:20px;
-
-border-radius:10px;
-
-margin-bottom:20px;
+window.open(
+`https://wa.me/918872776620?text=${message}`,
+"_blank"
+);
 
 }
 
-.admin-card h2{
+// ----------------------
+// Auto Start
+// ----------------------
 
-color:#6a1b9a;
+updateCartCount();
 
-margin-bottom:15px;
+showCart();
 
-}
-
-.admin-card input,
-.admin-card textarea,
-.admin-card select{
-
-width:100%;
-
-padding:12px;
-
-margin:8px 0;
-
-border:1px solid #ccc;
-
-border-radius:8px;
-
-font-size:15px;
-
-}
-
-.admin-card button{
-
-background:#6a1b9a;
-
-color:#fff;
-
-border:none;
-
-padding:12px 18px;
-
-border-radius:8px;
-
-cursor:pointer;
-
-margin-top:10px;
-
-margin-right:8px;
-
-}
-
-.admin-card button:hover{
-
-background:#4a148c;
-
-}
-
-</style>
-
-</head>
-
-<body>
-
-<div class="admin-container">
-
-<h1 class="admin-title">
-
-🛒 APNA PIND DIGITAL ADMIN PANEL
-
-</h1>
-
- <!-- ========================= -->
-<!-- ADMIN LOGIN -->
+<!-- ========================= -->
+<!-- ADMIN DASHBOARD -->
 <!-- ========================= -->
 
-<div class="admin-card">
+<section
+id="adminDashboard"
+class="products-section"
+style="display:none;">
 
-<h2>🔐 Admin Login</h2>
+<h2>📦 Product Management</h2>
+
+<div class="admin-form">
 
 <input
-type="password"
-id="adminPassword"
-placeholder="Enter Admin Password">
+type="text"
+id="pCode"
+placeholder="Product Code">
 
-<button onclick="adminLogin()">
+<input
+type="text"
+id="pName"
+placeholder="Product Name">
 
-🔓 Login
+<input
+type="text"
+id="pCategory"
+placeholder="Category (women-suits / women-handbags / men)">
 
-</button>
+<input
+type="number"
+id="pPrice"
+placeholder="Price">
 
-</div>
+<input
+type="number"
+id="pOldPrice"
+placeholder="Old Price">
 
-<!-- ========================= -->
-<!-- ADD NEW PRODUCT -->
-<!-- ========================= -->
+<input
+type="text"
+id="pOffer"
+placeholder="Offer">
 
-<div class="admin-card" id="admin-panel" style="display:none;">
+<input
+type="text"
+id="pColour"
+placeholder="Colour">
 
-<h2>➕ Add New Product</h2>
+<input
+type="text"
+id="pSize"
+placeholder="Size">
 
-<input type="text" id="code" placeholder="Product Code">
+<input
+type="text"
+id="pStock"
+placeholder="Stock">
 
-<input type="text" id="name" placeholder="Product Name">
+<input
+type="text"
+id="pImage"
+placeholder="Image Path (images/logo/...)">
 
-<input type="text" id="category" placeholder="Category">
+<textarea
+id="pDescription"
+placeholder="Product Description"></textarea>
 
-<input type="text" id="colour" placeholder="Colour">
+<div style="margin-top:15px;">
 
-<input type="text" id="size" placeholder="Size">
-
-<input type="number" id="oldPrice" placeholder="Old Price">
-
-<input type="number" id="price" placeholder="New Price">
-
-<input type="text" id="offer" placeholder="Offer">
-
-<input type="text" id="image" placeholder="Image Path">
-
-<textarea id="description" placeholder="Description"></textarea>
-
-<select id="stock">
-
-<option>In Stock</option>
-
-<option>Out of Stock</option>
-
-<option>Sold Out</option>
-
-</select>
-
-<button onclick="addProduct()">
+<button
+class="btn btn-buy"
+onclick="saveProduct()">
 
 ➕ Add Product
 
 </button>
 
-<button onclick="updateProduct()">
+<button
+class="btn btn-cart"
+onclick="clearForm()">
 
-💾 Save Update
-
-</button>
-
-</div>
-
-<!-- ========================= -->
-<!-- SEARCH PRODUCT -->
-<!-- ========================= -->
-
-<div class="admin-card" id="admin-search" style="display:none;">
-
-<h2>🔍 Search Product</h2>
-
-<input
-type="text"
-id="searchCode"
-placeholder="Enter Product Code">
-
-<button onclick="searchProduct()">
-
-🔍 Search Product
+🗑 Clear
 
 </button>
 
 </div>
 
- <!-- ========================= -->
-<!-- PRODUCT MANAGEMENT -->
-<!-- ========================= -->
-
-<div class="admin-card" id="admin-manage" style="display:none;">
-
-<h2>⚙ Product Management</h2>
-
-<button onclick="deleteProduct()">🗑 Delete Product</button>
-
-<button onclick="updatePrice()">💰 Update Price</button>
-
-<button onclick="updateOffer()">🏷 Update Offer</button>
-
-<button onclick="updateStock()">📦 Stock Update</button>
-
 </div>
 
-<!-- ========================= -->
-<!-- BANNER MANAGEMENT -->
-<!-- ========================= -->
+</section>
 
-<div class="admin-card" id="admin-banner" style="display:none;">
-
-<h2>🖼 Banner Management</h2>
-
-<input
-type="text"
-id="bannerPath"
-placeholder="Banner Image Path">
-
-<button onclick="changeBanner()">
-
-🖼 Change Banner
-
-</button>
-
-</div>
-
-<!-- ========================= -->
-<!-- PRODUCT LIST -->
-<!-- ========================= -->
-
-<div class="admin-card" id="admin-list" style="display:none;">
-
-<h2>📋 Product List</h2>
-
-<table border="1" width="100%" cellspacing="0" cellpadding="8">
-
-<thead>
-
-<tr>
-
-<th>Code</th>
-
-<th>Name</th>
-
-<th>Category</th>
-
-<th>Price</th>
-
-<th>Offer</th>
-
-<th>Stock</th>
-
-</tr>
-
-</thead>
-
-<tbody id="productTable">
-
-</tbody>
-
-</table>
-
-</div>
-
-<!-- ========================= -->
-<!-- WEBSITE SETTINGS -->
-<!-- ========================= -->
-
-<div class="admin-card" id="admin-settings" style="display:none;">
-
-<h2>📊 Website Settings</h2>
-
-<button onclick="refreshProducts()">
-
-🔄 Refresh Product List
-
-</button>
-
-<button onclick="exportProducts()">
-
-⬇ Export Products
-
-</button>
-
-<button onclick="importProducts()">
-
-⬆ Import Products
-
-</button>
-
-</div>
-
-<script src="admin.js"></script>
-
-</div>
-
-</body>
-
-</html>
