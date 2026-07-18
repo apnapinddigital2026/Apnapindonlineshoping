@@ -346,33 +346,7 @@ updateCartCount();
 
 function buyNow(code){
 
-const product = getProduct(code);
-
-if(!product) return;
-
-let message = `🛒 Apna Pind Digital Shopping Mall
-
-Product : ${product.name}
-
-Code : ${product.code}
-
-Price : ₹${product.price}
-
-Offer : ${product.offer}
-
-Colour : ${product.colour}
-
-Size : ${product.size}
-
-I want to order this product.`;
-
-window.open(
-
-`https://wa.me/918872776620?text=${encodeURIComponent(message)}`,
-
-"_blank"
-
-);
+window.location.href = "order.html?code=" + code;
 
 }
 
