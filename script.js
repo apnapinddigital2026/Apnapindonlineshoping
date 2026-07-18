@@ -304,3 +304,16 @@ alert(
 },2000);
 
 }
+
+
+/* ==========================================
+CHECKOUT PAGE
+========================================== */
+
+function goToCheckout(productId){
+
+localStorage.setItem("selectedProduct", productId);
+
+window.location.href="checkout.html";
+
+}
