@@ -279,32 +279,9 @@ ONLINE PAYMENT (UPI)
 
 function payOnline(productCode){
 
-const product = products.find(p => p.code === productCode);
-
-if(!product){
-alert("❌ Product Not Found");
-return;
-}
-
-const amount = product.price;
-
-const upiLink =
-`upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
-
-// Try opening UPI
-window.location.href = upiLink;
-
-// If UPI App doesn't open
-setTimeout(function(){
-
-alert(
-"ਜੇ Google Pay / PhonePe ਨਹੀਂ ਖੁੱਲ੍ਹੀ ਤਾਂ QR Code ਨਾਲ Payment ਕਰੋ।"
-);
-
-},2000);
+window.location.href = "payment.html?code=" + productCode;
 
 }
-
 
 /* ==========================================
 CHECKOUT PAGE
