@@ -279,18 +279,21 @@ ONLINE PAYMENT (UPI)
 
 function payOnline(productCode) {
 
-    const product = products.find(p => p.code === productCode);
+const product = products.find(p => p.code === productCode);
 
-    if (!product) {
-        alert("❌ Product Not Found");
-        return;
-    }
+if (!product){
 
-    const amount = product.price;
+alert("❌ Product Not Found");
 
-    const upi =
-        `upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
+return;
 
-    window.location.href = upi;
+}
+
+const amount = product.price;
+
+const upiLink =
+`upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
+
+window.open(upiLink,"_self");
 
 }
