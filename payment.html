@@ -56,9 +56,14 @@ Payment Completed
 
 <script>
 
+const params = new URLSearchParams(window.location.search);
+
+const code = params.get("code");
+
 function goOrder(){
 
-history.back();
+window.location.href =
+"order.html?code=" + code;
 
 }
 
