@@ -239,32 +239,58 @@ loader.style.display="none";
 AUTO START
 ========================================== */
 
-document.addEventListener("DOMContentLoaded",()=>{
+document.addEventListener("DOMContentLoaded", () => {
 
-displayProducts(products);
+    displayProducts(products);
 
-updateCartCount();
+    updateCartCount();
 
 });
 
+
+/* ==========================================
+BUY NOW
+========================================== */
+
 function buyNow(productCode) {
-   // Buy Now Code
+
+    const product = products.find(p => p.code === productCode);
+
+    if (!product) {
+        alert("❌ Product Not Found");
+        return;
+    }
+
+    // Product Save for Order Page
+    localStorage.setItem(
+        "selectedProduct",
+        JSON.stringify(product)
+    );
+
+    // Open Order Page
+    window.location.href = "order.html";
+
 }
 
-function payOnline(productCode){
 
-const product = products.find(p=>p.code===productCode);
+/* ==========================================
+ONLINE PAYMENT (UPI)
+========================================== */
 
-if(!product){
-alert("Product Not Found");
-return;
-}
+function payOnline(productCode) {
 
-const amount = product.price;
+    const product = products.find(p => p.code === productCode);
 
-const upi =
-`upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
+    if (!product) {
+        alert("❌ Product Not Found");
+        return;
+    }
 
-window.location.href = upi;
+    const amount = product.price;
+
+    const upi =
+        `upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
+
+    window.location.href = upi;
 
 }
