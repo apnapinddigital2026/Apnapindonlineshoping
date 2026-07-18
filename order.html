@@ -1,1 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Order Form</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="order-container">
+
+<h2>🛒 Confirm Your Order</h2>
+
+<h3>ਆਪਣਾ ਆਰਡਰ ਪੁਸ਼ਟੀ ਕਰੋ</h3>
+
+<hr>
+
+<h4 id="productName"></h4>
+
+<p id="productCode"></p>
+
+<p id="productPrice"></p>
+
+<hr>
+
+<input type="text" id="customerName"
+placeholder="Full Name">
+
+<input type="text" id="mobile"
+placeholder="Mobile Number">
+
+<input type="text" id="house"
+placeholder="House No">
+
+<input type="text" id="street"
+placeholder="Street / Mohalla">
+
+<input type="text" id="village"
+placeholder="Village / City">
+
+<input type="text" id="tehsil"
+placeholder="Tehsil">
+
+<input type="text" id="district"
+placeholder="District">
+
+<input type="text" id="state"
+placeholder="State">
+
+<input type="text" id="pincode"
+placeholder="PIN Code">
+
+<input type="text" id="landmark"
+placeholder="Landmark">
+
+<input type="number" id="qty"
+placeholder="Quantity"
+value="1">
+
+<select id="payment">
+
+<option>Cash on Delivery</option>
+
+<option>Online UPI</option>
+
+</select>
+
+<input type="text"
+id="utr"
+placeholder="UPI Transaction ID (if paid online)">
+
+<button onclick="sendOrder()">
+
+📦 Confirm Order
+
+</button>
+
+</div>
+
+<script src="order.js"></script>
+
+</body>
+
+</html>
