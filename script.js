@@ -246,3 +246,25 @@ displayProducts(products);
 updateCartCount();
 
 });
+
+function buyNow(productCode) {
+   // Buy Now Code
+}
+
+function payOnline(productCode){
+
+const product = products.find(p=>p.code===productCode);
+
+if(!product){
+alert("Product Not Found");
+return;
+}
+
+const amount = product.price;
+
+const upi =
+`upi://pay?pa=8872776620@axl&pn=Apna Pind Digital Online Shopping Mall&am=${amount}&cu=INR&tn=${product.code}`;
+
+window.location.href = upi;
+
+}
