@@ -252,23 +252,10 @@ document.addEventListener("DOMContentLoaded", () => {
 BUY NOW
 ========================================== */
 
-function buyNow(productCode) {
+function buyNow(productCode){
 
-    const product = products.find(p => p.code === productCode);
-
-    if (!product) {
-        alert("❌ Product Not Found");
-        return;
-    }
-
-    // Product Save for Order Page
-    localStorage.setItem(
-        "selectedProduct",
-        JSON.stringify(product)
-    );
-
-    // Open Order Page
-    window.location.href = "order.html";
+window.location.href =
+"order.html?code=" + productCode;
 
 }
 
