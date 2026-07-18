@@ -85,24 +85,9 @@
 
 🛒 Add To Cart
 
+<button class="btn btn-admin" id="upiBtn">
+💳 Pay Online (UPI)
 </button>
-
-<button class="btn btn-buy" id="buyBtn">
-
-⚡ Buy Now
-
-</button>
-
-<button class="btn btn-admin" id="wishBtn">
-
-❤️ Wishlist
-
-</button>
-
-</div>
-
-</div>
-
 <!-- ================= RELATED PRODUCTS ================= -->
 
 <section class="products-section">
@@ -175,6 +160,8 @@ document.getElementById("cartBtn").onclick = ()=>addToCart(product.code);
 
 document.getElementById("buyBtn").onclick = ()=>buyNow(product.code);
 
+document.getElementById("upiBtn").onclick = ()=>payOnline(product.code);
+  
 document.getElementById("wishBtn").onclick = ()=>addToWishlist(product.code);
 
 }
