@@ -1,517 +1,390 @@
-/* ==========================================
-APNA PIND DIGITAL ONLINE SHOPPING MALL
-PRODUCT.JS
-========================================== */
-
-const products = [];
-
-// ==========================================
-// WOMEN SUITS
-// ==========================================
-
-products.push(
+const products = [
 
 {
-    id: 1,
-    code: "LS001",
-    name: "Ladies Suit",
-    color: "Pink",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 2,
-    code: "LS002",
-    name: "Ladies Suit",
-    color: "Pink",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 3,
-    code: "LS003",
-    name: "Ladies Suit",
-    color: "Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0030.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 4,
-    code: "LS004",
-    name: "Ladies Suit",
-    color: "Red",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0033.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 5,
-    code: "LS005",
-    name: "Ladies Suit",
-    color: "White",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0035.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 6,
-    code: "LS006",
-    name: "Ladies Suit",
-    color: "Yellow",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0036.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 7,
-    code: "LS007",
-    name: "Ladies Suit",
-    color: "Purple",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 8,
-    code: "LS008",
-    name: "Ladies Suit",
-    color: "Cream",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 9,
-    code: "LS009",
-    name: "Ladies Suit",
-    color: "Bottle Green",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-{
-    id: 10,
-    code: "LS010",
-    name: "Ladies Suit",
-    color: "Black",
-    size: "Free Size",
-    oldPrice: 2499,
-    price: 1499,
-    offer: "40% OFF",
-    category: "ladies",
-    image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
-    description: "Latest Ladies Suit",
-    stock: "In Stock"
-},
-
-
-// ==========================================
-// WOMEN HANDBAGS
-// ==========================================
-
-for(let i=1;i<=28;i++){
-
-let no = String(i).padStart(4,"0");
-
-products.push({
-
-id:"WH"+no,
-
-code:"APD-WH-"+no,
-
-name:"Ladies Handbag "+i,
-
-category:"women-handbags",
-
-price:499+(i*15),
-
-oldPrice:799+(i*15),
-
-offer:"15% OFF",
-
+id:1,
+code:"LS001",
+name:"Ladies Suit 1",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
 stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0013.jpg",
+description:"Premium Ladies Suit"
+},
 
-colour:"Multi Colour",
-
-size:"Standard",
-
-image:`images/logo/women-handbags/IMG-20260628-WA${no}.jpg`,
-
-description:"Premium Ladies Handbag"
-
-});
-
-}
-
-// ==========================================
-// MEN WEAR
-// ==========================================
-
-for(let i=1;i<=7;i++){
-
-const menImages = [
-"0026",
-"0027",
-"0028",
-"0029",
-"0031",
-"0032",
-"0034"
-];
-
-let no = menImages[i-1];
-
-products.push({
-
-id:"MW"+no,
-
-code:"APD-MW-"+no,
-
-name:"Men T-Shirt "+i,
-
-category:"men",
-
-price:699+(i*20),
-
-oldPrice:999+(i*20),
-
-offer:"10% OFF",
-
+{
+id:2,
+code:"LS002",
+name:"Ladies Suit 2",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
 stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0025.jpg",
+description:"Premium Ladies Suit"
+},
 
-colour:"Multi Colour",
+{
+id:3,
+code:"LS003",
+name:"Ladies Suit 3",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0030.jpg",
+description:"Premium Ladies Suit"
+},
 
-size:"M L XL XXL",
+{
+id:4,
+code:"LS004",
+name:"Ladies Suit 4",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0033.jpg",
+description:"Premium Ladies Suit"
+},
 
-image:`images/logo/men/IMG-20260628-WA${no}.jpg`,
+{
+id:5,
+code:"LS005",
+name:"Ladies Suit 5",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0035.jpg",
+description:"Premium Ladies Suit"
+},
 
-description:"Premium Men Wear"
+{
+id:6,
+code:"LS006",
+name:"Ladies Suit 6",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0036.jpg",
+description:"Premium Ladies Suit"
+},
 
-});
+{
+id:7,
+code:"LS007",
+name:"Ladies Suit 7",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40
 
+{
+id:8,
+code:"LS008",
+name:"Ladies Suit 8",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0038.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:9,
+code:"LS009",
+name:"Ladies Suit 9",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0039.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:10,
+code:"LS010",
+name:"Ladies Suit 10",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0040.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:11,
+code:"LS011",
+name:"Ladies Suit 11",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0041.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:12,
+code:"LS012",
+name:"Ladies Suit 12",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0042.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:13,
+code:"LS013",
+name:"Ladies Suit 13",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0043.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:14,
+code:"LS014",
+name:"Ladies Suit 14",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0044.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:15,
+code:"LS015",
+name:"Ladies Suit 15",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0045.jpg",
+description:"Premium Ladies Suit"
 }
 
-// ==========================================
-// GET PRODUCT
-// ==========================================
+,
 
-function getProduct(code){
+{
+id:16,
+code:"LS016",
+name:"Ladies Suit 16",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0046.jpg",
+description:"Premium Ladies Suit"
+},
 
-return products.find(item=>item.code===code);
+{
+id:17,
+code:"LS017",
+name:"Ladies Suit 17",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0047.jpg",
+description:"Premium Ladies Suit"
+},
 
+{
+id:18,
+code:"LS018",
+name:"Ladies Suit 18",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0048.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:19,
+code:"LS019",
+name:"Ladies Suit 19",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0049.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:20,
+code:"LS020",
+name:"Ladies Suit 20",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0050.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:21,
+code:"LS021",
+name:"Ladies Suit 21",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0051.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:22,
+code:"LS022",
+name:"Ladies Suit 22",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0052.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:23,
+code:"LS023",
+name:"Ladies Suit 23",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0053.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:24,
+code:"LS024",
+name:"Ladies Suit 24",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0054.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:25,
+code:"LS025",
+name:"Ladies Suit 25",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0055.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:26,
+code:"LS026",
+name:"Ladies Suit 26",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0056.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:27,
+code:"LS027",
+name:"Ladies Suit 27",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0057.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:28,
+code:"LS028",
+name:"Ladies Suit 28",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0058.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:29,
+code:"LS029",
+name:"Ladies Suit 29",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0059.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:30,
+code:"LS030",
+name:"Ladies Suit 30",
+category:"ladies",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0060.jpg",
+description:"Premium Ladies Suit"
 }
-
-// ==========================================
-// CATEGORY FILTER
-// ==========================================
-
-function getProductsByCategory(category){
-
-return products.filter(item=>item.category===category);
-
-}
-
-// ==========================================
-// SEARCH
-// ==========================================
-
-function searchProduct(keyword){
-
-keyword = keyword.toLowerCase();
-
-return products.filter(item=>
-
-item.name.toLowerCase().includes(keyword) ||
-
-item.code.toLowerCase().includes(keyword)
-
-);
-
-}
-
-// ==========================================
-// FEATURED PRODUCTS
-// ==========================================
-
-const featuredProducts = products.slice(0,12);
-
-// ==========================================
-// LATEST PRODUCTS
-// ==========================================
-
-const latestProducts = [...products].reverse();
-
-// ==========================================
-// OFFERS
-// ==========================================
-
-const offerProducts = products.filter(product =>
-
-product.offer !== ""
-
-);
-
-// ==========================================
-// STOCK FILTER
-// ==========================================
-
-function getInStockProducts(){
-
-return products.filter(product=>
-
-product.stock==="In Stock"
-
-);
-
-}
-
-// ==========================================
-// PRICE FILTER
-// ==========================================
-
-function getProductsByPrice(min,max){
-
-return products.filter(product=>
-
-product.price>=min && product.price<=max
-
-);
-
-}
-
-// ==========================================
-// SORTING
-// ==========================================
-
-function sortLowToHigh(){
-
-return [...products].sort(
-
-(a,b)=>a.price-b.price
-
-);
-
-}
-
-function sortHighToLow(){
-
-return [...products].sort(
-
-(a,b)=>b.price-a.price
-
-);
-
-}
-
-// ==========================================
-// TOTAL PRODUCTS
-// ==========================================
-
-console.log(
-
-"Total Products : ",
-
-products.length
-
-);
-
-// ==========================================
-// DISPLAY PRODUCTS
-// ==========================================
-
-function displayProducts(productList = products){
-
-const container = document.getElementById("product-container");
-
-if(!container) return;
-
-container.innerHTML = "";
-
-productList.forEach(product=>{
-
-container.innerHTML += `
-
-<div class="product-card">
-
-<span class="offer-badge">${product.offer}</span>
-
-<img
-src="${product.image}"
-alt="${product.name}"
-loading="lazy"
-onerror="this.src='images/logo/no-image.jpg';"
-onclick="openProduct('${product.code}')">
-
-<h3>${product.name}</h3>
-
-<p>${product.description}</p>
-
-<h4>₹${product.price}</h4>
-
-<del>₹${product.oldPrice}</del>
-
-<br>
-
-<span class="stock-badge in-stock">
-${product.stock}
-</span>
-
-<br><br>
-
-<button
-class="btn btn-cart"
-onclick="addToCart('${product.code}')">
-
-🛒 Add To Cart
-
-</button>
-
-<button
-class="btn btn-buy"
-onclick="buyNow('${product.code}')">
-
-⚡ Buy Now
-
-</button>
-
-</div>
-
-`;
-
-});
-
-}
-
-// ==========================================
-// AUTO LOAD
-// ==========================================
-
-document.addEventListener("DOMContentLoaded",()=>{
-
-displayProducts(products);
-
-});
-
-// ==========================================
-// ADD TO CART
-// ==========================================
-
-function addToCart(code){
-
-const product = getProduct(code);
-
-if(!product) return;
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-cart.push(product);
-
-localStorage.setItem("cart", JSON.stringify(cart));
-
-alert("✅ Product Added To Cart");
-
-updateCartCount();
-
-}
-
-// ==========================================
-// BUY NOW (WHATSAPP)
-// ==========================================
-
-function buyNow(code){
-
-window.location.href = "order.html?code=" + code;
-
-}
-
-// ==========================================
-// OPEN PRODUCT PAGE
-// ==========================================
-
-function openProduct(code){
-
-window.location.href = `product.html?code=${code}`;
-
-}
-
-// ==========================================
-// UPDATE CART COUNT
-// ==========================================
-
-function updateCartCount(){
-
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-const count = document.getElementById("cart-count");
-
-if(count){
-
-count.innerText = cart.length;
-
-}
-
-}
-
-// ==========================================
-// AUTO START
-// ==========================================
-
-updateCartCount();
 
