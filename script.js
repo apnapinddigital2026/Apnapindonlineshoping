@@ -204,3 +204,43 @@ window.open(
 );
 
 }
+
+function displayProducts(productList = products){
+
+const container = document.getElementById("product-container");
+
+if(!container) return;
+
+container.innerHTML = "";
+
+productList.forEach(product=>{
+
+container.innerHTML += `
+<div class="product-card">
+
+<img src="${product.image}" alt="${product.name}">
+
+<h3>${product.name}</h3>
+
+<p>${product.description}</p>
+
+<h4>₹${product.price}</h4>
+
+<del>₹${product.oldPrice}</del>
+
+<br>
+
+<button onclick="addToCart('${product.code}')">
+🛒 Add To Cart
+</button>
+
+<button onclick="buyNow('${product.code}')">
+⚡ Buy Now
+</button>
+
+</div>
+`;
+
+});
+
+}
