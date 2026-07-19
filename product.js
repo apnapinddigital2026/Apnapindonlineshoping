@@ -9,9 +9,11 @@ const products = [];
 // WOMEN SUITS
 // ==========================================
 
-for(let i=1;i<=100;i++){
+for(let i=13;i<=255;i++){
 
 let no = String(i).padStart(4,"0");
+  
+let fileNo = String(i).padStart(4,"0");
 
 products.push({
 
@@ -35,7 +37,7 @@ colour:"Multi Colour",
 
 size:"M L XL XXL",
 
-image:`images/logo/women-suits/IMG-20260628-WA${no}.jpg`,
+image:`images/logo/women-suits/IMG-20260628-WA${fileNo}.jpg`,
 
 description:"Premium Punjabi Ladies Suit"
 
