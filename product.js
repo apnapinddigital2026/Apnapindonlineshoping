@@ -17,9 +17,9 @@ let fileNo = String(i).padStart(4,"0");
 
 products.push({
 
-id:"WS"+no,
+id:"WS"+fileNo,
 
-code:"APD-WS-"+no,
+code:"APD-WS-"+fileNo,
 
 name:"Ladies Suit "+i,
 
