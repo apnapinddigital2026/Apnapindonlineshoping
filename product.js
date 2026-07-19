@@ -9,41 +9,158 @@ const products = [];
 // WOMEN SUITS
 // ==========================================
 
-for(let i=13;i<=255;i++){
+products.push(
 
-let no = String(i).padStart(4,"0");
-  
-let fileNo = String(i).padStart(4,"0");
+{
+    id: 1,
+    code: "LS001",
+    name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0013.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-products.push({
+{
+    id: 2,
+    code: "LS002",
+    name: "Ladies Suit",
+    color: "Pink",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0025.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-id:"WS"+fileNo,
+{
+    id: 3,
+    code: "LS003",
+    name: "Ladies Suit",
+    color: "Green",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0030.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-code:"APD-WS-"+fileNo,
+{
+    id: 4,
+    code: "LS004",
+    name: "Ladies Suit",
+    color: "Red",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0033.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-name:"Ladies Suit "+i,
+{
+    id: 5,
+    code: "LS005",
+    name: "Ladies Suit",
+    color: "White",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0035.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-category:"women-suits",
+{
+    id: 6,
+    code: "LS006",
+    name: "Ladies Suit",
+    color: "Yellow",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0036.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-price:999+(i*10),
+{
+    id: 7,
+    code: "LS007",
+    name: "Ladies Suit",
+    color: "Purple",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0037.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-oldPrice:1499+(i*10),
+{
+    id: 8,
+    code: "LS008",
+    name: "Ladies Suit",
+    color: "Cream",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0038.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-offer:"20% OFF",
+{
+    id: 9,
+    code: "LS009",
+    name: "Ladies Suit",
+    color: "Bottle Green",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0039.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-stock:"In Stock",
+{
+    id: 10,
+    code: "LS010",
+    name: "Ladies Suit",
+    color: "Black",
+    size: "Free Size",
+    oldPrice: 2499,
+    price: 1499,
+    offer: "40% OFF",
+    category: "ladies",
+    image: "images/logo/women-suits/IMG-20260628-WA0040.jpg",
+    description: "Latest Ladies Suit",
+    stock: "In Stock"
+},
 
-colour:"Multi Colour",
-
-size:"M L XL XXL",
-
-image:`images/logo/women-suits/IMG-20260628-WA${fileNo}.jpg`,
-
-description:"Premium Punjabi Ladies Suit"
-
-});
-
-}
 
 // ==========================================
 // WOMEN HANDBAGS
