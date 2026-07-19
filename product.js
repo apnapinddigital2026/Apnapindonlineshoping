@@ -268,6 +268,8 @@ container.innerHTML += `
 <img
 src="${product.image}"
 alt="${product.name}"
+loading="lazy"
+onerror="this.src='images/logo/no-image.jpg';"
 onclick="openProduct('${product.code}')">
 
 <h3>${product.name}</h3>
