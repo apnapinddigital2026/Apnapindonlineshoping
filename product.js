@@ -89,7 +89,17 @@ description:"Premium Ladies Handbag"
 
 for(let i=1;i<=7;i++){
 
-let no = String(i).padStart(4,"0");
+const menImages = [
+"0026",
+"0027",
+"0028",
+"0029",
+"0031",
+"0032",
+"0034"
+];
+
+let no = menImages[i-1];
 
 products.push({
 
