@@ -1,16 +1,35 @@
 /* ==========================================
 APNA PIND DIGITAL ONLINE SHOPPING MALL
-SCRIPT.JS PROFESSIONAL
+SCRIPT.JS
+VERSION 3.0
 PART-1
 ========================================== */
 
 // ==========================
-// AUTO START
+// PAGE LOAD
 // ==========================
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    displayProducts(products);
+    // Loader Hide
+    const loader = document.getElementById("loader");
+
+    if(loader){
+
+        setTimeout(()=>{
+
+            loader.style.display="none";
+
+        },1000);
+
+    }
+
+    // Products Load
+    if(typeof products !== "undefined"){
+
+        displayProducts(products);
+
+    }
 
     updateCartCount();
 
@@ -22,13 +41,13 @@ document.addEventListener("DOMContentLoaded", () => {
 // DISPLAY PRODUCTS
 // ==========================
 
-function displayProducts(productList = products){
+function displayProducts(productList){
 
 const container = document.getElementById("product-container");
 
 if(!container) return;
 
-container.innerHTML = "";
+container.innerHTML="";
 
 productList.forEach(product=>{
 
@@ -49,20 +68,16 @@ onclick="openProduct('${product.code}')">
 
 <del>₹${product.oldPrice}</del>
 
-<br>
-
 <p>${product.stock}</p>
 
-<button
-class="btn-cart"
+<button class="btn-cart"
 onclick="addToCart('${product.code}')">
 
 🛒 Add To Cart
 
 </button>
 
-<button
-class="btn-buy"
+<button class="btn-buy"
 onclick="buyNow('${product.code}')">
 
 ⚡ Buy Now
@@ -77,50 +92,43 @@ onclick="buyNow('${product.code}')">
 
 }
 
+/* ==========================================
+SCRIPT.JS
+PART-2
+========================================== */
+
 // ==========================
-// SEARCH
+// SEARCH PRODUCTS
 // ==========================
 
 function searchProducts(){
 
-let keyword = document
+const keyword = document
 .getElementById("searchBox")
 .value
 .toLowerCase();
 
-let result = products.filter(product=>
+const filtered = products.filter(product=>
 
-product.name.toLowerCase().includes(keyword)
+product.name.toLowerCase().includes(keyword) ||
 
-||
-
-product.code.toLowerCase().includes(keyword)
-
-||
+product.code.toLowerCase().includes(keyword) ||
 
 product.category.toLowerCase().includes(keyword)
 
 );
 
-displayProducts(result);
+displayProducts(filtered);
 
 }
 
 // ==========================
-// CATEGORY
+// FILTER CATEGORY
 // ==========================
 
 function filterCategory(category){
 
-if(category==="all"){
-
-displayProducts(products);
-
-return;
-
-}
-
-let filtered = products.filter(product=>
+const filtered = products.filter(product=>
 
 product.category===category
 
@@ -136,25 +144,29 @@ displayProducts(products);
 
 }
 
-/* ==========================================
-SCRIPT.JS PROFESSIONAL
-PART-2
-========================================== */
-
-/* ---------- PRODUCT PAGE ---------- */
+// ==========================
+// PRODUCT DETAILS
+// ==========================
 
 function openProduct(code){
 
-window.location.href =
-"product.html?code=" + code;
+window.location.href=
+"product.html?code="+code;
 
 }
 
-/* ---------- BUY NOW ---------- */
+/* ==========================================
+SCRIPT.JS
+PART-3
+========================================== */
+
+// ==========================
+// BUY NOW
+// ==========================
 
 function buyNow(code){
 
-const product = products.find(p=>p.code===code);
+const product = products.find(item=>item.code===code);
 
 if(!product){
 
@@ -173,11 +185,13 @@ window.location.href="order.html";
 
 }
 
-/* ---------- ADD TO CART ---------- */
+// ==========================
+// ADD TO CART
+// ==========================
 
 function addToCart(code){
 
-const product = products.find(p=>p.code===code);
+const product = products.find(item=>item.code===code);
 
 if(!product){
 
@@ -191,21 +205,26 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 cart.push(product);
 
-localStorage.setItem("cart",JSON.stringify(cart));
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
 
 updateCartCount();
 
-alert("✅ Added To Cart");
+alert("✅ Product Added To Cart");
 
 }
 
-/* ---------- CART COUNT ---------- */
+// ==========================
+// CART COUNT
+// ==========================
 
 function updateCartCount(){
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-let count = document.getElementById("cart-count");
+const count = document.getElementById("cart-count");
 
 if(count){
 
@@ -215,17 +234,26 @@ count.innerText = cart.length;
 
 }
 
-/* ---------- WISHLIST ---------- */
+/* ==========================================
+SCRIPT.JS
+PART-4
+========================================== */
+
+// ==========================
+// WISHLIST
+// ==========================
 
 function addToWishlist(code){
 
-const product = products.find(p=>p.code===code);
+const product = products.find(item=>item.code===code);
 
 if(!product) return;
 
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-if(!wishlist.find(item=>item.code===code)){
+const exists = wishlist.find(item=>item.code===code);
+
+if(!exists){
 
 wishlist.push(product);
 
@@ -234,19 +262,23 @@ localStorage.setItem(
 JSON.stringify(wishlist)
 );
 
+alert("❤️ Added To Wishlist");
+
 }
 
 updateWishlistCount();
 
 }
 
-/* ---------- WISHLIST COUNT ---------- */
+// ==========================
+// WISHLIST COUNT
+// ==========================
 
 function updateWishlistCount(){
 
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-let count = document.getElementById("wishlist-count");
+const count = document.getElementById("wishlist-count");
 
 if(count){
 
@@ -256,21 +288,23 @@ count.innerText = wishlist.length;
 
 }
 
-/* ---------- ONLINE PAYMENT ---------- */
+// ==========================
+// PAYMENT
+// ==========================
 
 function payOnline(code){
 
-window.location.href =
-"payment.html?code="+code;
+window.location.href="payment.html?code="+code;
 
 }
 
-/* ---------- WHATSAPP ORDER ---------- */
+// ==========================
+// WHATSAPP ORDER
+// ==========================
 
 function whatsappOrder(product){
 
 let message =
-
 `🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL
 
 Product : ${product.name}
@@ -280,12 +314,9 @@ Code : ${product.code}
 Price : ₹${product.price}`;
 
 window.open(
-
 "https://wa.me/918872776620?text="+
 encodeURIComponent(message),
-
 "_blank"
-
 );
 
 }
