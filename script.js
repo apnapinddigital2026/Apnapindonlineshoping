@@ -1,12 +1,12 @@
 /* ==========================================
 APNA PIND DIGITAL ONLINE SHOPPING MALL
-SCRIPT.JS
-VERSION 2.0
+SCRIPT.JS PROFESSIONAL
+PART-1
 ========================================== */
 
-// ==============================
-// AUTO LOAD
-// ==============================
+// ==========================
+// AUTO START
+// ==========================
 
 document.addEventListener("DOMContentLoaded", () => {
 
@@ -14,24 +14,89 @@ document.addEventListener("DOMContentLoaded", () => {
 
     updateCartCount();
 
+    updateWishlistCount();
+
 });
 
-// ==============================
+// ==========================
+// DISPLAY PRODUCTS
+// ==========================
+
+function displayProducts(productList = products){
+
+const container = document.getElementById("product-container");
+
+if(!container) return;
+
+container.innerHTML = "";
+
+productList.forEach(product=>{
+
+container.innerHTML += `
+
+<div class="product-card">
+
+<img
+src="${product.image}"
+alt="${product.name}"
+onclick="openProduct('${product.code}')">
+
+<h3>${product.name}</h3>
+
+<p>${product.description}</p>
+
+<h4>₹${product.price}</h4>
+
+<del>₹${product.oldPrice}</del>
+
+<br>
+
+<p>${product.stock}</p>
+
+<button
+class="btn-cart"
+onclick="addToCart('${product.code}')">
+
+🛒 Add To Cart
+
+</button>
+
+<button
+class="btn-buy"
+onclick="buyNow('${product.code}')">
+
+⚡ Buy Now
+
+</button>
+
+</div>
+
+`;
+
+});
+
+}
+
+// ==========================
 // SEARCH
-// ==============================
+// ==========================
 
 function searchProducts(){
 
-const keyword = document
+let keyword = document
 .getElementById("searchBox")
 .value
 .toLowerCase();
 
-const result = products.filter(product =>
+let result = products.filter(product=>
 
-product.name.toLowerCase().includes(keyword) ||
+product.name.toLowerCase().includes(keyword)
 
-product.code.toLowerCase().includes(keyword) ||
+||
+
+product.code.toLowerCase().includes(keyword)
+
+||
 
 product.category.toLowerCase().includes(keyword)
 
@@ -41,9 +106,9 @@ displayProducts(result);
 
 }
 
-// ==============================
+// ==========================
 // CATEGORY
-// ==============================
+// ==========================
 
 function filterCategory(category){
 
@@ -55,13 +120,13 @@ return;
 
 }
 
-const result = products.filter(product =>
+let filtered = products.filter(product=>
 
 product.category===category
 
 );
 
-displayProducts(result);
+displayProducts(filtered);
 
 }
 
@@ -71,35 +136,48 @@ displayProducts(products);
 
 }
 
-// ==============================
-// PRODUCT PAGE
-// ==============================
+/* ==========================================
+SCRIPT.JS PROFESSIONAL
+PART-2
+========================================== */
+
+/* ---------- PRODUCT PAGE ---------- */
 
 function openProduct(code){
 
 window.location.href =
-`product.html?code=${code}`;
+"product.html?code=" + code;
 
 }
 
-// ==============================
-// BUY NOW
-// ==============================
+/* ---------- BUY NOW ---------- */
 
 function buyNow(code){
 
-window.location.href =
-`order.html?code=${code}`;
+const product = products.find(p=>p.code===code);
+
+if(!product){
+
+alert("Product Not Found");
+
+return;
 
 }
 
-/* ==========================================
-ADD TO CART
-========================================== */
+localStorage.setItem(
+"selectedProduct",
+JSON.stringify(product)
+);
+
+window.location.href="order.html";
+
+}
+
+/* ---------- ADD TO CART ---------- */
 
 function addToCart(code){
 
-const product = getProduct(code);
+const product = products.find(p=>p.code===code);
 
 if(!product){
 
@@ -113,23 +191,21 @@ let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 cart.push(product);
 
-localStorage.setItem("cart", JSON.stringify(cart));
+localStorage.setItem("cart",JSON.stringify(cart));
 
 updateCartCount();
 
-alert("✅ Product Added To Cart");
+alert("✅ Added To Cart");
 
 }
 
-/* ==========================================
-CART COUNT
-========================================== */
+/* ---------- CART COUNT ---------- */
 
 function updateCartCount(){
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-const count = document.getElementById("cart-count");
+let count = document.getElementById("cart-count");
 
 if(count){
 
@@ -139,55 +215,63 @@ count.innerText = cart.length;
 
 }
 
-/* ==========================================
-WISHLIST
-========================================== */
+/* ---------- WISHLIST ---------- */
 
 function addToWishlist(code){
 
-const product = getProduct(code);
+const product = products.find(p=>p.code===code);
 
 if(!product) return;
 
 let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-const exists = wishlist.find(item => item.code===code);
-
-if(!exists){
+if(!wishlist.find(item=>item.code===code)){
 
 wishlist.push(product);
 
-localStorage.setItem("wishlist",JSON.stringify(wishlist));
+localStorage.setItem(
+"wishlist",
+JSON.stringify(wishlist)
+);
 
-alert("❤️ Added To Wishlist");
+}
 
-}else{
+updateWishlistCount();
 
-alert("Already In Wishlist");
+}
+
+/* ---------- WISHLIST COUNT ---------- */
+
+function updateWishlistCount(){
+
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+let count = document.getElementById("wishlist-count");
+
+if(count){
+
+count.innerText = wishlist.length;
 
 }
 
 }
 
-/* ==========================================
-ONLINE PAYMENT
-========================================== */
+/* ---------- ONLINE PAYMENT ---------- */
 
 function payOnline(code){
 
-window.location.href="payment.html?code="+code;
+window.location.href =
+"payment.html?code="+code;
 
 }
 
-/* ==========================================
-WHATSAPP
-========================================== */
+/* ---------- WHATSAPP ORDER ---------- */
 
 function whatsappOrder(product){
 
-let message=
+let message =
 
-`🛒 APNA PIND DIGITAL
+`🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL
 
 Product : ${product.name}
 
@@ -197,50 +281,11 @@ Price : ₹${product.price}`;
 
 window.open(
 
-`https://wa.me/918872776620?text=${encodeURIComponent(message)}`,
+"https://wa.me/918872776620?text="+
+encodeURIComponent(message),
 
 "_blank"
 
 );
-
-}
-
-function displayProducts(productList = products){
-
-const container = document.getElementById("product-container");
-
-if(!container) return;
-
-container.innerHTML = "";
-
-productList.forEach(product=>{
-
-container.innerHTML += `
-<div class="product-card">
-
-<img src="${product.image}" alt="${product.name}">
-
-<h3>${product.name}</h3>
-
-<p>${product.description}</p>
-
-<h4>₹${product.price}</h4>
-
-<del>₹${product.oldPrice}</del>
-
-<br>
-
-<button onclick="addToCart('${product.code}')">
-🛒 Add To Cart
-</button>
-
-<button onclick="buyNow('${product.code}')">
-⚡ Buy Now
-</button>
-
-</div>
-`;
-
-});
 
 }
