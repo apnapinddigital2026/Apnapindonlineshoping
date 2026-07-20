@@ -1,170 +1,177 @@
 /* ==========================================
 APNA PIND DIGITAL ONLINE SHOPPING MALL
 CART.JS
+PART-1
 ========================================== */
 
-// ==========================
-// LOAD CART
-// ==========================
+document.addEventListener("DOMContentLoaded", loadCart);
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
+function loadCart(){
 
-// ==========================
-// SHOW CART
-// ==========================
+    const container = document.getElementById("cart-items");
 
-function showCart() {
+    if(!container) return;
 
-const cartBox = document.getElementById("cartItems");
-const totalBox = document.getElementById("cartTotal");
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-if (!cartBox) return;
+    container.innerHTML = "";
 
-cartBox.innerHTML = "";
+    if(cart.length===0){
 
-let total = 0;
+        container.innerHTML = "<h2>Your Cart is Empty</h2>";
 
-if (cart.length === 0) {
+        return;
 
-cartBox.innerHTML = `
-<div class="product-card">
-<h3>🛒 Cart Empty</h3>
-<p>ਤੁਹਾਡਾ ਕਾਰਟ ਖਾਲੀ ਹੈ।</p>
-<a href="index.html" class="btn btn-buy">
-Continue Shopping
-</a>
-</div>
-`;
+    }
 
-if (totalBox) totalBox.innerHTML = "Total : ₹0";
+    cart.forEach((item,index)=>{
 
-return;
+        container.innerHTML += `
 
-}
+        <div class="product-card">
 
-cart.forEach((item, index) => {
+            <img src="${item.image}" alt="${item.name}">
 
-total += item.price;
+            <h3>${item.name}</h3>
 
-cartBox.innerHTML += `
+            <p>${item.code}</p>
 
-<div class="product-card">
+            <h4>₹${item.price}</h4>
 
-<img src="${item.image}" alt="${item.name}">
+            <button onclick="removeCart(${index})">
 
-<h3>${item.name}</h3>
+            Remove
 
-<p>${item.code}</p>
+            </button>
 
-<h4>₹${item.price}</h4>
+        </div>
 
-<button class="btn btn-cart"
-onclick="removeItem(${index})">
+        `;
 
-❌ Remove
-
-</button>
-
-</div>
-
-`;
-
-});
-
-if (totalBox) {
-
-totalBox.innerHTML = `Total : ₹${total}`;
+    });
 
 }
-
-}
-
 /* ==========================================
-REMOVE ITEM
+CART.JS
+PART-2
 ========================================== */
 
-function removeItem(index){
+function removeCart(index){
 
-cart.splice(index,1);
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-localStorage.setItem("cart",JSON.stringify(cart));
+    cart.splice(index,1);
 
-showCart();
+    localStorage.setItem("cart",JSON.stringify(cart));
 
-updateCartCount();
+    loadCart();
 
 }
-
-/* ==========================================
-CLEAR CART
-========================================== */
 
 function clearCart(){
 
-if(confirm("ਕੀ ਤੁਸੀਂ ਪੂਰਾ Cart ਖਾਲੀ ਕਰਨਾ ਚਾਹੁੰਦੇ ਹੋ?")){
+    localStorage.removeItem("cart");
 
-cart=[];
-
-localStorage.removeItem("cart");
-
-showCart();
-
-updateCartCount();
+    loadCart();
 
 }
+
+function getCartTotal(){
+
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+    let total = 0;
+
+    cart.forEach(item=>{
+
+        total += Number(item.price);
+
+    });
+
+    const totalBox = document.getElementById("cart-total");
+
+    if(totalBox){
+
+        totalBox.innerHTML = "Total : ₹" + total;
+
+    }
 
 }
 
 /* ==========================================
-WHATSAPP CHECKOUT
+CART.JS
+PART-3
 ========================================== */
 
 function checkout(){
 
-if(cart.length===0){
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-alert("🛒 ਤੁਹਾਡਾ Cart ਖਾਲੀ ਹੈ।");
+    if(cart.length===0){
 
-return;
+        alert("Your Cart is Empty");
+
+        return;
+
+    }
+
+    window.location.href="checkout.html";
 
 }
 
-let message="🛒 Apna Pind Digital Shopping Mall\n\n";
+function orderOnWhatsApp(){
 
-let total=0;
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-cart.forEach((item,index)=>{
+    if(cart.length===0){
 
-message += `${index+1}. ${item.name}\n`;
+        alert("Your Cart is Empty");
 
-message += `Code : ${item.code}\n`;
+        return;
 
-message += `Price : ₹${item.price}\n\n`;
+    }
 
-total += item.price;
+    let message="🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL\n\n";
 
-});
+    let total=0;
 
-message += `💰 Total = ₹${total}`;
+    cart.forEach(item=>{
 
-window.open(
+        message +=
+`${item.name}
+Code : ${item.code}
+Price : ₹${item.price}
 
-`https://wa.me/918872776620?text=${encodeURIComponent(message)}`,
+`;
+
+        total += Number(item.price);
+
+    });
+
+    message += "Total = ₹"+total;
+
+    window.open(
+
+"https://wa.me/918872776620?text="+
+encodeURIComponent(message),
 
 "_blank"
 
-);
+    );
 
 }
 
-/* ==========================================
-AUTO START
-========================================== */
+function payNow(){
+
+    window.location.href="payment.html";
+
+}
 
 document.addEventListener("DOMContentLoaded",()=>{
 
-showCart();
+    loadCart();
 
-updateCartCount();
+    getCartTotal();
 
 });
+
