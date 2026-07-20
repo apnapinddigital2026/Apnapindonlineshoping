@@ -1,108 +1,74 @@
-// ===============================
-// ORDER PAGE
-// ===============================
+/* ==========================================
+APNA PIND DIGITAL ONLINE SHOPPING MALL
+ORDER.JS
+PART-1
+========================================== */
 
-const params = new URLSearchParams(window.location.search);
-const code = params.get("code");
+document.addEventListener("DOMContentLoaded", loadOrder);
 
-const product = getProduct(code);
+function loadOrder(){
 
-// ===============================
-// SHOW PRODUCT
-// ===============================
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
-if (product) {
+    if(!product) return;
 
-document.getElementById("productName").innerHTML =
-"📦 Product : " + product.name;
-
-document.getElementById("productCode").innerHTML =
-"🆔 Product Code : " + product.code;
-
-document.getElementById("productPrice").innerHTML =
-"💰 Price : ₹" + product.price;
+    document.getElementById("product-name").innerText = product.name;
+    document.getElementById("product-code").innerText = product.code;
+    document.getElementById("product-price").innerText = "₹" + product.price;
+    document.getElementById("product-image").src = product.image;
 
 }
 
-// ===============================
-// ORDER ID
-// ===============================
+/* ==========================================
+ORDER.JS
+PART-2
+========================================== */
 
-function createOrderID() {
-return "APD" + Date.now();
-}
+function submitOrder(){
 
-// ===============================
-// SEND ORDER
-// ===============================
+    const name = document.getElementById("customer-name").value;
+    const phone = document.getElementById("customer-phone").value;
+    const address = document.getElementById("customer-address").value;
 
-function sendOrder() {
+    if(name==="" || phone==="" || address===""){
 
-if (!product) {
-alert("Product Not Found");
-return;
-}
+        alert("Please Fill All Details");
 
-const customerName = document.getElementById("customerName").value.trim();
-const mobile = document.getElementById("mobile").value.trim();
-const house = document.getElementById("house").value.trim();
-const street = document.getElementById("street").value.trim();
-const village = document.getElementById("village").value.trim();
-const tehsil = document.getElementById("tehsil").value.trim();
-const district = document.getElementById("district").value.trim();
-const state = document.getElementById("state").value.trim();
-const pincode = document.getElementById("pincode").value.trim();
-const landmark = document.getElementById("landmark").value.trim();
-const qty = document.getElementById("qty").value;
-const payment = document.getElementById("payment").value;
-const utr = document.getElementById("utr").value.trim();
+        return;
 
-if(customerName==="" || mobile===""){
-alert("ਕਿਰਪਾ ਕਰਕੇ ਨਾਮ ਅਤੇ ਮੋਬਾਈਲ ਨੰਬਰ ਭਰੋ");
-return;
-}
+    }
 
-const orderID = createOrderID();
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
-let message =
+    let message =
 `🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL
 
-━━━━━━━━━━━━━━
-📦 ORDER REQUEST
-━━━━━━━━━━━━━━
+Customer : ${name}
 
-Order ID : ${orderID}
+Phone : ${phone}
 
-Product Code : ${product.code}
-Product Name : ${product.name}
-Price : ₹${product.price}
+Address : ${address}
 
-━━━━━━━━━━━━━━
-👤 CUSTOMER DETAILS
-━━━━━━━━━━━━━━
+Product : ${product.name}
 
-Name : ${customerName}
-Mobile : ${mobile}
+Code : ${product.code}
 
-House : ${house}
-Street : ${street}
-Village : ${village}
-Tehsil : ${tehsil}
-District : ${district}
-State : ${state}
-PIN : ${pincode}
-Landmark : ${landmark}
+Price : ₹${product.price}`;
 
-Quantity : ${qty}
+    window.open(
+"https://wa.me/918872776620?text="+
+encodeURIComponent(message),
+"_blank"
+    );
 
-Payment : ${payment}
+    alert("Order Submitted Successfully");
 
-UTR : ${utr}
-`;
+}
 
-const whatsappURL =
-"https://wa.me/918872776620?text=" + encodeURIComponent(message);
+function paymentCompleted(){
 
-window.open(whatsappURL, "_blank");
+    alert("Payment Verified Successfully");
+
+    window.location.href="index.html";
 
 }
