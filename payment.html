@@ -7,7 +7,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>UPI Payment</title>
+<title>Payment | APNA PIND DIGITAL</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -15,36 +15,45 @@
 
 <body>
 
-<div class="payment-box">
+<header class="header">
 
-<h2>💳 Online Payment</h2>
+<div class="logo">
 
-<h3>Scan QR Code</h3>
+<img src="images/logo/IMG_20260629_002124.png" alt="Logo">
 
-<img src="images/logo/pay/PAYMENT WITH QR SBI.jpg"
-alt="SBI UPI QR Code"
-style="max-width:320px;width:100%;border-radius:10px;">
-<h3>
+<div>
 
-UPI ID
+<h2>APNA PIND DIGITAL</h2>
 
-</h3>
+<p>ONLINE SHOPPING MALL</p>
 
-<p>
+</div>
 
-8872776620@sbi
+</div>
 
-</p>
+</header>
 
-<p>
+<section class="products">
 
-Payment Complete ਹੋਣ ਤੋਂ ਬਾਅਦ
+<h2>Scan & Pay</h2>
 
-UTR Number ਲਿਖੋ
+<div class="product-card">
 
-</p>
+<img
 
-<button onclick="goOrder()">
+src="images/logo/pay/PAYMENT WITH QR SBI.jpg"
+
+alt="QR Payment"
+
+style="max-width:300px;margin:auto;">
+
+<h3>SBI QR PAYMENT</h3>
+
+<p>Please Scan QR Code & Complete Payment</p>
+
+<button class="btn-buy"
+
+onclick="paymentCompleted()">
 
 Payment Completed
 
@@ -52,19 +61,9 @@ Payment Completed
 
 </div>
 
-<script>
+</section>
 
-const params = new URLSearchParams(window.location.search);
-
-const code = params.get("code");
-
-function goOrder(){
-
-window.location.href = "order.html?code=" + code;
-
-}
-
-</script>
+<script src="order.js"></script>
 
 </body>
 
