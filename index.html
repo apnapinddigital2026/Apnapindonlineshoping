@@ -4,13 +4,19 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>APNA PIND DIGITAL ONLINE SHOPPING MALL</title>
 
-<link rel="icon" href="images/logo/logo.png">
+<meta name="description"
+content="APNA PIND DIGITAL ONLINE SHOPPING MALL">
 
-<link rel="stylesheet" href="style.css">
+<link rel="icon"
+href="images/logo/IMG_20260629_002124.png">
+
+<link rel="stylesheet"
+href="style.css">
 
 <link rel="stylesheet"
 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
@@ -19,23 +25,29 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <body>
 
+<!-- ========================= -->
 <!-- PAGE LOADER -->
+<!-- ========================= -->
 
 <div id="loader">
 
 <div class="loader-box">
 
-<img src="images/logo/logo.png" alt="Logo">
+<img
+src="images/logo/IMG_20260629_002124.png"
+alt="Logo">
 
 <h2>APNA PIND DIGITAL</h2>
 
-<p>Loading Shopping Mall...</p>
+<p>ONLINE SHOPPING MALL</p>
 
 </div>
 
 </div>
 
+<!-- ========================= -->
 <!-- HEADER -->
+<!-- ========================= -->
 
 <header class="header">
 
@@ -43,7 +55,9 @@ href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
 
 <a href="index.html">
 
-<img src="images/logo/logo.png" alt="Logo">
+<img
+src="images/logo/IMG_20260629_002124.png"
+alt="Logo">
 
 </a>
 
@@ -64,7 +78,8 @@ type="text"
 id="searchBox"
 placeholder="Search Products...">
 
-<button onclick="searchProducts()">
+<button
+onclick="searchProducts()">
 
 <i class="fa fa-search"></i>
 
@@ -100,7 +115,7 @@ placeholder="Search Products...">
 
 </header>
 
-<!-- ========================= -->
+  <!-- ========================= -->
 <!-- NAVIGATION -->
 <!-- ========================= -->
 
@@ -118,9 +133,9 @@ placeholder="Search Products...">
 
 <li><a href="order.html">My Orders</a></li>
 
-<li><a href="payment.html">Payment</a></li>
+<li><a href="payment.html">Online Payment</a></li>
 
-<li><a href="admin.html">Admin</a></li>
+<li><a href="admin.html">Admin Panel</a></li>
 
 </ul>
 
@@ -132,27 +147,35 @@ placeholder="Search Products...">
 
 <section class="banner">
 
-<div class="banner-slider">
+<img
 
-<img id="banner-image"
-src="images/logo/banner/banner1.jpg"
+id="banner-image"
+
+src="images/logo/image_20828faa.png"
+
 alt="Banner">
 
-</div>
+</section>
 
-<div class="banner-text">
+<!-- ========================= -->
+<!-- WELCOME -->
+<!-- ========================= -->
+
+<section class="welcome">
 
 <h1>Welcome To APNA PIND DIGITAL</h1>
 
-<p>Your Trusted Online Shopping Mall</p>
+<p>
+
+Your Trusted Online Shopping Mall
+
+</p>
 
 <button onclick="showAllProducts()">
 
-Shop Now
+Start Shopping
 
 </button>
-
-</div>
 
 </section>
 
@@ -166,7 +189,7 @@ Shop Now
 
 <div class="category-grid">
 
-<div class="category-card" onclick="filterCategory('ladies')">
+<div class="category-card" onclick="filterCategory('women-suits')">
 <img src="images/logo/women-suits/IMG-20260628-WA0025.jpg" alt="Ladies Suits">
 <h3>Ladies Suits</h3>
 </div>
@@ -186,14 +209,39 @@ Shop Now
 <h3>Kids Wear</h3>
 </div>
 
+<div class="category-card" onclick="filterCategory('grocery')">
+<img src="images/logo/grocery/IMG-20260628-WA0001.jpg" alt="Grocery">
+<h3>Grocery</h3>
+</div>
+
 <div class="category-card" onclick="filterCategory('cosmetics')">
 <img src="images/logo/cosmetics/IMG-20260628-WA0001.jpg" alt="Cosmetics">
 <h3>Cosmetics</h3>
 </div>
 
-<div class="category-card" onclick="filterCategory('grocery')">
-<img src="images/logo/grocery/IMG-20260628-WA0001.jpg" alt="Grocery">
-<h3>Grocery</h3>
+<div class="category-card" onclick="filterCategory('footwear')">
+<img src="images/logo/footwear/IMG-20260628-WA0001.jpg" alt="Footwear">
+<h3>Footwear</h3>
+</div>
+
+<div class="category-card" onclick="filterCategory('home-kitchen')">
+<img src="images/logo/home-kitchen/IMG-20260628-WA0001.jpg" alt="Home Kitchen">
+<h3>Home & Kitchen</h3>
+</div>
+
+<div class="category-card" onclick="filterCategory('stationery')">
+<img src="images/logo/stationery/IMG-20260628-WA0001.jpg" alt="Stationery">
+<h3>Stationery</h3>
+</div>
+
+<div class="category-card" onclick="filterCategory('toys')">
+<img src="images/logo/toys/IMG-20260628-WA0001.jpg" alt="Toys">
+<h3>Toys</h3>
+</div>
+
+<div class="category-card" onclick="filterCategory('electronics')">
+<img src="images/logo/electronics/IMG-20260628-WA0001.jpg" alt="Electronics">
+<h3>Electronics</h3>
 </div>
 
 </div>
@@ -201,7 +249,7 @@ Shop Now
 </section>
 
 <!-- ========================= -->
-<!-- LATEST PRODUCTS -->
+<!-- PRODUCTS -->
 <!-- ========================= -->
 
 <section class="products">
@@ -210,17 +258,17 @@ Shop Now
 
 <div id="product-container" class="product-grid">
 
-<!-- Products Auto Load Here -->
-
 </div>
 
 </section>
 
+<!-- ========================= -->
 <!-- FLOATING BUTTONS -->
+<!-- ========================= -->
 
 <a href="https://wa.me/918872776620"
-target="_blank"
-class="whatsapp-float">
+class="whatsapp-float"
+target="_blank">
 
 <i class="fab fa-whatsapp"></i>
 
@@ -259,104 +307,27 @@ class="payment-float">
 
 <p>📧 support@apnapinddigital.in</p>
 
-<p>Punjab, India</p>
-
 </div>
 
 <div class="footer-box">
 
-<h3>Quick Links</h3>
+<h3>Categories</h3>
 
-<a href="index.html">Home</a><br>
+<ul>
 
-<a href="cart.html">Cart</a><br>
+<li>Ladies Suits</li>
 
-<a href="wishlist.html">Wishlist</a><br>
+<li>Handbags</li>
 
-<a href="payment.html">Payment</a>
+<li>Men Wear</li>
 
-</div>
+<li>Kids Wear</li>
 
-<div class="footer-box">
+<li>Grocery</li>
 
-<h3>Follow Us</h3>
+<li>Cosmetics</li>
 
-<a href="#"><i class="fab fa-facebook"></i></a>
-
-<a href="#"><i class="fab fa-instagram"></i></a>
-
-<a href="#"><i class="fab fa-youtube"></i></a>
-
-<a href="#"><i class="fab fa-whatsapp"></i></a>
-
-</div>
-
-</div>
-
-<div class="copyright">
-
-© 2026 APNA PIND DIGITAL ONLINE SHOPPING MALL
-
-<br>
-
-All Rights Reserved.
-
-</div>
-
-</footer>
-
-<!-- ========================= -->
-<!-- JAVASCRIPT -->
-<!-- ========================= -->
-
-<script src="product.js"></script>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
-<footer>
-
-<div class="footer-container">
-
-<div class="footer-box">
-
-<h3>APNA PIND DIGITAL</h3>
-
-<p>ONLINE SHOPPING MALL</p>
-
-<p>Your Trusted Shopping Partner</p>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Customer Care</h3>
-
-<p>📞 +91 8872776620</p>
-
-<p>📧 support@apnapinddigital.in</p>
-
-<p>Punjab, India</p>
-
-</div>
-
-<div class="footer-box">
-
-<h3>Quick Links</h3>
-
-<a href="index.html">Home</a><br>
-
-<a href="cart.html">Cart</a><br>
-
-<a href="wishlist.html">Wishlist</a><br>
-
-<a href="payment.html">Payment</a>
+</ul>
 
 </div>
 
@@ -370,7 +341,9 @@ All Rights Reserved.
 
 <a href="#"><i class="fab fa-youtube"></i></a>
 
-<a href="#"><i class="fab fa-whatsapp"></i></a>
+<a href="https://wa.me/918872776620">
+<i class="fab fa-whatsapp"></i>
+</a>
 
 </div>
 
