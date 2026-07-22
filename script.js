@@ -50,6 +50,11 @@ onclick="openProduct('${product.code}')">
             Add To Cart
             </button>
 
+            <button class="btn-buy"
+onclick="buyNow('${product.code}')">
+Buy Now
+</button>
+
         </div>
 
         `;
