@@ -136,4 +136,132 @@ image:"images/logo/women-suits/IMG-20260628-WA0043.jpg",
 description:"Premium Ladies Suit"
 }
 
+// ===========================
+// WOMEN HANDBAGS
+// ===========================
+
+products.push(
+{
+id:16,
+code:"HB001",
+name:"Ladies Handbag",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0001.jpg",
+description:"Premium Ladies Handbag"
+},
+{
+id:17,
+code:"HB002",
+name:"Ladies Handbag",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0002.jpg",
+description:"Premium Ladies Handbag"
+},
+{
+id:18,
+code:"HB003",
+name:"Ladies Handbag",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0003.jpg",
+description:"Premium Ladies Handbag"
+},
+{
+id:19,
+code:"HB004",
+name:"Ladies Handbag",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0004.jpg",
+description:"Premium Ladies Handbag"
+},
+{
+id:20,
+code:"HB005",
+name:"Ladies Handbag",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0005.jpg",
+description:"Premium Ladies Handbag"
+}
+);
+
+// ==========================
+// MEN WEAR
+// ==========================
+
+products.push(
+
+{
+id:429,
+code:"MW001",
+name:"Men T-Shirt",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0026.jpg",
+description:"Premium Men T-Shirt"
+},
+
+{
+id:430,
+code:"MW002",
+name:"Men T-Shirt",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0027.jpg",
+description:"Premium Men T-Shirt"
+},
+
+{
+id:431,
+code:"MW003",
+name:"Men T-Shirt",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0028.jpg",
+description:"Premium Men T-Shirt"
+},
+
+{
+id:432,
+code:"MW004",
+name:"Men T-Shirt",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0029.jpg",
+description:"Premium Men T-Shirt"
+}
+
+);
+
+
 ];
