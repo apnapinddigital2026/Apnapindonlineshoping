@@ -1,61 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Product Details</title>
+<title>Product Details | APNA PIND DIGITAL</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+
+body{
+margin:0;
+padding:0;
+font-family:Arial,sans-serif;
+background:#f5f5f5;
+}
+
+.header{
+background:#0057c8;
+color:#fff;
+padding:10px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+}
+
+.logo-area{
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.logo-area img{
+width:60px;
+height:60px;
+border-radius:50%;
+}
+
+.product-details-container{
+max-width:1200px;
+margin:20px auto;
+background:#fff;
+padding:20px;
+border-radius:10px;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+}
+
+.product-image{
+flex:1;
+min-width:300px;
+text-align:center;
+}
+
+.product-image img{
+width:100%;
+max-width:450px;
+border-radius:10px;
+}
+
+.product-info{
+flex:1;
+min-width:300px;
+}
+
+.btn{
+padding:12px;
+border:none;
+width:100%;
+margin-top:10px;
+border-radius:5px;
+cursor:pointer;
+font-size:16px;
+}
+
+.btn-cart{
+background:#28a745;
+color:#fff;
+}
+
+.btn-buy{
+background:#dc3545;
+color:#fff;
+}
+
+.btn-upi{
+background:#ff9800;
+color:#fff;
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- ================= HEADER ================= -->
-
 <header class="header">
 
 <div class="logo-area">
 
-<img src="images/logo/IMG_20260629_002124.png" alt="Logo">
+<img src="images/logo/IMG_20260629_002124.png">
 
 <div>
 
-<h1>Apna Pind Digital</h1>
+<h2>APNA PIND DIGITAL</h2>
 
-<p>ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall</p>
-
-</div>
+<p>ONLINE SHOPPING MALL</p>
 
 </div>
 
-<nav>
-
-<ul>
-
-<li><a href="index.html">🏠 Home</a></li>
-
-<li><a href="cart.html">🛒 Cart <span id="cart-count">0</span></a></li>
-
-</ul>
-
-</nav>
+</div>
 
 </header>
-
-<!-- ================= PRODUCT DETAILS ================= -->
 
 <div class="product-details-container">
 
 <div class="product-image">
 
-<img id="productImage" src="" alt="Product">
+<img id="productImage">
 
 </div>
 
@@ -67,19 +131,13 @@
 
 <h3 id="productPrice"></h3>
 
-<h4 id="oldPrice"></h4>
+<p id="oldPrice"></p>
 
-<div id="offerBadge" class="offer-badge"></div>
+<p id="offerBadge"></p>
 
-<div id="stockBadge" class="stock-badge"></div>
-
-<p id="productColour"></p>
-
-<p id="productSize"></p>
+<p id="stockBadge"></p>
 
 <p id="productDescription"></p>
-
-<br>
 
 <button class="btn btn-cart" id="cartBtn">
 🛒 Add To Cart
@@ -89,11 +147,15 @@
 ⚡ Buy Now
 </button>
 
-<button class="btn btn-admin" id="upiBtn">
+<button class="btn btn-upi" id="upiBtn">
 💳 Pay Online (UPI)
 </button>
-  
-<!-- ================= RELATED PRODUCTS ================= -->
+
+</div>
+
+</div>
+
+<!-- RELATED PRODUCTS -->
 
 <section class="products-section">
 
@@ -105,9 +167,9 @@
 
 </section>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 
-<footer>
+<footer style="background:#0057c8;color:#fff;padding:20px;text-align:center;">
 
 <h2>Apna Pind Digital Online Shopping Mall</h2>
 
@@ -123,12 +185,8 @@
 
 </footer>
 
-<!-- ================= JS FILES ================= -->
-
 <script src="product.js"></script>
-
 <script src="script.js"></script>
-
 <script src="cart.js"></script>
 
 <script>
@@ -155,19 +213,13 @@ document.getElementById("offerBadge").innerText = product.offer;
 
 document.getElementById("stockBadge").innerText = product.stock;
 
-document.getElementById("productColour").innerText = "Colour : " + product.colour;
-
-document.getElementById("productSize").innerText = "Size : " + product.size;
-
 document.getElementById("productDescription").innerText = product.description;
 
 document.getElementById("cartBtn").onclick = ()=>addToCart(product.code);
 
 document.getElementById("buyBtn").onclick = ()=>buyNow(product.code);
 
-document.getElementById("upiBtn").onclick = ()=>payOnline(product.code);
-  
-document.getElementById("wishBtn").onclick = ()=>addToWishlist(product.code);
+document.getElementById("upiBtn").onclick = ()=>window.location.href="payment.html";
 
 }
 
@@ -176,5 +228,4 @@ updateCartCount();
 </script>
 
 </body>
-
 </html>
