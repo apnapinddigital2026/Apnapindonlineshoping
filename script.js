@@ -33,10 +33,14 @@ function displayProducts(productList){
         <div class="product-card">
         
 <img src="${product.image}"
-alt="${product.name}"
-onclick="openProduct('${product.code}')">
+     alt="${product.name}"
+     onclick="openProduct('${product.code}')"
+     style="cursor:pointer;">
 
-            <h3>${product.name}</h3>
+            <h3 onclick="openProduct('${product.code}')"
+    style="cursor:pointer;">
+${product.name}
+</h3>
 
             <p>${product.code}</p>
 
