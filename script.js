@@ -31,8 +31,10 @@ function displayProducts(productList){
         container.innerHTML += `
 
         <div class="product-card">
-
-            <img src="${product.image}" alt="${product.name}" onclick="openProduct('${product.code}')">
+        
+<img src="${product.image}"
+alt="${product.name}"
+onclick="openProduct('${product.code}')">
 
             <h3>${product.name}</h3>
 
