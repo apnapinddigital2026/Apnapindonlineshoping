@@ -522,7 +522,7 @@ price:799,
 oldPrice:1299,
 offer:"38% OFF",
 stock:"In Stock",
-image:"images/logo/men/IMG-20260628-WA0030.jpg",
+image:"images/logo/men/IMG-20260628-WA0031.jpg",
 description:"Premium Men T-Shirt"
 },
 
