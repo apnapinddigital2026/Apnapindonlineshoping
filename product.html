@@ -82,12 +82,17 @@
 <br>
 
 <button class="btn btn-cart" id="cartBtn">
-
 🛒 Add To Cart
+</button>
+
+<button class="btn btn-buy" id="buyBtn">
+⚡ Buy Now
+</button>
 
 <button class="btn btn-admin" id="upiBtn">
 💳 Pay Online (UPI)
 </button>
+  
 <!-- ================= RELATED PRODUCTS ================= -->
 
 <section class="products-section">
@@ -132,7 +137,7 @@ const params = new URLSearchParams(window.location.search);
 
 const code = params.get("code");
 
-const product = getProduct(code);
+const product = products.find(p => p.code === code);
 
 if(product){
 
