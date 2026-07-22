@@ -15,7 +15,7 @@ price:1499,
 oldPrice:2499,
 offer:"40% OFF",
 stock:"In Stock",
-image/images/logo/women-suits/IMG-20260628-WA0013.jpg",
+image:"images/logo/women-suits/IMG-20260628-WA0013.jpg",
 description:"Premium Ladies Suit"
 },
 
