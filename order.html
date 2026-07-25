@@ -68,15 +68,16 @@ placeholder="ਰਾਜ / State">
 <input type="text" id="pincode"
 placeholder="ਪਿੰਨ ਕੋਡ / PIN Code">
 
-<input type="number" id="qty"
-placeholder="Quantity"
+<input type="number"
+id="qty"
+placeholder="ਮਾਤਰਾ / Quantity"
 value="1">
 
 <select id="payment">
 
-<option>Cash on Delivery</option>
-
-<option>Online UPI</option>
+<option value="UPI" selected>
+📱 Online UPI Payment (ਆਨਲਾਈਨ UPI ਭੁਗਤਾਨ)
+</option>
 
 </select>
 
@@ -84,9 +85,9 @@ value="1">
 💳 QR Payment
   </button>
   
-<input type="text"
+  <input type="text"
 id="utr"
-placeholder="UPI Transaction ID (if paid online)">
+placeholder="UPI Transaction ID / UPI ਟ੍ਰਾਂਜ਼ੈਕਸ਼ਨ ਆਈਡੀ">
 
 <button onclick="sendOrder()">
 
