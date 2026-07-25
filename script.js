@@ -18,35 +18,28 @@ document.addEventListener("DOMContentLoaded", () => {
 DISPLAY PRODUCTS
 ========================== */
 
-let currentPage = 1;
-const productsPerPage = 12;
-
 function displayProducts(productList){
 
     const container = document.getElementById("product-container");
-    const pagination = document.getElementById("pagination");
 
     if(!container) return;
 
     container.innerHTML = "";
 
-    const start = (currentPage - 1) * productsPerPage;
-    const end = start + productsPerPage;
-
-    const pageProducts = productList.slice(start, end);
-
-    pageProducts.forEach(product=>{
+    productList.forEach(product=>{
 
         container.innerHTML += `
 
         <div class="product-card">
 
-            <img src="${product.image}" alt="${product.name}"
-            onclick="openProduct('${product.code}')"
-            loading="lazy">
+            <img src="${product.image}"
+                 alt="${product.name}"
+                 onclick="openProduct('${product.code}')"
+                 style="cursor:pointer;">
 
-            <h3 onclick="openProduct('${product.code}')">
-            ${product.name}
+            <h3 onclick="openProduct('${product.code}')"
+                style="cursor:pointer;">
+                ${product.name}
             </h3>
 
             <p>${product.code}</p>
@@ -58,53 +51,18 @@ function displayProducts(productList){
             <p>${product.offer}</p>
 
             <button onclick="addToCart('${product.code}')">
-            Add To Cart
+                Add To Cart
             </button>
 
             <button class="btn-buy"
-            onclick="buyNow('${product.code}')">
-            Buy Now
+                    onclick="buyNow('${product.code}')">
+                Buy Now
             </button>
 
         </div>
 
         `;
 
-    });
-
-    if(pagination){
-
-        const totalPages = Math.ceil(productList.length / productsPerPage);
-
-        pagination.innerHTML = "";
-
-        if(currentPage > 1){
-
-            pagination.innerHTML += `<button onclick="changePage(${currentPage-1})">⬅ Previous</button>`;
-
-        }
-
-        pagination.innerHTML += `<span> Page ${currentPage} / ${totalPages} </span>`;
-
-        if(currentPage < totalPages){
-
-            pagination.innerHTML += `<button onclick="changePage(${currentPage+1})">Next ➡</button>`;
-
-        }
-
-    }
-
-}
-
-function changePage(page){
-
-    currentPage = page;
-
-    displayProducts(products);
-
-    window.scrollTo({
-        top:0,
-        behavior:"smooth"
     });
 
 }
