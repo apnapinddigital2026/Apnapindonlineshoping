@@ -1889,9 +1889,256 @@ stock:"In Stock",
 image:"images/logo/women-handbags/IMG-20260628-WA0010.jpg",
 description:"Premium Ladies Handbag"
 },
-
+  
 {
 id:146,
+code:"HB011",
+name:"Ladies Handbag 11",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0011.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:147,
+code:"HB012",
+name:"Ladies Handbag 12",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0012.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:148,
+code:"HB014",
+name:"Ladies Handbag 14",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0014.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:149,
+code:"HB016",
+name:"Ladies Handbag 16",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0016.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:150,
+code:"HB017",
+name:"Ladies Handbag 17",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0017.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:151,
+code:"HB018",
+name:"Ladies Handbag 18",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0018.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:152,
+code:"HB019",
+name:"Ladies Handbag 19",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0019.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:153,
+code:"HB020",
+name:"Ladies Handbag 20",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0020.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:154,
+code:"HB022",
+name:"Ladies Handbag 22",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0022.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:155,
+code:"HB023",
+name:"Ladies Handbag 23",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0023.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:156,
+code:"HB079",
+name:"Ladies Handbag 79",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0079.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:157,
+code:"HB080",
+name:"Ladies Handbag 80",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0080.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:158,
+code:"HB081",
+name:"Ladies Handbag 81",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0081.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:159,
+code:"HB082",
+name:"Ladies Handbag 82",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0082.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:160,
+code:"HB083",
+name:"Ladies Handbag 83",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0083.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:161,
+code:"HB084",
+name:"Ladies Handbag 84",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0084.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:162,
+code:"HB085",
+name:"Ladies Handbag 85",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0085.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:163,
+code:"HB093",
+name:"Ladies Handbag 93",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0093.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:164,
+code:"HB113",
+name:"Ladies Handbag 113",
+category:"women-handbags",
+price:999,
+oldPrice:1699,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-handbags/IMG-20260628-WA0113.jpg",
+description:"Premium Ladies Handbag"
+},
+
+{
+id:165,
 code:"MW001",
 name:"Men T-Shirt 1",
 category:"men",
@@ -1904,7 +2151,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:147,
+id:167,
 code:"MW002",
 name:"Men T-Shirt 2",
 category:"men",
@@ -1917,7 +2164,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:38,
+id:168,
 code:"MW003",
 name:"Men T-Shirt 3",
 category:"men",
@@ -1930,7 +2177,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:39,
+id:169,
 code:"MW004",
 name:"Men T-Shirt 4",
 category:"men",
@@ -1943,7 +2190,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:40,
+id:170,
 code:"MW005",
 name:"Men T-Shirt 5",
 category:"men",
@@ -1956,7 +2203,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:41,
+id:171,
 code:"MW006",
 name:"Men T-Shirt 6",
 category:"men",
@@ -1969,7 +2216,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:42,
+id:172,
 code:"MW007",
 name:"Men T-Shirt 7",
 category:"men",
