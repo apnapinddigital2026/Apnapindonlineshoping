@@ -1,7 +1,6 @@
 /* ==========================================
 APNA PIND DIGITAL ONLINE SHOPPING MALL
 ORDER.JS
-PART-1
 ========================================== */
 
 document.addEventListener("DOMContentLoaded", loadOrder);
@@ -12,73 +11,89 @@ function loadOrder(){
 
     if(!product) return;
 
-    document.getElementById("product-name").innerText = product.name;
-    document.getElementById("product-code").innerText = product.code;
-    document.getElementById("product-price").innerText = "₹" + product.price;
-    document.getElementById("product-image").src = product.image;
+    document.getElementById("productName").innerText = product.name;
+    document.getElementById("productCode").innerText = product.code;
+    document.getElementById("productPrice").innerText = "₹" + product.price;
 
 }
 
-/* ==========================================
-ORDER.JS
-PART-2
-========================================== */
+function sendOrder(){
 
-function submitOrder(){
+    const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
-const utr = document.getElementById("utr").value.trim();
+    if(!product){
 
-if(utr===""){
-
-    alert("ਪਹਿਲਾਂ Online UPI Payment ਕਰੋ ਅਤੇ UPI Transaction ID ਭਰੋ.");
-
-    return;
-
-}
-
-    const name = document.getElementById("customer-name").value;
-    const phone = document.getElementById("customer-phone").value;
-    const address = document.getElementById("customer-address").value;
-
-    if(name==="" || phone==="" || address===""){
-
-        alert("Please Fill All Details");
-
+        alert("Product Not Found");
         return;
 
     }
 
-    const product = JSON.parse(localStorage.getItem("selectedProduct"));
+    const name = document.getElementById("customerName").value.trim();
+    const phone = document.getElementById("mobile").value.trim();
+    const house = document.getElementById("house").value.trim();
+    const street = document.getElementById("street").value.trim();
+    const city = document.getElementById("city").value.trim();
+    const tehsil = document.getElementById("tehsil").value.trim();
+    const district = document.getElementById("district").value.trim();
+    const state = document.getElementById("state").value.trim();
+    const pincode = document.getElementById("pincode").value.trim();
+    const qty = document.getElementById("qty").value;
+    const utr = document.getElementById("utr").value.trim();
+
+    if(name==="" || phone==="" || house==="" || street==="" || city==="" || tehsil==="" || district==="" || state==="" || pincode===""){
+
+        alert("ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀ ਜਾਣਕਾਰੀ ਭਰੋ।");
+        return;
+
+    }
+
+    if(utr===""){
+
+        alert("ਪਹਿਲਾਂ Online UPI Payment ਕਰੋ ਅਤੇ UPI Transaction ID ਭਰੋ।");
+        return;
+
+    }
 
     let message =
-`🛒 APNA PIND DIGITAL ONLINE SHOPPING MALL
+`🛒 *ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall*
 
-Customer : ${name}
+👤 ਨਾਮ / Name : ${name}
 
-Phone : ${phone}
+📞 ਮੋਬਾਈਲ / Mobile : ${phone}
 
-Address : ${address}
+🏠 ਪਤਾ / Address :
 
-Product : ${product.name}
+ਮਕਾਨ : ${house}
 
-Code : ${product.code}
+ਗਲੀ : ${street}
 
-Price : ₹${product.price}`;
+ਪਿੰਡ : ${city}
+
+ਤਹਿਸੀਲ : ${tehsil}
+
+ਜ਼ਿਲ੍ਹਾ : ${district}
+
+ਰਾਜ : ${state}
+
+PIN : ${pincode}
+
+🛍️ ਪ੍ਰੋਡਕਟ : ${product.name}
+
+🔖 ਕੋਡ : ${product.code}
+
+📦 ਮਾਤਰਾ : ${qty}
+
+💰 ਕੀਮਤ : ₹${product.price}
+
+💳 Payment : Online UPI
+
+🧾 UPI Transaction ID :
+
+${utr}`;
 
     window.open(
-"https://wa.me/918872776620?text="+
-encodeURIComponent(message),
+"https://wa.me/918872776620?text="+encodeURIComponent(message),
 "_blank"
     );
-
-    alert("Order Submitted Successfully");
-
-}
-
-function paymentCompleted(){
-
-    alert("Payment Verified Successfully");
-
-    window.location.href="index.html";
 
 }
