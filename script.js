@@ -96,8 +96,6 @@ CATEGORY FILTER
 
 function filterCategory(category){
 
-    currentPage = 1;
-
     const filtered = products.filter(product =>
 
         product.category === category
@@ -113,8 +111,6 @@ SHOW ALL PRODUCTS
 ========================== */
 
 function showAllProducts(){
-
-    currentPage = 1;
 
     displayProducts(products);
 
