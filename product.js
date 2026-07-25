@@ -2203,7 +2203,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:171,
+id:170,
 code:"MW006",
 name:"Men T-Shirt 6",
 category:"men",
@@ -2216,7 +2216,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:172,
+id:171,
 code:"MW007",
 name:"Men T-Shirt 7",
 category:"men",
