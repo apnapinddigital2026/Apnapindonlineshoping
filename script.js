@@ -26,19 +26,18 @@ function displayProducts(productList){
 
     container.innerHTML = "";
 
-    productList.forEach(product=>{
-
-        container.innerHTML += `
+    productList.slice(0,12).forEach(product=>{
 
         <div class="product-card">
-        
+
 <img src="${product.image}"
      alt="${product.name}"
+     loading="lazy"
      onclick="openProduct('${product.code}')"
      style="cursor:pointer;">
 
-            <h3 onclick="openProduct('${product.code}')"
-    style="cursor:pointer;">
+<h3 onclick="openProduct('${product.code}')"
+style="cursor:pointer;">
 ${product.name}
 </h3>
 
