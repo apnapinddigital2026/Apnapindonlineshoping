@@ -1305,9 +1305,463 @@ stock:"In Stock",
 image:"images/logo/women-suits/IMG-20260628-WA0150.jpg",
 description:"Premium Ladies Suit"
 },
+{
+id:101,
+code:"LS101",
+name:"Ladies Suit 101",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0151.jpg",
+description:"Premium Ladies Suit"
+},
 
 {
-id:26,
+id:102,
+code:"LS102",
+name:"Ladies Suit 102",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0152.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:103,
+code:"LS103",
+name:"Ladies Suit 103",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0153.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:104,
+code:"LS104",
+name:"Ladies Suit 104",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0154.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:105,
+code:"LS105",
+name:"Ladies Suit 105",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0155.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:106,
+code:"LS106",
+name:"Ladies Suit 106",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0156.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:107,
+code:"LS107",
+name:"Ladies Suit 107",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0157.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:108,
+code:"LS108",
+name:"Ladies Suit 108",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0158.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:109,
+code:"LS109",
+name:"Ladies Suit 109",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0159.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:110,
+code:"LS110",
+name:"Ladies Suit 110",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0160.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:111,
+code:"LS111",
+name:"Ladies Suit 111",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0161.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:112,
+code:"LS112",
+name:"Ladies Suit 112",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0162.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:113,
+code:"LS113",
+name:"Ladies Suit 113",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0163.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:114,
+code:"LS114",
+name:"Ladies Suit 114",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0164.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:115,
+code:"LS115",
+name:"Ladies Suit 115",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0165.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:116,
+code:"LS116",
+name:"Ladies Suit 116",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0166.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:117,
+code:"LS117",
+name:"Ladies Suit 117",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0167.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:118,
+code:"LS118",
+name:"Ladies Suit 118",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0168.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:119,
+code:"LS119",
+name:"Ladies Suit 119",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0169.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:120,
+code:"LS120",
+name:"Ladies Suit 120",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0170.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:121,
+code:"LS121",
+name:"Ladies Suit 121",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0171.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:122,
+code:"LS122",
+name:"Ladies Suit 122",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0172.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:123,
+code:"LS123",
+name:"Ladies Suit 123",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0173.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:124,
+code:"LS124",
+name:"Ladies Suit 124",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0174.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:125,
+code:"LS125",
+name:"Ladies Suit 125",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0175.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:126,
+code:"LS126",
+name:"Ladies Suit 126",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0176.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:127,
+code:"LS127",
+name:"Ladies Suit 127",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0177.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:128,
+code:"LS128",
+name:"Ladies Suit 128",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0178.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:129,
+code:"LS129",
+name:"Ladies Suit 129",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0179.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:130,
+code:"LS130",
+name:"Ladies Suit 130",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0180.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:131,
+code:"LS131",
+name:"Ladies Suit 131",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0181.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:132,
+code:"LS132",
+name:"Ladies Suit 132",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0182.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:133,
+code:"LS133",
+name:"Ladies Suit 133",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0183.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:134,
+code:"LS134",
+name:"Ladies Suit 134",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0184.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:135,
+code:"LS135",
+name:"Ladies Suit 135",
+category:"women-suits",
+price:1499,
+oldPrice:2499,
+offer:"40% OFF",
+stock:"In Stock",
+image:"images/logo/women-suits/IMG-20260628-WA0185.jpg",
+description:"Premium Ladies Suit"
+},
+
+{
+id:136,
 code:"HB001",
 name:"Ladies Handbag 1",
 category:"women-handbags",
@@ -1320,7 +1774,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:27,
+id:137,
 code:"HB002",
 name:"Ladies Handbag 2",
 category:"women-handbags",
@@ -1333,7 +1787,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:28,
+id:138,
 code:"HB003",
 name:"Ladies Handbag 3",
 category:"women-handbags",
@@ -1346,7 +1800,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:29,
+id:139,
 code:"HB004",
 name:"Ladies Handbag 4",
 category:"women-handbags",
@@ -1359,7 +1813,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:30,
+id:140,
 code:"HB005",
 name:"Ladies Handbag 5",
 category:"women-handbags",
@@ -1372,7 +1826,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:31,
+id:141,
 code:"HB006",
 name:"Ladies Handbag 6",
 category:"women-handbags",
@@ -1385,7 +1839,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:32,
+id:142,
 code:"HB007",
 name:"Ladies Handbag 7",
 category:"women-handbags",
@@ -1398,7 +1852,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:33,
+id:143,
 code:"HB008",
 name:"Ladies Handbag 8",
 category:"women-handbags",
@@ -1411,7 +1865,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:34,
+id:144,
 code:"HB009",
 name:"Ladies Handbag 9",
 category:"women-handbags",
@@ -1424,7 +1878,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:35,
+id:145,
 code:"HB010",
 name:"Ladies Handbag 10",
 category:"women-handbags",
@@ -1437,7 +1891,7 @@ description:"Premium Ladies Handbag"
 },
 
 {
-id:36,
+id:146,
 code:"MW001",
 name:"Men T-Shirt 1",
 category:"men",
@@ -1450,7 +1904,7 @@ description:"Premium Men T-Shirt"
 },
 
 {
-id:37,
+id:147,
 code:"MW002",
 name:"Men T-Shirt 2",
 category:"men",
