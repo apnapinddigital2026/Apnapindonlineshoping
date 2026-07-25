@@ -1954,5 +1954,31 @@ stock:"In Stock",
 image:"images/logo/men/IMG-20260628-WA0031.jpg",
 description:"Premium Men T-Shirt"
 },
+
+{
+id:41,
+code:"MW006",
+name:"Men T-Shirt 6",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0032.jpg",
+description:"Premium Men T-Shirt"
+},
+
+{
+id:42,
+code:"MW007",
+name:"Men T-Shirt 7",
+category:"men",
+price:799,
+oldPrice:1299,
+offer:"38% OFF",
+stock:"In Stock",
+image:"images/logo/men/IMG-20260628-WA0034.jpg",
+description:"Premium Men T-Shirt"
+},
   
 ];
