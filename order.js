@@ -26,6 +26,16 @@ PART-2
 
 function submitOrder(){
 
+const utr = document.getElementById("utr").value.trim();
+
+if(utr===""){
+
+    alert("ਪਹਿਲਾਂ Online UPI Payment ਕਰੋ ਅਤੇ UPI Transaction ID ਭਰੋ.");
+
+    return;
+
+}
+
     const name = document.getElementById("customer-name").value;
     const phone = document.getElementById("customer-phone").value;
     const address = document.getElementById("customer-address").value;
