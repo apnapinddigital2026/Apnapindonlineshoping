@@ -2018,7 +2018,7 @@ offer:"40% OFF",
 stock:"In Stock",
 image:"images/logo/women-handbags/IMG-20260628-WA0023.jpg",
 description:"Premium Ladies Handbag"
-}
+},
 
 {
 id:156,
