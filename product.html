@@ -81,6 +81,43 @@ background:#28a745;
 color:#fff;
 }
 
+// =========================
+// RELATED PRODUCTS
+// =========================
+
+const related = products
+.filter(p => p.category === product.category && p.code !== product.code)
+.slice(0,4);
+
+const relatedBox = document.getElementById("relatedProducts");
+
+related.forEach(item=>{
+
+relatedBox.innerHTML += `
+
+<div class="product-card">
+
+<img src="${item.image}"
+onclick="openProduct('${item.code}')">
+
+<h3>${item.name}</h3>
+
+<p>${item.code}</p>
+
+<h4>₹${item.price}</h4>
+
+<button onclick="openProduct('${item.code}')">
+
+View Product
+
+</button>
+
+</div>
+
+`;
+
+});
+
 .btn-buy{
 background:#dc3545;
 color:#fff;
