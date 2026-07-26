@@ -265,3 +265,25 @@ img.src = banners[currentBanner];
 }
 
 },3000);
+
+/* ==========================
+PAYMENT COMPLETED
+========================== */
+
+function paymentCompleted(){
+
+    const utr = document.getElementById("utr").value.trim();
+
+    if(utr===""){
+
+        alert("ਕਿਰਪਾ ਕਰਕੇ ਪਹਿਲਾਂ UPI Transaction ID ਭਰੋ।");
+
+        return;
+
+    }
+
+    localStorage.setItem("paymentUTR", utr);
+
+    window.location.href = "order.html";
+
+}
