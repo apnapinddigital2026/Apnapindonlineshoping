@@ -9,7 +9,9 @@ function loadOrder(){
 
     const product = JSON.parse(localStorage.getItem("selectedProduct"));
 
-    if(!product) return;
+    if(!product){
+        return;
+    }
 
     document.getElementById("productName").innerText = product.name;
     document.getElementById("productCode").innerText = product.code;
@@ -37,78 +39,102 @@ function sendOrder(){
     const district = document.getElementById("district").value.trim();
     const state = document.getElementById("state").value.trim();
     const pincode = document.getElementById("pincode").value.trim();
-    const qty = document.getElementById("qty").value;
 
-const utr = localStorage.getItem("paymentUTR");
+    const qty = parseInt(document.getElementById("qty").value);
 
-const total = product.price * qty;
+    const utr = localStorage.getItem("paymentUTR");
 
-if(
-    name==="" ||
-    phone==="" ||
-    house==="" ||
-    street==="" ||
-    city==="" ||
-    tehsil==="" ||
-    district==="" ||
-    state==="" ||
-    pincode===""
-){
+    const total = Number(product.price) * qty;
 
-    alert("ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀ ਜਾਣਕਾਰੀ ਭਰੋ।");
-    return;
+    if(
+        name==="" ||
+        phone==="" ||
+        house==="" ||
+        street==="" ||
+        city==="" ||
+        tehsil==="" ||
+        district==="" ||
+        state==="" ||
+        pincode===""){
 
-}
+        alert("ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀ ਜਾਣਕਾਰੀ ਭਰੋ।");
+        return;
 
-if(!utr){
+    }
 
-    alert("ਪਹਿਲਾਂ Payment Verify ਕਰੋ।");
-    return;
+    if(!utr){
 
-}
+        alert("ਪਹਿਲਾਂ Payment Verify ਕਰੋ।");
+        return;
 
-    let message =
-`🛒 *ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall*
+    }
 
-👤 ਨਾਮ / Name : ${name}
+    /* ===== WHATSAPP ORDER MESSAGE ===== */
 
-📞 ਮੋਬਾਈਲ / Mobile : ${phone}
+let message =
+`🛒 *APNA PIND DIGITAL ONLINE SHOPPING MALL*
 
-🏠 ਪਤਾ / Address :
+━━━━━━━━━━━━━━━━━━
 
-ਮਕਾਨ : ${house}
+👤 Customer Name : ${name}
 
-ਗਲੀ : ${street}
+📞 Mobile : ${phone}
 
-ਪਿੰਡ : ${city}
+🏠 Address
 
-ਤਹਿਸੀਲ : ${tehsil}
+🏡 House : ${house}
 
-ਜ਼ਿਲ੍ਹਾ : ${district}
+🛣️ Street : ${street}
 
-ਰਾਜ : ${state}
+🏘️ Village/City : ${city}
 
-PIN : ${pincode}
+🏢 Tehsil : ${tehsil}
 
-🛍️ ਪ੍ਰੋਡਕਟ : ${product.name}
+📍 District : ${district}
 
-🔖 ਕੋਡ : ${product.code}
+🌍 State : ${state}
 
-📦 ਮਾਤਰਾ : ${qty}
+📮 PIN Code : ${pincode}
 
-💰 ਕੀਮਤ : ₹${product.price}
+━━━━━━━━━━━━━━━━━━
 
-💳 Payment : Online UPI
+🛍️ Product : ${product.name}
 
-🧾 UPI Transaction ID :
+🔖 Product Code : ${product.code}
 
-${utr}`;
+📦 Quantity : ${qty}
 
-    window.open(upiLink, "_blank");
+💰 Price : ₹${product.price}
 
-    window.open(
-"https://wa.me/918872776620?text="+encodeURIComponent(message),
+🧾 Total Amount : ₹${total}
+
+━━━━━━━━━━━━━━━━━━
+
+💳 Payment Mode : Online UPI
+
+🧾 UPI Transaction ID
+
+${utr}
+
+━━━━━━━━━━━━━━━━━━
+
+🙏 Please Confirm My Order.
+`;
+
+/* ===== SEND WHATSAPP ORDER ===== */
+
+window.open(
+"https://wa.me/918872776620?text=" + encodeURIComponent(message),
 "_blank"
-    );
+);
+
+/* ===== CLEAR TEMP DATA ===== */
+
+localStorage.removeItem("paymentUTR");
+localStorage.removeItem("selectedProduct");
+
+/* ===== SUCCESS MESSAGE ===== */
+
+alert("✅ ਤੁਹਾਡਾ Order Successfully WhatsApp 'ਤੇ ਭੇਜ ਦਿੱਤਾ ਗਿਆ ਹੈ।");
 
 }
