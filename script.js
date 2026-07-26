@@ -241,42 +241,6 @@ window.onload = function () {
 
 };
 
-/* ==========================
-AUTO SLIDER
-========================== */
-
-const banners = [
-
-"images/banner/banner1.jpg",
-
-"images/banner/banner2.jpg",
-
-"images/banner/banner3.jpg"
-
-];
-
-let slideIndex = 0;
-
-setInterval(()=>{
-
-slideIndex++;
-
-if(slideIndex>=banners.length){
-
-slideIndex=0;
-
-}
-
-const img=document.getElementById("bannerSlide");
-
-if(img){
-
-img.src=banners[slideIndex];
-
-}
-
-},3000);
-
 /* ===== Banner Slider ===== */
 
 const banners = [
@@ -291,11 +255,13 @@ setInterval(function(){
 currentBanner++;
 
 if(currentBanner >= banners.length){
-
 currentBanner = 0;
-
 }
 
-document.getElementById("banner-image").src = banners[currentBanner];
+const img = document.getElementById("banner-image");
+
+if(img){
+img.src = banners[currentBanner];
+}
 
 },3000);
