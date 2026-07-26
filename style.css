@@ -584,3 +584,33 @@ height:auto;
 border-radius:10px;
 display:block;
 }
+
+.reviews{
+padding:30px 15px;
+text-align:center;
+background:#f8f9fa;
+margin-top:30px;
+}
+
+.reviews h2{
+color:#0b5ed7;
+font-size:28px;
+margin-bottom:5px;
+}
+
+.reviews h3{
+font-size:18px;
+color:#444;
+margin-bottom:20px;
+}
+
+.review-box{
+background:#fff;
+padding:15px;
+margin:15px auto;
+max-width:700px;
+border-radius:10px;
+box-shadow:0 2px 8px rgba(0,0,0,.15);
+font-size:16px;
+line-height:1.6;
+}
