@@ -62,10 +62,11 @@ function sendOrder(){
 
     }
 
-    if(!utr){
+    if(!utr || utr.length < 12 || utr.length > 18){
 
-        alert("ਪਹਿਲਾਂ Payment Verify ਕਰੋ।");
-        return;
+    alert("ਕਿਰਪਾ ਕਰਕੇ Valid UPI Transaction ID (12 ਤੋਂ 18 ਅੱਖਰ) ਭਰੋ।");
+
+    return;
 
     }
 
