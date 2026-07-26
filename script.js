@@ -246,7 +246,6 @@ window.onload = function () {
 const banners = [
 "images/logo/image_20828faa.png",
 "images/logo/image_3f865399.png"
-"images/logo/image_5a146559.png"
 ];
 
 let currentBanner = 0;
