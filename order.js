@@ -95,6 +95,8 @@ PIN : ${pincode}
 
 ${utr}`;
 
+    window.open(upiLink, "_blank");
+
     window.open(
 "https://wa.me/918872776620?text="+encodeURIComponent(message),
 "_blank"
