@@ -38,25 +38,34 @@ function sendOrder(){
     const state = document.getElementById("state").value.trim();
     const pincode = document.getElementById("pincode").value.trim();
     const qty = document.getElementById("qty").value;
-    const utr = document.getElementById("utr").value.trim();
+
+const utr = localStorage.getItem("paymentUTR");
 
 const total = product.price * qty;
 
-const upiLink = `upi://pay?pa=8872776620@sbi&pn=APNA%20PIND%20DIGITAL&am=${total}&cu=INR`;
+if(
+    name==="" ||
+    phone==="" ||
+    house==="" ||
+    street==="" ||
+    city==="" ||
+    tehsil==="" ||
+    district==="" ||
+    state==="" ||
+    pincode===""
+){
 
-    if(name==="" || phone==="" || house==="" || street==="" || city==="" || tehsil==="" || district==="" || state==="" || pincode===""){
+    alert("ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀ ਜਾਣਕਾਰੀ ਭਰੋ।");
+    return;
 
-        alert("ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੀ ਜਾਣਕਾਰੀ ਭਰੋ।");
-        return;
+}
 
-    }
+if(!utr){
 
-    if(utr===""){
+    alert("ਪਹਿਲਾਂ Payment Verify ਕਰੋ।");
+    return;
 
-        alert("ਪਹਿਲਾਂ Online UPI Payment ਕਰੋ ਅਤੇ UPI Transaction ID ਭਰੋ।");
-        return;
-
-    }
+}
 
     let message =
 `🛒 *ਆਪਣਾ ਪਿੰਡ ਡਿਜ਼ਿਟਲ Online Shopping Mall*
