@@ -276,3 +276,26 @@ img.src=banners[slideIndex];
 }
 
 },3000);
+
+/* ===== Banner Slider ===== */
+
+const banners = [
+"images/logo/image_20828faa.png",
+"images/logo/image_3f865399.png"
+];
+
+let currentBanner = 0;
+
+setInterval(function(){
+
+currentBanner++;
+
+if(currentBanner >= banners.length){
+
+currentBanner = 0;
+
+}
+
+document.getElementById("banner-image").src = banners[currentBanner];
+
+},3000);
