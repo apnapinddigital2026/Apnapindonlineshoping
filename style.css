@@ -614,3 +614,61 @@ box-shadow:0 2px 8px rgba(0,0,0,.15);
 font-size:16px;
 line-height:1.6;
 }
+
+/* =========================
+IMAGE POPUP
+========================= */
+
+.image-popup{
+
+display:none;
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+height:100%;
+
+background:rgba(0,0,0,0.9);
+
+z-index:9999;
+
+justify-content:center;
+
+align-items:center;
+
+}
+
+.image-popup img{
+
+max-width:90%;
+
+max-height:90%;
+
+border-radius:10px;
+
+box-shadow:0 0 20px #fff;
+
+}
+
+.close-popup{
+
+position:absolute;
+
+top:20px;
+
+right:30px;
+
+font-size:40px;
+
+color:white;
+
+cursor:pointer;
+
+font-weight:bold;
+
+}
