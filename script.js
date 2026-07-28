@@ -33,9 +33,9 @@ function displayProducts(productList){
         <div class="product-card">
 
             <img src="${product.image}"
-                 alt="${product.name}"
-                 onclick="openProduct('${product.code}')"
-                 style="cursor:pointer;">
+     alt="${product.name}"
+     onclick="openImage('${product.image}')"
+     style="cursor:pointer;">
 
             <h3 onclick="openProduct('${product.code}')"
                 style="cursor:pointer;">
@@ -285,5 +285,23 @@ function paymentCompleted(){
     localStorage.setItem("paymentUTR", utr);
 
     window.location.href = "order.html";
+
+}
+
+/* ==========================
+IMAGE POPUP
+========================== */
+
+function openImage(src){
+
+    document.getElementById("imagePopup").style.display="flex";
+
+    document.getElementById("popupImg").src=src;
+
+}
+
+function closeImage(){
+
+    document.getElementById("imagePopup").style.display="none";
 
 }
